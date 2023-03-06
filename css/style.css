@@ -1513,58 +1513,77 @@ article .content .caption {
   content: ")";
 }
 .highlight {
-  background: #000080;
-  color: #0ff;
+  color: #000;
+  background: #fff;
 }
-.highlight .code .subst {
-  color: #0ff;
-}
-.highlight .code .string,
-.highlight .code .attribute,
-.highlight .code .symbol,
-.highlight .code .bullet,
-.highlight .code .built_in,
-.highlight .code .builtin-name,
-.highlight .code .template-tag,
-.highlight .code .template-variable,
-.highlight .code .addition {
-  color: #ff0;
-}
-.highlight .code .keyword,
-.highlight .code .selector-tag,
-.highlight .code .section,
-.highlight .code .type,
-.highlight .code .name,
-.highlight .code .selector-id,
-.highlight .code .selector-class,
-.highlight .code .variable {
-  color: #c9c;
+.highlight .code .subst,
+.highlight .code .title {
+  font-weight: normal;
+  color: #000;
 }
 .highlight .code .comment,
-.highlight .code .quote,
-.highlight .code .doctag,
-.highlight .code .deletion {
-  color: #888;
+.highlight .code .quote {
+  color: #808080;
+  font-style: italic;
+}
+.highlight .code .meta {
+  color: #808000;
+}
+.highlight .code .tag {
+  background: #efefef;
+}
+.highlight .code .section,
+.highlight .code .name,
+.highlight .code .literal,
+.highlight .code .keyword,
+.highlight .code .selector-tag,
+.highlight .code .type,
+.highlight .code .selector-id,
+.highlight .code .selector-class {
+  font-weight: bold;
+  color: #000080;
+}
+.highlight .code .attribute,
+.highlight .code .number,
+.highlight .code .regexp,
+.highlight .code .link {
+  font-weight: bold;
+  color: #00f;
 }
 .highlight .code .number,
 .highlight .code .regexp,
-.highlight .code .literal,
 .highlight .code .link {
-  color: #0f0;
+  font-weight: normal;
 }
-.highlight .code .meta {
-  color: #008080;
-}
-.highlight .code .keyword,
-.highlight .code .selector-tag,
-.highlight .code .title,
-.highlight .code .section,
-.highlight .code .name,
-.highlight .code .strong {
+.highlight .code .string {
+  color: #008000;
   font-weight: bold;
+}
+.highlight .code .symbol,
+.highlight .code .bullet,
+.highlight .code .formula {
+  color: #000;
+  background: #d0eded;
+  font-style: italic;
+}
+.highlight .code .doctag {
+  text-decoration: underline;
+}
+.highlight .code .variable,
+.highlight .code .template-variable {
+  color: #660e7a;
+}
+.highlight .code .addition {
+  background: #baeeba;
+}
+.highlight .code .deletion {
+  background: #ffc8bd;
 }
 .highlight .code .emphasis {
   font-style: italic;
+}
+.highlight .code .strong {
+  font-weight: bold;
 }
 pre {
   overflow-x: auto;
