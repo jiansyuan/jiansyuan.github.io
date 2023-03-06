@@ -4,11 +4,24 @@
   
     
     <entry>
+      <title>Theorem Proving &amp; Program Verification by Coq</title>
+      <link href="/2023/03/06/algorithm/Theorem-Proving-and-Program-Verification-By-Coq/"/>
+      <url>/2023/03/06/algorithm/Theorem-Proving-and-Program-Verification-By-Coq/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>If we say that programming is through writing code, the combination of simple functions &amp; components to realize the complex assembly, then proof is the combination of some simple proof steps to make the complex proof.<br />Theorem proving tools like Coq &amp; Isabelle allow us to describe mathematical definitions &amp; mathematical proofs in the form of codes.</p></blockquote><p>We use Coq here: <a href="https://github.com/coq/platform/releases/">Coq-Release@github.com</a>.</p><h1 id="1-proof-equation"><a class="markdownIt-Anchor" href="#1-proof-equation"></a> 1  Proof Equation</h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Welcome, guest.</title>
       <link href="/2023/03/05/hi-guest/"/>
       <url>/2023/03/05/hi-guest/</url>
       
-        <content type="html"><![CDATA[<h2 id="Hi"><a href="#Hi" class="headerlink" title="Hi!"></a>Hi!</h2><p>Welcome to my blog website<br><a href="../../../../about">About this website.</a></p><hr>]]></content>
+        <content type="html"><![CDATA[<h2 id="hi"><a class="markdownIt-Anchor" href="#hi"></a> Hi!</h2><p>Welcome to my blog website<br /><a href="../../../../about">About this website.</a></p><hr />]]></content>
       
       
       
