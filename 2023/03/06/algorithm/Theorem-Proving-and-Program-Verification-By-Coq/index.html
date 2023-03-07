@@ -14,7 +14,7 @@
 <meta property="og:description" content="Content  Content Introduction 1. Proof Equation  1.1 Proving Right Inverse Property 1.2 Proving Right Unit Property 1.3 Proving Double Negation Property   2. Inductive Type, Recursive Definitions &amp;am">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-06T05:43:31.000Z">
-<meta property="article:modified_time" content="2023-03-07T03:15:34.274Z">
+<meta property="article:modified_time" content="2023-03-07T03:26:31.434Z">
 <meta property="article:author" content="Contexploit">
 <meta name="twitter:card" content="summary">
     
@@ -115,7 +115,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#content"><span class="toc-number">1.</span> <span class="toc-text"> Content</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#introduction"><span class="toc-number">2.</span> <span class="toc-text"> Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-proof-equation"><span class="toc-number">3.</span> <span class="toc-text"> 1. Proof Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-proving-right-inverse-property"><span class="toc-number">3.1.</span> <span class="toc-text"> 1.1 Proving Right Inverse Property</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-proving-right-unit-property"><span class="toc-number">3.2.</span> <span class="toc-text"> 1.2 Proving Right Unit Property</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-proving-double-negation-property"><span class="toc-number">3.3.</span> <span class="toc-text"> 1.3 Proving Double Negation Property</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-inductive-type-recursive-definitions-inductive-proof"><span class="toc-number">4.</span> <span class="toc-text"> 2. Inductive Type, Recursive Definitions &amp; Inductive proof</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#content"><span class="toc-number">1.</span> <span class="toc-text"> Content</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#introduction"><span class="toc-number">2.</span> <span class="toc-text"> Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-proof-equation"><span class="toc-number">3.</span> <span class="toc-text"> 1. Proof Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-proving-right-inverse-property"><span class="toc-number">3.1.</span> <span class="toc-text"> 1.1 Proving Right Inverse Property</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-proving-right-unit-property"><span class="toc-number">3.2.</span> <span class="toc-text"> 1.2 Proving Right Unit Property</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-proving-double-negation-property"><span class="toc-number">3.3.</span> <span class="toc-text"> 1.3 Proving Double Negation Property</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-inductive-type-recursive-definitions-inductive-proof"><span class="toc-number">4.</span> <span class="toc-text"> 2. Inductive Type, Recursive Definitions &amp; Inductive proof</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%99%E5%87%A0%E5%A4%A9%E4%B8%8D%E5%86%99%E4%BA%86%E5%BE%85%E7%BB%AD"><span class="toc-number">5.</span> <span class="toc-text"> 这几天不写了，待续。。。。</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -145,7 +145,7 @@
     </div>
 
  |
-      <span class="post-count">803words, 5mins</span>
+      <span class="post-count">819words, 5mins</span>
       
 
       
@@ -167,6 +167,7 @@
 </ul>
 </li>
 <li><a href="#2-inductive-type-recursive-definitions--inductive-proof">2. Inductive Type, Recursive Definitions &amp; Inductive proof</a></li>
+<li><a href="#%E8%BF%99%E5%87%A0%E5%A4%A9%E4%B8%8D%E5%86%99%E4%BA%86%E5%BE%85%E7%BB%AD"><strong>这几天不写了，待续。。。。</strong></a></li>
 </ul>
 <h1 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h1>
 <blockquote>
@@ -200,6 +201,7 @@ Finally, the <em>reflexivity</em> says that the equation is reflexive, &amp; now
 <p>Next prove the double negation signelimination property.</p>
 <figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Theorem</span> double_negation &#123;G: GroupOperator&#125; &#123;GP: GroupProperties G&#125;:</span><br><span class="line">  <span class="keyword">forall</span> (a: tote_set), - - a = a.</span><br><span class="line"><span class="keyword">Proof</span>.</span><br><span class="line">  <span class="built_in">intros</span>.</span><br><span class="line">  <span class="built_in">rewrite</span> &lt;- (left_unit_clear (--a)).</span><br><span class="line">  <span class="built_in">rewrite</span> &lt;- (right_inverstion_clear (a)).</span><br><span class="line">  <span class="built_in">rewrite</span> associate, right_inverstion_clear, right_unit_clear.</span><br><span class="line">  <span class="built_in">reflexivity</span>.</span><br><span class="line"><span class="keyword">Qed</span>.</span><br></pre></td></tr></table></figure>
 <h1 id="2-inductive-type-recursive-definitions-inductive-proof"><a class="markdownIt-Anchor" href="#2-inductive-type-recursive-definitions-inductive-proof"></a> 2. Inductive Type, Recursive Definitions &amp; Inductive proof</h1>
+<h1 id="这几天不写了待续"><a class="markdownIt-Anchor" href="#这几天不写了待续"></a> <strong>这几天不写了，待续。。。。</strong></h1>
 
   </div>
 </article>
@@ -246,7 +248,7 @@ Finally, the <em>reflexivity</em> says that the equation is reflexive, &amp; now
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#content"><span class="toc-number">1.</span> <span class="toc-text"> Content</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#introduction"><span class="toc-number">2.</span> <span class="toc-text"> Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-proof-equation"><span class="toc-number">3.</span> <span class="toc-text"> 1. Proof Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-proving-right-inverse-property"><span class="toc-number">3.1.</span> <span class="toc-text"> 1.1 Proving Right Inverse Property</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-proving-right-unit-property"><span class="toc-number">3.2.</span> <span class="toc-text"> 1.2 Proving Right Unit Property</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-proving-double-negation-property"><span class="toc-number">3.3.</span> <span class="toc-text"> 1.3 Proving Double Negation Property</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-inductive-type-recursive-definitions-inductive-proof"><span class="toc-number">4.</span> <span class="toc-text"> 2. Inductive Type, Recursive Definitions &amp; Inductive proof</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#content"><span class="toc-number">1.</span> <span class="toc-text"> Content</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#introduction"><span class="toc-number">2.</span> <span class="toc-text"> Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-proof-equation"><span class="toc-number">3.</span> <span class="toc-text"> 1. Proof Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-proving-right-inverse-property"><span class="toc-number">3.1.</span> <span class="toc-text"> 1.1 Proving Right Inverse Property</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-proving-right-unit-property"><span class="toc-number">3.2.</span> <span class="toc-text"> 1.2 Proving Right Unit Property</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-proving-double-negation-property"><span class="toc-number">3.3.</span> <span class="toc-text"> 1.3 Proving Double Negation Property</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-inductive-type-recursive-definitions-inductive-proof"><span class="toc-number">4.</span> <span class="toc-text"> 2. Inductive Type, Recursive Definitions &amp; Inductive proof</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%99%E5%87%A0%E5%A4%A9%E4%B8%8D%E5%86%99%E4%BA%86%E5%BE%85%E7%BB%AD"><span class="toc-number">5.</span> <span class="toc-text"> 这几天不写了，待续。。。。</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
