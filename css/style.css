@@ -510,9 +510,9 @@ body {
   -webkit-hyphens: manual;
 }
 .content a {
-  color: #22272a;
+  color: #931eaa;
   text-decoration: none;
-  background-image: linear-gradient(transparent, transparent 5px, #22272a 5px, #22272a);
+  background-image: linear-gradient(transparent, transparent 5px, #931eaa 5px, #931eaa);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -1612,7 +1612,7 @@ code {
   margin: 1rem 0;
   padding: 10px 15px;
   border-radius: 4px;
-  background: #f5f5f5;
+  background: #fcf9f0;
   font-family: "Menlo", "Meslo LG", monospace;
   -webkit-border-radius: 4px;
 }
