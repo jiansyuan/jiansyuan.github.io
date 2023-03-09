@@ -335,14 +335,14 @@ body .h2 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: rgba(86,124,119,0.8);
+  color: #743481 !important;
   text-transform: none;
   letter-spacing: normal;
   font-weight: bold;
   font-size: 1rem;
 }
 body h3 {
-  color: rgba(86,124,119,0.8);
+  color: #743481 !important;
   text-decoration: underline;
   font-weight: bold;
   font-size: 0.9rem;
@@ -426,7 +426,7 @@ body table {
 body th {
   padding: 8px;
   border-bottom: 1px dashed #666;
-  color: rgba(86,124,119,0.8);
+  color: #743481 !important;
   font-weight: bold;
   font-size: 15px;
 }
@@ -510,7 +510,7 @@ body {
   -webkit-hyphens: manual;
 }
 .content a {
-  color: #931eaa;
+  color: #931eaa !important;
   text-decoration: none;
   background-image: linear-gradient(transparent, transparent 5px, #931eaa 5px, #931eaa);
   background-position: bottom;
@@ -1340,7 +1340,7 @@ article .content .caption {
   background-image: none;
 }
 .pagination a:hover:not(.active) {
-  color: rgba(86,124,119,0.8);
+  color: #743481 !important;
 }
 .search-input {
   padding: 4px 7px;
@@ -1348,7 +1348,7 @@ article .content .caption {
   outline: none;
   border: solid 1px #666;
   border-radius: 5px;
-  background-color: #fafafa;
+  background-color: rgba(116,52,129,0.7) !important;
   color: #22272a;
   font-size: 1.2rem;
   -webkit-border-radius: 5px;
