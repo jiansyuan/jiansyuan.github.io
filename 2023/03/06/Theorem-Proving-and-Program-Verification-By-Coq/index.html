@@ -14,7 +14,7 @@
 <meta property="og:description" content="Content  Content Introduction 1. Proof Equation  1.1 Proving Right Inverse Property 1.2 Proving Right Unit Property 1.3 Proving Double Negation Property   2. Inductive Type, Recursive Definitions and">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-06T05:43:31.000Z">
-<meta property="article:modified_time" content="2023-03-09T06:42:10.865Z">
+<meta property="article:modified_time" content="2023-03-09T07:47:04.024Z">
 <meta property="article:author" content="Contexploit">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="coq">
@@ -148,7 +148,7 @@
     </div>
 
  |
-      <span class="post-count">913words, 5mins</span>
+      <span class="post-count">903words, 5mins</span>
       
 
       
@@ -184,7 +184,7 @@ Theorem proving tools like Coq &amp; Isabelle allow us to describe mathematical 
 </blockquote>
 <p>We use Coq here: <a target="_blank" rel="noopener" href="https://github.com/coq/platform/releases/">Coq-Release@github.com</a>. The <a target="_blank" rel="noopener" href="https://jscoq.github.io/wa/">online version of Coq</a> is also able to be used.<br>
 Here is a link to <a target="_blank" rel="noopener" href="https://coq.inria.fr/refman/coq-tacindex.html">the official Coq documentation</a> for review &amp; reference, in order for readers’ better reading.<br>
-This article only guarantees that readers can establish a preliminary understanding of formal theorem proving &amp; program verification. If you’re looking for a book with a richer and more substantial introduction to get familiar with Coq, I recommend you read the <em>“Software Foundations Vol.1: Logical Foundations”</em> at least. <em>“Software Foundations”</em> all volumes of Chinese translation version <a target="_blank" rel="noopener" href="https://coq-zh.github.io/SF-zh/">looks here</a>.</p>
+This article only guarantees that readers can establish a preliminary understanding of formal theorem proving &amp; program verification. If you’re looking for a book with a richer and more substantial introduction to get familiar with Coq, I recommend you read the <em>“Software Foundations Vol.1: Logical Foundations”</em> at least.</p>
 <h2 id="1-proof-equation"><a class="markdownIt-Anchor" href="#1-proof-equation"></a> 1. Proof Equation</h2>
 <p>Equation is one of the base of math, we started with a proof about group theory.</p>
 <figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Module</span> Group.</span><br><span class="line"><span class="keyword">Class</span> GroupOperator: <span class="keyword">Type</span> := &#123;</span><br><span class="line">    tote_set: <span class="keyword">Type</span>;</span><br><span class="line">    zero: tote_set;</span><br><span class="line">    add: tote_set -&gt; tote_set -&gt; tote_set;</span><br><span class="line">    neg: tote_set -&gt; tote_set;</span><br><span class="line">&#125;.</span><br><span class="line"></span><br><span class="line"><span class="keyword">Notation</span> <span class="string">&quot;0&quot;</span> := (zero).</span><br><span class="line"><span class="keyword">Notation</span> <span class="string">&quot;a + b&quot;</span> := (add a b).</span><br><span class="line"><span class="keyword">Notation</span> <span class="string">&quot;- a&quot;</span> := (neg a).</span><br><span class="line"></span><br><span class="line"><span class="keyword">Check</span> <span class="keyword">forall</span> (G: GroupOperator) (x y: tote_set), x + y = y + x.</span><br></pre></td></tr></table></figure>
