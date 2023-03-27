@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://jiansyuan.github.io/image/Talk-About-Tree-Chain-Partition1.png">
 <meta property="article:published_time" content="2023-03-26T14:30:00.000Z">
-<meta property="article:modified_time" content="2023-03-27T11:22:33.025Z">
+<meta property="article:modified_time" content="2023-03-27T12:39:50.128Z">
 <meta property="article:author" content="Contexploit">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="Graph-Theory">
@@ -120,7 +120,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text"> 目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%86%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text"> 先决知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-number">3.</span> <span class="toc-text"> 基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E5%87%BA%E5%AE%9A%E4%B9%89"><span class="toc-number">4.</span> <span class="toc-text"> 给出定义</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text"> 目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%86%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text"> 先决知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-number">3.</span> <span class="toc-text"> 基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E5%87%BA%E5%AE%9A%E4%B9%89"><span class="toc-number">4.</span> <span class="toc-text"> 给出定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text"> 伪代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dfs_1"><span class="toc-number">5.1.</span> <span class="toc-text"> DFS_1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dfs_2"><span class="toc-number">5.2.</span> <span class="toc-text"> DFS_2</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -150,7 +150,7 @@
     </div>
 
  |
-      <span class="post-count">397words, 1mins</span>
+      <span class="post-count">725words, 3mins</span>
       
 
       
@@ -185,6 +185,45 @@
 <li>轻链: 所有不是重链的链.</li>
 </ol>
 <p><img src="/image/Talk-About-Tree-Chain-Partition1.png" alt=""></p>
+<p>如图, 在这一颗树中, 被以红色填充的点是重子节点, 额外被两条红线标记的边是重边. 该图符合上文给出的定义, 可以看出图上存在三条重链.</p>
+<h2 id="伪代码"><a class="markdownIt-Anchor" href="#伪代码"></a> 伪代码</h2>
+<p>我们首先通过两次的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>F</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">DFS</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span> 来计算出一些信息.</p>
+<h3 id="dfs_1"><a class="markdownIt-Anchor" href="#dfs_1"></a> DFS_1</h3>
+<p>给出以下伪代码:</p>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;_&#039; at position 27: …y}{l}
+\text{DFS_̲1 }(node,father…'>\begin{array}{l}
+\text{DFS_1 }(node,father,depth) \\
+\begin{array}{ll}
+1 &amp; node.father \gets father \\
+2 &amp; node.heavy\_son\gets node.heavy\_son.size\gets 0 \\
+3 &amp; node.depth\gets depth \\
+4 &amp; node.size\gets 1 \\
+5 &amp; \textbf{for }\text{each }node\text{&#039;s son }node\_son \\
+6 &amp; \qquad node.size\gets node.size + \text{DFS_1 }(node\_son,node,depth+1) \\
+7 &amp; \qquad \textbf{if }node\_son.size&gt; node.heavy\_son.size \\
+8 &amp; \qquad \textbf{then }node.heavy\_son\gets node\_son \\
+9 &amp; \textbf{return } node.size
+\end{array}
+\end{array}
+</p>
+<p>这段代码处理了每个节点的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>a</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi><mo separator="true">,</mo><mi>h</mi><mi>e</mi><mi>a</mi><mi>v</mi><mi>y</mi><mi mathvariant="normal">_</mi><mi>s</mi><mi>o</mi><mi>n</mi><mo separator="true">,</mo><mi>d</mi><mi>e</mi><mi>p</mi><mi>t</mi><mi>h</mi><mo separator="true">,</mo><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">father, heavy\_son, depth, size</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span> 这些信息, 其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">size</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"></span></span> 是以这个点为根的子树的点数量.</p>
+<h3 id="dfs_2"><a class="markdownIt-Anchor" href="#dfs_2"></a> DFS_2</h3>
+<p class='katex-block katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;_&#039; at position 27: …y}{l}
+\text{DFS_̲2 }(node,top) \…'>\begin{array}{l}
+\text{DFS_2 }(node,top) \\
+\begin{array}{ll}
+1 &amp; node.index \gets tot \gets tot+1 \\
+2 &amp; new\_id(node.index) \gets node.value \\
+3 &amp; node.top \gets top \\
+4 &amp; \textbf{if }node.heavy\_son \neq empty \\
+5 &amp; \textbf{then }\text{DFS_2}(node.heavy\_son,top) \\
+6 &amp; \textbf{for }\text{each }node\text{&#039;s son }node\_son \\
+7 &amp; \qquad \textbf{if }node\_son\neq node.heavy\_son \\
+8 &amp; \qquad \textbf{then }\text{DFS_2}(node\_son,node\_son) \\
+9 &amp; \textbf{return} \\
+\end{array}
+\end{array}
+</p>
 
   </div>
 </article>
@@ -231,7 +270,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text"> 目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%86%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text"> 先决知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-number">3.</span> <span class="toc-text"> 基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E5%87%BA%E5%AE%9A%E4%B9%89"><span class="toc-number">4.</span> <span class="toc-text"> 给出定义</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text"> 目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%86%B3%E7%9F%A5%E8%AF%86"><span class="toc-number">2.</span> <span class="toc-text"> 先决知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-number">3.</span> <span class="toc-text"> 基本思想</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E5%87%BA%E5%AE%9A%E4%B9%89"><span class="toc-number">4.</span> <span class="toc-text"> 给出定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E4%BB%A3%E7%A0%81"><span class="toc-number">5.</span> <span class="toc-text"> 伪代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dfs_1"><span class="toc-number">5.1.</span> <span class="toc-text"> DFS_1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dfs_2"><span class="toc-number">5.2.</span> <span class="toc-text"> DFS_2</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
