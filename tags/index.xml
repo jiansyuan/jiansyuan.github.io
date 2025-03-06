@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on JiansYuan&#39;s Blog</title>
+    <link>https://jiansyuan.github.io/tags/</link>
+    <description>Recent content in Tags on JiansYuan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <copyright>Copyright © 2000–2025</copyright>
+    <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jiansyuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Graph Theory</title>
+      <link>https://jiansyuan.github.io/tags/graph-theory/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/tags/graph-theory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Index</title>
+      <link>https://jiansyuan.github.io/tags/index/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/tags/index/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://jiansyuan.github.io/tags/tutorial/</link>
+      <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DP</title>
+      <link>https://jiansyuan.github.io/tags/dp/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/tags/dp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HNOI</title>
+      <link>https://jiansyuan.github.io/tags/hnoi/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/tags/hnoi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Solution</title>
+      <link>https://jiansyuan.github.io/tags/solution/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/tags/solution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Codeforces</title>
+      <link>https://jiansyuan.github.io/tags/codeforces/</link>
+      <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/tags/codeforces/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>USACO</title>
+      <link>https://jiansyuan.github.io/tags/usaco/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/tags/usaco/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coq</title>
+      <link>https://jiansyuan.github.io/tags/coq/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/tags/coq/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
