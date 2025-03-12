@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graph Theory on JiansYuan&#39;s Blog</title>
-    <link>https://jiansyuan.github.io/tags/graph-theory/</link>
+    <link>http://localhost:1313/tags/graph-theory/</link>
     <description>Recent content in Graph Theory on JiansYuan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
     <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://jiansyuan.github.io/tags/graph-theory/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/graph-theory/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Talk about Tree Chain Partition</title>
-      <link>https://jiansyuan.github.io/post/talk-about-tree-chain-partition/</link>
+      <link>http://localhost:1313/post/talk-about-tree-chain-partition/</link>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://jiansyuan.github.io/post/talk-about-tree-chain-partition/</guid>
+      <guid>http://localhost:1313/post/talk-about-tree-chain-partition/</guid>
       <description>&lt;h2 id=&#34;先决知识&#34;&gt;先决知识&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;基本的图论和数据结构知识&lt;/li&gt;
@@ -36,16 +36,16 @@
 &lt;li&gt;重链: 由一或多条重边连接成的延续的路径.&lt;/li&gt;
 &lt;li&gt;轻链: 所有不是重链的链.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://jiansyuan.github.io/image/Talk-About-Tree-Chain-Partition1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/image/Talk-About-Tree-Chain-Partition1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;如图, 在这一颗树中, 被以红色填充的点是重子节点, 额外被两条红线标记的边是重边. 该图符合上文给出的定义, 可以看出图上存在三条重链.&lt;/p&gt;
 &lt;h2 id=&#34;过程分析&#34;&gt;过程分析&lt;/h2&gt;
 &lt;p&gt;我们首先通过两次的 $DFS$ 来计算出一些信息.&lt;/p&gt;
 &lt;h3 id=&#34;dfs_1&#34;&gt;DFS_1&lt;/h3&gt;
 &lt;p&gt;给出以下伪代码:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://jiansyuan.github.io/image/Talk-About-Tree-Chain-Partition2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/image/Talk-About-Tree-Chain-Partition2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这段代码处理了每个节点的 $father, heavy_son, depth, size$ 这些信息, 其中 $size$ 是以这个点为根的子树的点数量.&lt;/p&gt;
 &lt;h3 id=&#34;dfs_2&#34;&gt;DFS_2&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://jiansyuan.github.io/image/Talk-About-Tree-Chain-Partition3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/image/Talk-About-Tree-Chain-Partition3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这段代码处理出每个点映射到线性结构上对应的标号 $index$ 和线性结构每个标号对应到的点 $new_id$. 还按照定义处理出重子节点 $heavy_son$, 以及重链链头信息 $top$.&lt;/p&gt;
 &lt;h3 id=&#34;线段树&#34;&gt;线段树&lt;/h3&gt;
 &lt;p&gt;随后就能根据 $new_id$ 建出一颗线段树, 提供对区间求和的更新和查询操作.

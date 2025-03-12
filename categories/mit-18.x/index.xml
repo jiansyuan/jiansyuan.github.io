@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MIT 18.x on JiansYuan&#39;s Blog</title>
+    <link>http://localhost:1313/categories/mit-18.x/</link>
+    <description>Recent content in MIT 18.x on JiansYuan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>cn</language>
+    <copyright>Copyright © 2000–2025</copyright>
+    <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/mit-18.x/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Notes on MIT 18.01.1 Calculus I</title>
+      <link>http://localhost:1313/post/mit_18.01.1_calculus_i/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/mit_18.01.1_calculus_i/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;unit-0-limits&#34;&gt;Unit 0: Limits&lt;/h2&gt;
+&lt;h3 id=&#34;definition-of-one-sided-limit&#34;&gt;Definition of One-Sided Limit&lt;/h3&gt;
+&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u0lim1_leftright.svg&#34;&gt;
+&lt;p&gt;Suppose $f(x)$ gets really close to $R$ for values of $x$ that get really close to and are not equal to $a$ from the right. Then we say $R$ is the &lt;code&gt;right-hand limit&lt;/code&gt; of the function $f(x)$ as $x$ approaches $a$ from the right.&lt;/p&gt;
+&lt;p&gt;We note
+$$
+f(x)\to R\ as\ x\to a^+\\
+or\\
+\lim_{x\to a^+}f(x)=R
+$$
+If $f(x)$ gets really close to $L$ for values of $x$ that get really close to and are not equal to $a$ from the left, we say that $L$ is the &lt;code&gt;left-hand limit&lt;/code&gt; of the function $f(x)$ as $x$ approaches $a$ from the left.&lt;/p&gt;
+&lt;p&gt;We note
+$$
+f(x)\to L\ as\ x\to a^-\\
+or\\
+\lim_{x\to a^-}f(x)=L
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;definition-of-the-limit&#34;&gt;Definition of the Limit&lt;/h3&gt;
+&lt;p&gt;If a function $f(x)$ approaches some value $L$ as $x$ approaches $a$ from both the right and the left, then &lt;code&gt;the limit&lt;/code&gt; of $f(x)$ exists and equals $L$.&lt;/p&gt;
+&lt;p&gt;Write the limit in symbols, if
+$$
+\lim_{x\to a^+}f(x)=\lim_{x\to a^-}f(x)=L
+$$
+then
+$$
+\lim_{x\to a}f(x) = L
+$$
+In other way,
+$$
+f(x)\to L \quad as\quad x\to a
+$$
+The important thing is that $x$ is approaching $a$ but does not equal $a$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Here is the formal definition of the limit:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The statement $\lim_{x\to a}f(x)=L$ is defined as:&lt;/p&gt;
+&lt;p&gt;For all $\varepsilon&amp;gt;0$, there exists some $\delta&amp;gt;0$ such that if $0&amp;lt;|x-a|&amp;lt;\delta$, then $|f(x)-L|&amp;lt;\varepsilon$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-limit-laws&#34;&gt;The Limit Laws&lt;/h3&gt;
+&lt;p&gt;Suppose $\lim_{x\to a}f(x)=L,\quad \lim_{x\to a}g(x)=M$.&lt;/p&gt;
+&lt;p&gt;Then here are some Limit Laws:
+$$
+\begin{aligned}
+\text{Addition:}\quad &amp;amp;\lim_{x\to a}[f(x)+g(x)]&amp;amp;=&amp;amp;\quad L+M\\
+\text{Subtraction:}\quad &amp;amp;\lim_{x\to a}[f(x)-g(x)]&amp;amp;=&amp;amp;\quad L-M\\
+\text{Multiplication:}\quad &amp;amp;\lim_{x\to a}[f(x)\cdot g(x)]&amp;amp;=&amp;amp;\quad L\cdot M
+\end{aligned}
+$$
+It is noteworthy that we only have part of the &lt;code&gt;Limit Law for Divison&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;If $\lim_{x\to a}f(x)=L$ and $\lim_{x\to a}g(x)=M$, then:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If $M\ne 0$, then $\lim_{x\to a}\frac {f(x)}{g(x)}=\frac L M$&lt;/li&gt;
+&lt;li&gt;If $M=0$, then $\lim_{x\to a}\frac{f(x)}{g(x)}$ does not exist&lt;/li&gt;
+&lt;li&gt;If $M=0$ and $L= 0$, then $\lim_{x\to a}\frac{f(x)}{g(x)}$ might exist or not exist. It is necessary to do more work to determine whether or not its limit exists, and what it is if it does exist.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;definition-of-continuous-at-a-point&#34;&gt;Definition of Continuous at a Point&lt;/h3&gt;
+&lt;p&gt;We say that a function $f$ is &lt;code&gt;continuous at a point&lt;/code&gt; $x=a$ if
+$$
+\lim_{x\to a}f(x)=f(a)
+$$
+In particular, if either $f(a)$ or $\lim_{x\to a}f(x)$ fails to exist, then $f$ is discontinuous at $a$.&lt;/p&gt;
+&lt;p&gt;We say that a function $f$ is &lt;code&gt;right-continuous at a point&lt;/code&gt; $x=a$ if $\lim_{x\to a^+}f(x)=f(a)$.&lt;/p&gt;
+&lt;p&gt;We say that a function $f$ is &lt;code&gt;left-continuous at a point&lt;/code&gt; $x=a$ if $\lim_{x\to a^-}f(x)=f(a)$.&lt;/p&gt;
+&lt;p&gt;We say that a function $f$ has a &lt;code&gt;jump discontinuity&lt;/code&gt; at $x=a$ if both of the left-hand limit $\lim_{x\to a^-}f(x)$ and the right-hand limit $\lim_{x\to a^+}f(x)$ exist but they are not equal.&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u0lim2_jump.svg&#34;&gt;
+&lt;p&gt;We say that a function $f$ has a &lt;code&gt;removable discontinuity&lt;/code&gt; at $x=a$ if the overall limit $\lim_{x\to a}f(x)$ exists, but the $\lim_{x\to a}f(x)\ne f(a)$.&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u0lim2_removable.svg&#34;&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;basic-continuous-functions&#34;&gt;Basic Continuous Functions&lt;/h3&gt;
+&lt;p&gt;The following functions are continuous at all real numbers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;all polynomials&lt;/li&gt;
+&lt;li&gt;$\sqrt[3]{x}$&lt;/li&gt;
+&lt;li&gt;$|x|$&lt;/li&gt;
+&lt;li&gt;$\cos(x)$ and $\sin(x)$&lt;/li&gt;
+&lt;li&gt;exponential functions $a^x$ which has $a&amp;gt;0$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following functions are continuous at the specified values of $x$:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\sqrt{x}, \forall x&amp;gt;0$&lt;/li&gt;
+&lt;li&gt;$\tan(x), \forall x\ \text{is defined}$&lt;/li&gt;
+&lt;li&gt;logarithmic functions $\log_a x$, where $a\in(0,\infty)$ with $a\neq 1$ and $x\in(0,\infty)$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;intermediate-value-theorem&#34;&gt;Intermediate Value Theorem&lt;/h3&gt;
+&lt;p&gt;If the function $f$ is continuous on the interval $[a,b]$, and $M$ lies between the values of $f(a)$ and $f(b)$, then there is at least one point $c$ between $a$ and $b$ such that $f(c)=M$.&lt;/p&gt;
+&lt;p&gt;In other words,  a function $f$ is &lt;code&gt;continuous on a closed interval&lt;/code&gt; $[a,b]$ if it is right-continuous at $a$, left-continuous at $b$, and continuous at all points between $a$ and $b$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;unit-1-the-derivative&#34;&gt;Unit 1: The Derivative&lt;/h2&gt;
+&lt;h3 id=&#34;the-definition-of-average-rate-of-change&#34;&gt;The Definition of Average Rate of Change&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;average rate of change&lt;/code&gt; of a function $f(x)$ over an interval $a\le x\le b$ is defined to be
+$$
+\frac {f(b)-f(a)}{b-a}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;geometrically&#34;&gt;Geometrically&lt;/h3&gt;
+&lt;p&gt;In geometrical, the average rate of change is the slope of the secant line through the points $(a,f(a))$ and $(b,f(b))$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-definition-of-the-derivative&#34;&gt;The Definition of the Derivative&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;derivative&lt;/code&gt; of a function $f(x)$ at a point $x=a$ is defined as
+$$
+f^\prime(a)=\lim_{b\to a}\frac{f(b)-f(a)}{b-a}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;geometrically-1&#34;&gt;Geometrically&lt;/h3&gt;
+&lt;p&gt;In geometrical, the derivative $f^\prime(a)$ is the slope of the tangent line to the function $f$ through the point $(a, f(a))$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;property-of-derivatives&#34;&gt;Property of Derivatives&lt;/h3&gt;
+&lt;p&gt;The derivative of a function is itself a function, and satsifies the following linearity properties:&lt;/p&gt;
+&lt;h4 id=&#34;derivatives-of-constant-multiples&#34;&gt;Derivatives of Constant Multiples&lt;/h4&gt;
+&lt;p&gt;If $g(x)=k\cdot f(x)$ for some constant $k$, then
+$$
+g^\prime(x)=k\cdot f^\prime(x)
+$$
+at all points where $f$ is differentiable.&lt;/p&gt;
+&lt;h4 id=&#34;derivatives-of-sums&#34;&gt;Derivatives of Sums&lt;/h4&gt;
+&lt;p&gt;If $h(x)=f(x)+g(x)$, then
+$$
+h^\prime(x)=g^\prime(x)+f^\prime(x)
+$$
+at all points where $f$ and $g$ are differentiable.&lt;/p&gt;
+&lt;h4 id=&#34;derivatives-of-differences&#34;&gt;Derivatives of Differences&lt;/h4&gt;
+&lt;p&gt;If $h(x)=f(x)-g(x)$, then
+$$
+h^\prime(x)=f^\prime(x)-g^\prime(x)
+$$
+at all points where $f$ and $g$ are differentiable.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-power-rule&#34;&gt;The Power Rule&lt;/h3&gt;
+&lt;p&gt;If $n$ is any fixed real numberm, and $f(x)=x^n$, then $f^\prime(x)=n\cdot x^{n-1}$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;properties-of-leibniz-notation&#34;&gt;Properties of Leibniz Notation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Unit:&lt;/strong&gt; Suppose $P$ has units of pressure and $t$ has units of time. Then the derivative
+$$
+\frac{dP}{dt}
+$$
+has units of pressure per unit time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Evaluating at Points:&lt;/strong&gt; To denote the derivative of a function at a particular point, for example at $x=3$, we write
+$$
+\left.\frac{df}{dx}\right|_{x=3},
+$$
+where the ertical bar indicates that the derivative is evaluated at $x=3$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Derivatives Acting on Functions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;One may write
+$$
+\frac{d}{dx}\left(x^2\right)
+$$
+for the derivative of $x^2$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Alternatively, we may write
+$$
+\frac{d}{dy}\left(y^3+2y^2\right).
+$$
+for a more complex function $y^3+2y^2$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;second-derivative&#34;&gt;Second Derivative&lt;/h3&gt;
+&lt;p&gt;The second derivative of a function $f(x)$ is defined as the derivative of $f^\prime(x)$, and is denoted by either
+$$
+f^{\prime\prime}(x)
+$$
+or
+$$
+\frac{d^2 f}{dx^2}
+$$
+Notice that in the Leibniz Notation for the second derivative, the square in the demoniator should be marked on the $d$, while in the numerator, the squre should be placed after $x$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;second-derivative-and-concavity-summary&#34;&gt;Second Derivative and Concavity Summary&lt;/h3&gt;
+&lt;p&gt;On intervals where $f^{\prime\prime}&amp;gt;0$, the function $f$ is concave up.&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u1der5_concaveupgraph.svg&#34;&gt;
+&lt;p&gt;On intervals where $^{\prime\prime}&amp;lt;0$, the function $f$ is concave down.&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u1der5_concavedowngraph.svg&#34;&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;derivative-of-sine-and-cosine&#34;&gt;Derivative of Sine and Cosine&lt;/h3&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\frac d {dx} sin(x)\quad&amp;amp;=\quad cos(x)\\
+\frac d {dx} cos(x)\quad&amp;amp;=\quad-sin(x)\\
+\frac {d^2} {dx^2} sin(x)\quad&amp;amp;=\quad -sin(x)\\
+\frac {d^2} {dx^2} cos(x)\quad&amp;amp;=\quad -cos(x)
+\end{aligned}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;unit-2-differentiation&#34;&gt;Unit 2: Differentiation&lt;/h2&gt;
+&lt;h3 id=&#34;linear-approximation&#34;&gt;Linear Approximation&lt;/h3&gt;
+&lt;p&gt;The linear approximation for a function $f$ near a point $x=a$ is given by the following equivalent formulas:
+$$
+\begin{aligned}
+\Delta f &amp;amp;\approx \left. \frac{df}{dx}\right |_{x=a} \cdot \Delta x\quad &amp;amp;for\ \Delta x\ near\ 0\\
+f(x)&amp;amp;\approx f^\prime(a)\cdot(x-a)+f(a)\quad &amp;amp;for\ x\ near\ a
+\end{aligned}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-product-rule&#34;&gt;The Product Rule&lt;/h3&gt;
+&lt;p&gt;If $h(x)=f(x)\cdot g(x)$, then
+$$
+h^\prime(x)=f(x)\cdot g^\prime(x)+f^\prime(x)\cdot g(x)
+$$
+at all points where the derivatives $f^\prime(x)$ and $g^\prime(x)$ are defined.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-quotient-rule&#34;&gt;The Quotient Rule&lt;/h3&gt;
+&lt;p&gt;If $h(x)=\frac{f(x)}{g(x)}$ for all $x$, then
+$$
+h^\prime(x)=\frac{f^\prime(x) \cdot g(x)-f(x)\cdot g^\prime(x)}{g(x)^2}
+$$
+at all points where $f$ and $g$ are differentiable and $g(x)\ne 0$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-chain-rule&#34;&gt;The Chain Rule&lt;/h3&gt;
+&lt;p&gt;If $h(x)=f(g(x))$, then
+$$
+h^\prime(x)=f^\prime(g(x))\cdot g^\prime(x)
+$$
+at all points where the derivatives $f^\prime(g(x))$ and $g^\prime(x)$ are defined.&lt;/p&gt;
+&lt;p&gt;Alternatively, if $y=f(u)$, and $u=g(x)$, then
+$$
+\left.\frac{dy}{dx}\right\vert_{x=a}= \left. \frac{dy}{du}\right\vert_{u=g(a)} \cdot \left. \frac{du}{dx}\right\vert_{x=a}
+$$
+at any point $x=a$ where the derivatives $\left.\frac{dy}{du}\right\vert_{u=g(a)}$ and $\left.\frac{du}{dx}\right\vert_{x=a}$ are defined.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;implicit-differentiation&#34;&gt;Implicit Differentiation&lt;/h3&gt;
+&lt;p&gt;To implicitly differentiate a function $f(x)\cdot g(x)=1$ with respect to $x$:
+$$
+\begin{aligned}
+&amp;amp;\frac d {dx}(f(x)\cdot g(y)\quad &amp;amp;=&amp;amp; \quad 1)\\
+&amp;amp;\frac d {dx}(f(x)\cdot g(y))\quad &amp;amp;=&amp;amp; \quad \frac d {dx}1\\
+&amp;amp;\frac d{dx}(f(x)\cdot g(y))\quad &amp;amp;=&amp;amp; \quad 0\\
+&amp;amp;f^\prime(x)\cdot g(x)+f(x)\cdot\frac{d}{dx}g(y)\quad &amp;amp;=&amp;amp; \quad 0\\
+&amp;amp;f^\prime(x)\cdot g(x)+f(x)\cdot g^\prime(y)\cdot\frac{dy}{dx}\quad &amp;amp;=&amp;amp; \quad 0
+\end{aligned}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;definition-of-inverser-function&#34;&gt;Definition of Inverser Function&lt;/h3&gt;
+&lt;p&gt;If functions $f$ and $g$ satisfy $g(f(x))=x$ and $f(g(y))=y$, then we say $g$ is the inverse of $f$, and denote it by $f^{-1}$. Similarly, $f=g^{-1}$.&lt;/p&gt;
+&lt;p&gt;If a function $f$ has an inverse function $f^{-1}$, then $f^{-1}(b)=a$ if and only if $f(a)=b$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;definition-of-one-to-one&#34;&gt;Definition of One-to-One&lt;/h3&gt;
+&lt;p&gt;A function $f$ is &lt;code&gt;one-to-one&lt;/code&gt; if $f(a)\ne f(b)$ whenever $a\ne b$. It is one-to-one if and only if its graphy satisfies the horizontal line test(noi horizontal line intersects its graph at more than one place).&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;domain-and-range&#34;&gt;Domain and Range&lt;/h3&gt;
+&lt;p&gt;Recall that the &lt;code&gt;domain&lt;/code&gt; of a function $f$ is the set of allowable input values. For instance, the domain of the function $f(x)=\frac 1 x$ si the set of all non-zero real numbers.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;range&lt;/code&gt; of $f$ is the set of all possible output values. For instance, the range of the function $g(x)=x^2$ is the set of all real numbers that are non-negative.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;derivatives-of-inverse-functions&#34;&gt;Derivatives of Inverse Functions&lt;/h3&gt;
+&lt;p&gt;If $g$ is a inverse of a function $f$, then
+$$
+g^\prime = \frac 1 {f^\prime (g(x))}
+$$
+at all $x$ where $f^\prime(g(x))$ exists and is non-zero.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;derivatives-of-the-inverse-trig-functions&#34;&gt;Derivatives of the Inverse Trig Functions&lt;/h3&gt;
+&lt;p&gt;We now have more basic functions that we can differentiate.
+$$
+\begin{aligned}
+\frac d {dx}\arcsin x\quad&amp;amp;=&amp;amp;\quad \frac 1 {\sqrt{1-x^2}}\\
+\frac d {dx}\arccos x\quad&amp;amp;=&amp;amp;\quad -\frac 1 {\sqrt{1-x^2}}\\
+\frac d {dx}\arctan x\quad&amp;amp;=&amp;amp;\quad \frac 1 {1+x^2}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-derivative-of-an-exponential-function&#34;&gt;The Derivative of an exponential function&lt;/h3&gt;
+&lt;p&gt;The derivative of the exponential function is
+$$
+\frac d {dx}a^x=M(a)a^x
+$$
+where the mystery number $M(a)$ is the slope of the tangent line at zero:
+$$
+M(a)=\left.\frac d {dx}a^x\right\vert_{x=0}=\lim_{\Delta x\to 0}\frac{a^{\Delta x}-1}{\Delta x}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;definition-of-e&#34;&gt;Definition of $e$&lt;/h3&gt;
+&lt;p&gt;The base $e$ is the unique real number so that
+$$
+\frac d{dx}e^x=e^x
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;differentiating-exponential-function-with-other-bases&#34;&gt;Differentiating Exponential Function with other Bases&lt;/h3&gt;
+&lt;p&gt;We can finally identify out mystery number, and differentiate exponential functions with any base.&lt;/p&gt;
+&lt;p&gt;For any postivie constant $a$,
+$$
+\frac d{dx}a^x=a^x\ln a
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;properties-of-x&#34;&gt;Properties of $x$&lt;/h3&gt;
+&lt;p&gt;$\log_a(x)$ is the inverse function of $ a^x$.&lt;/p&gt;
+&lt;p&gt;The natural log, denoted $\ln(x)$, is the inverse function of $e^x$.&lt;/p&gt;
+&lt;p&gt;We have&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\ln e^x=x$&lt;/li&gt;
+&lt;li&gt;$e^{\ln x}=x$&lt;/li&gt;
+&lt;li&gt;$\ln(ab)=\ln(a)+\ln(b)$&lt;/li&gt;
+&lt;li&gt;$\ln(a^b)=b\cdot\ln(a)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;The Derivative of the Natural Logarithm&lt;/p&gt;
+&lt;p&gt;Now we can differentiate more basic function:
+$$
+\frac d {dx}\ln x=\frac 1 x
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;unit-3-approximations&#34;&gt;Unit 3: Approximations&lt;/h2&gt;
+&lt;h3 id=&#34;linear-approximations-of-basic-functions-near-0&#34;&gt;Linear Approximations of Basic Functions Near 0&lt;/h3&gt;
+&lt;p&gt;$$
+\begin{aligned}
+&amp;amp;(1+x)^r&amp;amp;\approx&amp;amp;\quad 1+r\cdot x\\
+&amp;amp;\sin(x)&amp;amp;\approx&amp;amp;\quad \sin(0)+cos(0)\cdot x&amp;amp;=&amp;amp;x\\
+&amp;amp;\cos(x)&amp;amp;\approx&amp;amp;\quad\cos(0)-\sin(0)\cdot x&amp;amp;=&amp;amp;1\\
+&amp;amp;e^x &amp;amp;\approx&amp;amp;\quad e^0+e^0\cdot x&amp;amp;=&amp;amp;1+x\\
+&amp;amp;\ln(1+x)&amp;amp;\approx&amp;amp;\quad\ln(1+0)+\frac 1{1+0}x&amp;amp;=&amp;amp;x
+\end{aligned}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;best-fit-quadratic&#34;&gt;Best Fit Quadratic&lt;/h3&gt;
+&lt;p&gt;The best fit quadratic or best fit parabola to a function $f(x)$ at the point $x=0$ is the quadratic function $q(x)$ whose value agree with the value of $f$ at $x=0$, and those first and second derivatives agree with the first and second derivatives of $f$ at $x=0$.&lt;/p&gt;
+&lt;p&gt;i.e.
+$$
+\begin{aligned}
+f(0)\quad &amp;amp;=&amp;amp;q(0)\\
+f(0)^\prime\quad &amp;amp;=&amp;amp;q^\prime(0)\\
+f(0)^{\prime\prime}\quad &amp;amp;=&amp;amp;q^{\prime\prime}(0)
+\end{aligned}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;quadratic-approximation&#34;&gt;Quadratic Approximation&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;quadratic approximation&lt;/code&gt; near $x=a$ is the &lt;code&gt;best fit parabola&lt;/code&gt; to $f$ at the point $x=a$.&lt;/p&gt;
+&lt;p&gt;The formula for the quadratic approximation of a function $f$ near a point $x=a$ is
+$$
+f(x)\approx f(b)+f^\prime (a)\cdot (x-a)+\frac{f^{\prime\prime}(a)}{2}\cdot(x-a)^2
+$$
+When $a=0$, this quadratic approximation becomes
+$$
+f(x)\approx f(0)+f^\prime(0)\cdot x+\frac{f^{\prime\prime}(0)}2 \cdot x^2
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;big-o-notation&#34;&gt;Big-O Notation&lt;/h3&gt;
+&lt;p&gt;A function $f(x)$ is on the order $x^n$ near $x=0$, which is denoted using big &amp;ldquo;O&amp;rdquo; notation as $f(x)=O(x^n)$ near $x=0$, if $\vert f(x)\vert \le k\cdot x^n$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;newtons-method&#34;&gt;Newton&amp;rsquo;s Method&lt;/h3&gt;
+&lt;p&gt;Given a function $f(x)$, find $x$ such that $f(x)=0$.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Make a good guess of $x_0$.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Call $x_1$ the $x-$intercept of the tangent line through $(x_0, f(x_0))$. It has the formula
+$$
+x_1=x_0-\frac{f(x_0)}{f^\prime(x_0)}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Repeat. The general formula is
+$$
+x_{n+1}=x_n-\frac{f(x_n)}{f^\prime(x_n)}
+$$
+for the $n=0,1,2,\cdots$ .&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;unit-4-application&#34;&gt;Unit 4: Application&lt;/h2&gt;
+&lt;h3 id=&#34;definition-of-critical-points&#34;&gt;Definition of Critical Points&lt;/h3&gt;
+&lt;p&gt;The critical points of a function $f(x)$ to be all points $x$ in the domain of $f(x)$ such that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$f^\prime(x)=0$, or&lt;/li&gt;
+&lt;li&gt;$f^\prime(x)$ does not exist.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-first-derivative-test&#34;&gt;The First Derivative Test&lt;/h3&gt;
+&lt;h4 id=&#34;finding-local-maxima-and-minima&#34;&gt;Finding Local Maxima and Minima&lt;/h4&gt;
+&lt;p&gt;Suppose the function $f(x)$ is continuous at $x=a$ and has a critical point at $x=a$.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;$f$ has a local minimum at $x=a$ if $f^\prime(x)&amp;lt;0$ just to the left of $a$ and $f^\prime(x)&amp;gt;0$ just to the right of $a$.&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u4app1_test2.svg&#34;&gt;&lt;/p&gt;
+&lt;hr style=&#34;
+    border: 0;
+    height: 0;
+    border-top: 1px dashed rgba(2, 135, 96, 0.2); 
+    border-bottom: 0;
+    margin: 0.5em 0;
+&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$f$ has a local maximum at $x=a$ if $f^\prime(x)&amp;gt;0$ just to the left of $a$ and $f^\prime(x)&amp;lt;0$ just to the right of $a$.&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u4app1_test1.svg&#34;&gt;
+&lt;hr style=&#34;
+    border: 0;
+    height: 0;
+    border-top: 1px dashed rgba(2, 135, 96, 0.2); 
+    border-bottom: 0;
+    margin: 0.5em 0;
+&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The point $x=a$ is neither a local minimum nor a local maximum of $f$ if $f^\prime(x)$ has the same sign just to the left of $a$ and just to the right of $a$.&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u4app1_test3.svg&#34;&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-second-derivative-test&#34;&gt;The Second Derivative Test&lt;/h3&gt;
+&lt;p&gt;Suppose that $x=a$ is a critical point of $f$, with $f^\prime(a)=0$.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;If $f^{\prime\prime}(a)&amp;gt;0$, then $f$ has a local minimum at $x=a$.&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u4app1_te4.svg&#34;&gt;
+&lt;hr style=&#34;border: 0;height: 0;border-top: 1px dashed rgba(2, 135, 96, 0.2);border-bottom: 0;margin: 0.5em 0;&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If $f^{\prime\prime}(a)&amp;lt;0$, the $f$ has a local maximum at $x=a$.&lt;/p&gt;
+&lt;img src=&#34;http://localhost:1313/image/MIT_18.01/images_u4app1_test5.svg&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If $f^{\prime\prime}(a)=0$, or does not exist, then the test is inconclusive, which means there might be a local minimum, or a local maximum, or neither.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;definition-of-inflection-point&#34;&gt;Definition of Inflection Point&lt;/h3&gt;
+&lt;p&gt;An inflection point is a point where the concavity of the function changes. That is the second derivative $f^{\prime\prime}(x)$ changes sign:&lt;/p&gt;
+&lt;p&gt;$f^{\prime\prime}&amp;gt;0$ just to the left of $x$ and $f^{\prime\prime}(x)&amp;lt;0$ just to the right of $x$, or vice versa.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;general-strategy-for-sketching-functions&#34;&gt;General Strategy for Sketching Functions&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Plot
+&lt;ul&gt;
+&lt;li&gt;discontinuities (especially infinite ones)&lt;/li&gt;
+&lt;li&gt;end points (or $x\to \infty$)&lt;/li&gt;
+&lt;li&gt;easy points ($x=0, \text{ or }y=0$)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Plot critical points and values. (Solve $f^{\prime}(x)=0$ or undefined.)&lt;/li&gt;
+&lt;li&gt;Decide whether $f^{\prime}&amp;lt;0$ or $f^{\prime}&amp;gt;0$ on each interval between endpoints, critical points, and discontinuities. (Valuable double check)&lt;/li&gt;
+&lt;li&gt;Identify where $f^{\prime\prime}&amp;lt;0$ and $f^{\prime\prime}&amp;gt;0$ (concave down and concave up).&lt;/li&gt;
+&lt;li&gt;Identify inflection points.&lt;/li&gt;
+&lt;li&gt;Combine into graph.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;indeterminate-forms&#34;&gt;Indeterminate Forms&lt;/h3&gt;
+&lt;p&gt;We call $\frac 0 0$ and $\frac {\infty}{\infty}$ &lt;code&gt;indeterminate forms&lt;/code&gt;, because when we run into them in a limit, they require further analysis to determine whether the numerator or denominator wins in the race to $0$ or $\infty$ respectively, or whether they balance out and reach some other finite limit.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;lhôspitals-rule&#34;&gt;L&#39;Hôspital&#39;s Rule&lt;/h3&gt;
+&lt;p&gt;If
+$$
+\left.
+\begin{aligned}
+&amp;amp;f(x)\to 0 \\
+&amp;amp;g(x)\to 0
+\end{aligned}
+\right.
+\quad as\ x\to a
+$$
+and the functions $f$ and $g$ are differentiate near the point $x=a$, then limit
+$$
+\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f^{\prime}(x)}{g^{\prime}(x)}
+$$
+provided that the left hand limit and the right hand limit exists or is $\pm\infty$.
+Note that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We can replace $a$ with $a^+$ or $a^-$ and the results still hold.&lt;/li&gt;
+&lt;li&gt;We can replace $a$ with $\pm\infty$, and the results still hold.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;other-indeterminate-forms&#34;&gt;Other Indeterminate Forms&lt;/h4&gt;
+&lt;p&gt;Other indeterminate forms $0\cdot\infty$, $\infty -\infty$, $0^0$, $1^\infty$ and $\infty^0$ should be rearranged to be of the form $0/0$ or $\infty / \infty$ in order to apply L&amp;rsquo;Hôpital&amp;rsquo;s rule.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-extreme-value-theorem&#34;&gt;The Extreme Value Theorem&lt;/h3&gt;
+&lt;p&gt;If $f$ is continuous on a closed interval $[a,b]$, then there are points at which $f$ attains its maximum and its minimum on $[a,b]$.&lt;/p&gt;
+&lt;h4 id=&#34;maxima-and-minima&#34;&gt;Maxima and Minima&lt;/h4&gt;
+&lt;p&gt;The maxima and minima will be attained at either a critical point or an end point.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

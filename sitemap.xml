@@ -2,75 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jiansyuan.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/calculus/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/index/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mathematics/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/mit-18.x/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/note/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/mit_18.01.1_calculus_i/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2025-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/about/</loc>
-    <lastmod>2025-03-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jiansyuan.github.io/categories/algorithms/</loc>
+    <loc>http://localhost:1313/categories/algorithms/</loc>
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/categories/</loc>
+    <loc>http://localhost:1313/tags/graph-theory/</loc>
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/tags/graph-theory/</loc>
+    <loc>http://localhost:1313/post/talk-about-tree-chain-partition/</loc>
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/tags/index/</loc>
+    <loc>http://localhost:1313/tags/tutorial/</loc>
     <lastmod>2023-03-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/post/</loc>
-    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jiansyuan.github.io/tags/</loc>
-    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jiansyuan.github.io/post/talk-about-tree-chain-partition/</loc>
-    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jiansyuan.github.io/tags/tutorial/</loc>
-    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jiansyuan.github.io/tags/dp/</loc>
+    <loc>http://localhost:1313/tags/dp/</loc>
     <lastmod>2023-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/tags/hnoi/</loc>
+    <loc>http://localhost:1313/tags/hnoi/</loc>
     <lastmod>2023-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/tags/solution/</loc>
+    <loc>http://localhost:1313/tags/solution/</loc>
     <lastmod>2023-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/post/solution-of-hnoi2008-pack-toys/</loc>
+    <loc>http://localhost:1313/post/solution-of-hnoi2008-pack-toys/</loc>
     <lastmod>2023-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/tags/codeforces/</loc>
+    <loc>http://localhost:1313/tags/codeforces/</loc>
     <lastmod>2023-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/post/solution-of-cf372c/</loc>
+    <loc>http://localhost:1313/post/solution-of-cf372c/</loc>
     <lastmod>2023-03-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/post/solution-of-usaco12open-g/</loc>
+    <loc>http://localhost:1313/post/solution-of-usaco12open-g/</loc>
     <lastmod>2023-03-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/tags/usaco/</loc>
+    <loc>http://localhost:1313/tags/usaco/</loc>
     <lastmod>2023-03-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/tags/coq/</loc>
+    <loc>http://localhost:1313/tags/coq/</loc>
     <lastmod>2023-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/categories/program-verification/</loc>
+    <loc>http://localhost:1313/categories/program-verification/</loc>
     <lastmod>2023-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/post/theorem-proving-and-program-verification-by-coq/</loc>
+    <loc>http://localhost:1313/post/theorem-proving-and-program-verification-by-coq/</loc>
     <lastmod>2023-03-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/post/hi-guest/</loc>
+    <loc>http://localhost:1313/post/hi-guest/</loc>
     <lastmod>2023-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/archives/</loc>
+    <loc>http://localhost:1313/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jiansyuan.github.io/series/</loc>
+    <loc>http://localhost:1313/series/</loc>
   </url>
 </urlset>

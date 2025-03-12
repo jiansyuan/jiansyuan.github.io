@@ -2,31 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on JiansYuan&#39;s Blog</title>
-    <link>https://jiansyuan.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on JiansYuan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
-    <lastBuildDate>Sun, 26 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://jiansyuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>MIT 18.x</title>
+      <link>http://localhost:1313/categories/mit-18.x/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/categories/mit-18.x/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Algorithms</title>
-      <link>https://jiansyuan.github.io/categories/algorithms/</link>
+      <link>http://localhost:1313/categories/algorithms/</link>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://jiansyuan.github.io/categories/algorithms/</guid>
+      <guid>http://localhost:1313/categories/algorithms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Program Verification</title>
-      <link>https://jiansyuan.github.io/categories/program-verification/</link>
+      <link>http://localhost:1313/categories/program-verification/</link>
       <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://jiansyuan.github.io/categories/program-verification/</guid>
+      <guid>http://localhost:1313/categories/program-verification/</guid>
       <description></description>
     </item>
     
