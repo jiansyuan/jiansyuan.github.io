@@ -2,121 +2,121 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on JiansYuan&#39;s Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://jiansyuan.github.io/tags/</link>
     <description>Recent content in Tags on JiansYuan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
     <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jiansyuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Calculus</title>
-      <link>http://localhost:1313/tags/calculus/</link>
+      <link>https://jiansyuan.github.io/tags/calculus/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/calculus/</guid>
+      <guid>https://jiansyuan.github.io/tags/calculus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Index</title>
-      <link>http://localhost:1313/tags/index/</link>
+      <link>https://jiansyuan.github.io/tags/index/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/index/</guid>
+      <guid>https://jiansyuan.github.io/tags/index/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mathematics</title>
-      <link>http://localhost:1313/tags/mathematics/</link>
+      <link>https://jiansyuan.github.io/tags/mathematics/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/mathematics/</guid>
+      <guid>https://jiansyuan.github.io/tags/mathematics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Note</title>
-      <link>http://localhost:1313/tags/note/</link>
+      <link>https://jiansyuan.github.io/tags/note/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/note/</guid>
+      <guid>https://jiansyuan.github.io/tags/note/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Graph Theory</title>
-      <link>http://localhost:1313/tags/graph-theory/</link>
+      <link>https://jiansyuan.github.io/tags/graph-theory/</link>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/graph-theory/</guid>
+      <guid>https://jiansyuan.github.io/tags/graph-theory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tutorial</title>
-      <link>http://localhost:1313/tags/tutorial/</link>
+      <link>https://jiansyuan.github.io/tags/tutorial/</link>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/tutorial/</guid>
+      <guid>https://jiansyuan.github.io/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DP</title>
-      <link>http://localhost:1313/tags/dp/</link>
+      <link>https://jiansyuan.github.io/tags/dp/</link>
       <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/dp/</guid>
+      <guid>https://jiansyuan.github.io/tags/dp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HNOI</title>
-      <link>http://localhost:1313/tags/hnoi/</link>
+      <link>https://jiansyuan.github.io/tags/hnoi/</link>
       <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/hnoi/</guid>
+      <guid>https://jiansyuan.github.io/tags/hnoi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Solution</title>
-      <link>http://localhost:1313/tags/solution/</link>
+      <link>https://jiansyuan.github.io/tags/solution/</link>
       <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/solution/</guid>
+      <guid>https://jiansyuan.github.io/tags/solution/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Codeforces</title>
-      <link>http://localhost:1313/tags/codeforces/</link>
+      <link>https://jiansyuan.github.io/tags/codeforces/</link>
       <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/codeforces/</guid>
+      <guid>https://jiansyuan.github.io/tags/codeforces/</guid>
       <description></description>
     </item>
     
     <item>
       <title>USACO</title>
-      <link>http://localhost:1313/tags/usaco/</link>
+      <link>https://jiansyuan.github.io/tags/usaco/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/usaco/</guid>
+      <guid>https://jiansyuan.github.io/tags/usaco/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Coq</title>
-      <link>http://localhost:1313/tags/coq/</link>
+      <link>https://jiansyuan.github.io/tags/coq/</link>
       <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/coq/</guid>
+      <guid>https://jiansyuan.github.io/tags/coq/</guid>
       <description></description>
     </item>
     

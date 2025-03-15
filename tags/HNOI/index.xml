@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HNOI on JiansYuan&#39;s Blog</title>
-    <link>http://localhost:1313/tags/hnoi/</link>
+    <link>https://jiansyuan.github.io/tags/hnoi/</link>
     <description>Recent content in HNOI on JiansYuan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
     <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/hnoi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jiansyuan.github.io/tags/hnoi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Solution of HNOI2008 “玩具装箱”(P3195)</title>
-      <link>http://localhost:1313/post/solution-of-hnoi2008-pack-toys/</link>
+      <link>https://jiansyuan.github.io/post/solution-of-hnoi2008-pack-toys/</link>
       <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/solution-of-hnoi2008-pack-toys/</guid>
+      <guid>https://jiansyuan.github.io/post/solution-of-hnoi2008-pack-toys/</guid>
       <description>&lt;h2 id=&#34;题意&#34;&gt;题意&lt;/h2&gt;
 &lt;p&gt;&lt;del&gt;今天不想简化题面。。。&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;P 教授要去看奥运，但是他舍不得他的玩具，于是他决定把所有的玩具运到北京。&lt;/p&gt;

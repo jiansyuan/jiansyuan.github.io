@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>USACO on JiansYuan&#39;s Blog</title>
-    <link>http://localhost:1313/tags/usaco/</link>
+    <link>https://jiansyuan.github.io/tags/usaco/</link>
     <description>Recent content in USACO on JiansYuan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
     <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/usaco/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jiansyuan.github.io/tags/usaco/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Solution of USACO12OPEN G(P3067)</title>
-      <link>http://localhost:1313/post/solution-of-usaco12open-g/</link>
+      <link>https://jiansyuan.github.io/post/solution-of-usaco12open-g/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/solution-of-usaco12open-g/</guid>
+      <guid>https://jiansyuan.github.io/post/solution-of-usaco12open-g/</guid>
       <description>&lt;h2 id=&#34;题意&#34;&gt;题意&lt;/h2&gt;
 &lt;p&gt;有可重集$S$, 求它的非空子集$X$的个数, 满足: $X=A\cup B, A\cup B=\emptyset, \Sigma A_i=\Sigma B_i$.
 其中$|S| \leq 20$, $S_i \leq 10^8$.&lt;/p&gt;

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title>JiansYuan&#39;s Blog  | About</title>
+	<title>JiansYuan&#39;s Blog  | Notes on MIT 18.01.1 Calculus I (Unit2 Differentiation)</title>
 	<meta name="viewport" content="width=device-width,minimum-scale=1">
 	<meta name="generator" content="Hugo 0.145.0">
 	
@@ -144,19 +144,72 @@ onload='renderMathInElement(document.body);'></script>
 		<a href="https://jiansyuan.github.io/" title="JiansYuan&#39;s Blog" class="heading font-cursive icon">JiansYuan&#39;s Blog</a>
 	</h2>
 </div>
-<h1 class="pt-2">About</h1>
-
-<h3 class="text-java-700 font-normal leading-relaxed pt-2">some stories about this blog website</h3>
+<h1 class="pt-2">Notes on MIT 18.01.1 Calculus I (Unit2 Differentiation)</h1>
 
 <div class="flex flex-wrap justify-end pt-2 "><div class="md:flex-grow-0 font-light">
 	
-
+	
+	
+	
+	<a class="post-taxonomy-category text-medium-red-violet-600 hover:text-medium-red-violet-400"
+		href='/categories/mit-18.x'>MIT 18.x</a>
+	
+	
 	
 
+	
+	&nbsp;&nbsp;
+	
+
+	
+	
+	
+	
+	<a class="post-taxonomy-tag text-eucalyptus-500"
+		href='/tags/note'>Note</a>&nbsp;&#47;
+	
+	<a class="post-taxonomy-tag text-eucalyptus-500"
+		href='/tags/mathematics'>Mathematics</a>&nbsp;&#47;
+	
+	<a class="post-taxonomy-tag text-eucalyptus-500"
+		href='/tags/calculus'>Calculus</a>
+	
+	
 	
 </div><time class="text-eucalyptus-500 md:text-right md:flex-grow font-light pl-4"
-		datetime="2025-03-06T00:00:00Z">2025-3-6</time>
+		datetime="2025-03-04T00:00:00Z">2025-3-4</time>
 </div>
+
+<details class="toc" open>
+<summary>
+    <hr />
+</summary>
+<div class="inline toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#preface">Preface</a></li>
+    <li><a href="#unit-2-differentiation">Unit 2: Differentiation</a>
+      <ul>
+        <li><a href="#linear-approximation">Linear Approximation</a></li>
+        <li><a href="#the-product-rule">The Product Rule</a></li>
+        <li><a href="#the-quotient-rule">The Quotient Rule</a></li>
+        <li><a href="#the-chain-rule">The Chain Rule</a></li>
+        <li><a href="#implicit-differentiation">Implicit Differentiation</a></li>
+        <li><a href="#definition-of-inverser-function">Definition of Inverser Function</a></li>
+        <li><a href="#definition-of-one-to-one">Definition of One-to-One</a></li>
+        <li><a href="#domain-and-range">Domain and Range</a></li>
+        <li><a href="#derivatives-of-inverse-functions">Derivatives of Inverse Functions</a></li>
+        <li><a href="#derivatives-of-the-inverse-trig-functions">Derivatives of the Inverse Trig Functions</a></li>
+        <li><a href="#the-derivative-of-an-exponential-function">The Derivative of an exponential function</a></li>
+        <li><a href="#definition-of-e">Definition of $e$</a></li>
+        <li><a href="#differentiating-exponential-function-with-other-bases">Differentiating Exponential Function with other Bases</a></li>
+        <li><a href="#properties-of-x">Properties of $x$</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+</details>
 
 <hr />
 
@@ -168,20 +221,124 @@ onload='renderMathInElement(document.body);'></script>
 
 <article>
 	<section class="mx-auto content">
-		<div class="c-rich-text"><p>This blog website was originally created several years ago when I was in high school. Initially, it hosted a collection of articles I casually wrote about algorithm competitions. However, I later discovered that the website had poor support for LaTeX, with some formula subscripts misaligned in Chrome. Due to time constraints, I never got around to fixing it. Now, on March 6, 2025, after a thorough reorganization, the website stands in its current form.</p>
-<p>The texts below is from the initial version of this website.</p>
+		<div class="c-rich-text"><h2 id="preface">Preface</h2>
+<p>This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to <a href="https://student.mit.edu/catalog/m18a.html">MIT 18.x Catalog</a>, and it can also be found at <a href="https://openlearning.mit.edu/courses-programs/open-learning-library">MIT Open Learning Library</a>.</p>
+<h2 id="unit-2-differentiation">Unit 2: Differentiation</h2>
+<h3 id="linear-approximation">Linear Approximation</h3>
+<p>The linear approximation for a function $f$ near a point $x=a$ is given by the following equivalent formulas:
+$$
+\begin{aligned}
+\Delta f &amp;\approx \left. \frac{df}{dx}\right |_{x=a} \cdot \Delta x\quad &amp;for\ \Delta x\ near\ 0\\
+f(x)&amp;\approx f^\prime(a)\cdot(x-a)+f(a)\quad &amp;for\ x\ near\ a
+\end{aligned}
+$$</p>
 <hr>
-<h2 id="howdy">Howdy!</h2>
-<p>Welcome to my blog website!
-Some diurnal, practise, ruminate &amp; comprehend of myself will be put here.
-See at <a href="/../post/">Articles</a>.</p>
-<h2 id="me">Me</h2>
-<p>A student who is interested in algorithms and mathematics.
-You can find me through these links below.</p>
-<blockquote>
-<p>Mail: <a href="mailto:JiansYuan@outlook.com">JiansYuan@outlook.com</a></p>
-<p>Github: <a href="github.com/jiansyuan">Contexploit</a></p>
-<p>Zhihu: <a href="https://www.zhihu.com/people/jiansyuan">JiansYuan</a></p></blockquote>
+<h3 id="the-product-rule">The Product Rule</h3>
+<p>If $h(x)=f(x)\cdot g(x)$, then
+$$
+h^\prime(x)=f(x)\cdot g^\prime(x)+f^\prime(x)\cdot g(x)
+$$
+at all points where the derivatives $f^\prime(x)$ and $g^\prime(x)$ are defined.</p>
+<hr>
+<h3 id="the-quotient-rule">The Quotient Rule</h3>
+<p>If $h(x)=\frac{f(x)}{g(x)}$ for all $x$, then
+$$
+h^\prime(x)=\frac{f^\prime(x) \cdot g(x)-f(x)\cdot g^\prime(x)}{g(x)^2}
+$$
+at all points where $f$ and $g$ are differentiable and $g(x)\ne 0$.</p>
+<hr>
+<h3 id="the-chain-rule">The Chain Rule</h3>
+<p>If $h(x)=f(g(x))$, then
+$$
+h^\prime(x)=f^\prime(g(x))\cdot g^\prime(x)
+$$
+at all points where the derivatives $f^\prime(g(x))$ and $g^\prime(x)$ are defined.</p>
+<p>Alternatively, if $y=f(u)$, and $u=g(x)$, then
+$$
+\left.\frac{dy}{dx}\right\vert_{x=a}= \left. \frac{dy}{du}\right\vert_{u=g(a)} \cdot \left. \frac{du}{dx}\right\vert_{x=a}
+$$
+at any point $x=a$ where the derivatives $\left.\frac{dy}{du}\right\vert_{u=g(a)}$ and $\left.\frac{du}{dx}\right\vert_{x=a}$ are defined.</p>
+<hr>
+<h3 id="implicit-differentiation">Implicit Differentiation</h3>
+<p>To implicitly differentiate a function $f(x)\cdot g(x)=1$ with respect to $x$:
+$$
+\begin{aligned}
+&amp;\frac d {dx}(f(x)\cdot g(y)\quad &amp;=&amp; \quad 1)\\
+&amp;\frac d {dx}(f(x)\cdot g(y))\quad &amp;=&amp; \quad \frac d {dx}1\\
+&amp;\frac d{dx}(f(x)\cdot g(y))\quad &amp;=&amp; \quad 0\\
+&amp;f^\prime(x)\cdot g(x)+f(x)\cdot\frac{d}{dx}g(y)\quad &amp;=&amp; \quad 0\\
+&amp;f^\prime(x)\cdot g(x)+f(x)\cdot g^\prime(y)\cdot\frac{dy}{dx}\quad &amp;=&amp; \quad 0
+\end{aligned}
+$$</p>
+<hr>
+<h3 id="definition-of-inverser-function">Definition of Inverser Function</h3>
+<p>If functions $f$ and $g$ satisfy $g(f(x))=x$ and $f(g(y))=y$, then we say $g$ is the inverse of $f$, and denote it by $f^{-1}$. Similarly, $f=g^{-1}$.</p>
+<p>If a function $f$ has an inverse function $f^{-1}$, then $f^{-1}(b)=a$ if and only if $f(a)=b$.</p>
+<hr>
+<h3 id="definition-of-one-to-one">Definition of One-to-One</h3>
+<p>A function $f$ is <code>one-to-one</code> if $f(a)\ne f(b)$ whenever $a\ne b$. It is one-to-one if and only if its graphy satisfies the horizontal line test(noi horizontal line intersects its graph at more than one place).</p>
+<hr>
+<h3 id="domain-and-range">Domain and Range</h3>
+<p>Recall that the <code>domain</code> of a function $f$ is the set of allowable input values. For instance, the domain of the function $f(x)=\frac 1 x$ si the set of all non-zero real numbers.</p>
+<p>The <code>range</code> of $f$ is the set of all possible output values. For instance, the range of the function $g(x)=x^2$ is the set of all real numbers that are non-negative.</p>
+<hr>
+<h3 id="derivatives-of-inverse-functions">Derivatives of Inverse Functions</h3>
+<p>If $g$ is a inverse of a function $f$, then
+$$
+g^\prime = \frac 1 {f^\prime (g(x))}
+$$
+at all $x$ where $f^\prime(g(x))$ exists and is non-zero.</p>
+<hr>
+<h3 id="derivatives-of-the-inverse-trig-functions">Derivatives of the Inverse Trig Functions</h3>
+<p>We now have more basic functions that we can differentiate.
+$$
+\begin{aligned}
+\frac d {dx}\arcsin x\quad&amp;=&amp;\quad \frac 1 {\sqrt{1-x^2}}\\
+\frac d {dx}\arccos x\quad&amp;=&amp;\quad -\frac 1 {\sqrt{1-x^2}}\\
+\frac d {dx}\arctan x\quad&amp;=&amp;\quad \frac 1 {1+x^2}
+\end{aligned}
+$$</p>
+<hr>
+<h3 id="the-derivative-of-an-exponential-function">The Derivative of an exponential function</h3>
+<p>The derivative of the exponential function is
+$$
+\frac d {dx}a^x=M(a)a^x
+$$
+where the mystery number $M(a)$ is the slope of the tangent line at zero:
+$$
+M(a)=\left.\frac d {dx}a^x\right\vert_{x=0}=\lim_{\Delta x\to 0}\frac{a^{\Delta x}-1}{\Delta x}
+$$</p>
+<hr>
+<h3 id="definition-of-e">Definition of $e$</h3>
+<p>The base $e$ is the unique real number so that
+$$
+\frac d{dx}e^x=e^x
+$$</p>
+<hr>
+<h3 id="differentiating-exponential-function-with-other-bases">Differentiating Exponential Function with other Bases</h3>
+<p>We can finally identify out mystery number, and differentiate exponential functions with any base.</p>
+<p>For any postivie constant $a$,
+$$
+\frac d{dx}a^x=a^x\ln a
+$$</p>
+<hr>
+<h3 id="properties-of-x">Properties of $x$</h3>
+<p>$\log_a(x)$ is the inverse function of $ a^x$.</p>
+<p>The natural log, denoted $\ln(x)$, is the inverse function of $e^x$.</p>
+<p>We have</p>
+<ul>
+<li>$\ln e^x=x$</li>
+<li>$e^{\ln x}=x$</li>
+<li>$\ln(ab)=\ln(a)+\ln(b)$</li>
+<li>$\ln(a^b)=b\cdot\ln(a)$</li>
+</ul>
+<hr>
+<p>The Derivative of the Natural Logarithm</p>
+<p>Now we can differentiate more basic function:
+$$
+\frac d {dx}\ln x=\frac 1 x
+$$</p>
+<hr>
 </div>
 	</section>
 
@@ -199,7 +356,8 @@ You can find me through these links below.</p>
 	
 	
 	<li class="px-1 md:px-0">
-		<a href="/post/" title="Posts page" >
+		<a href="/post/" title="Posts page" 
+			class="font-medium text-medium-red-violet-600 hover:text-medium-red-violet-400" >
 			Posts
 		</a>
 	</li>
@@ -217,8 +375,7 @@ You can find me through these links below.</p>
 	</li>
 	
 	<li class="px-1 md:px-0">
-		<a href="/about/" title="About page" 
-			class="font-medium text-medium-red-violet-600 hover:text-medium-red-violet-400" >
+		<a href="/about/" title="About page" >
 			About
 		</a>
 	</li>
@@ -311,7 +468,7 @@ You can find me through these links below.</p>
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		130 words in this page.
+		584 words in this page.
 	</div>
 </div>
 
@@ -322,17 +479,17 @@ You can find me through these links below.</p>
 <hr class="double-line" />
 <div class="flex flex-wrap justify-between pb-2 leading-loose font-serif">
     
-    <a class="flex-grow-0" href="/post/mit_18.01/mit_18.01.1_calculus_i-unit3/">
+    <a class="flex-grow-0" href="/post/mit_18.01/mit_18.01.1_calculus_i-unit1/">
         <svg class="fill-current inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
             height="24">
             <path fill="none" d="M0 0h24v24H0z" />
             <path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z" /></svg>
-        Notes on MIT 18.01.1 Calculus I (Unit3 Approximation)
+        Notes on MIT 18.01.1 Calculus I (Unit1 Derivative)
     </a>
     
     
-    <a class="flex-grow-0" href="/post/mit_18.01/mit_18.01.1_calculus_i-unit4/">
-        Notes on MIT 18.01.1 Calculus I (Unit4 Application)
+    <a class="flex-grow-0" href="/post/mit_18.01/mit_18.01.1_calculus_i-unit3/">
+        Notes on MIT 18.01.1 Calculus I (Unit3 Approximation)
         <svg class="fill-current inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
             height="24">
             <path fill="none" d="M0 0h24v24H0z" />
@@ -342,6 +499,17 @@ You can find me through these links below.</p>
 <div >
 
 
+
+<div class="font-serif pb-2 flex align-start leading-loose">
+	<span class="heading pr-6 leading-loose">Related</span>
+	<span >
+		
+			<a href="/post/mit_18.01/mit_18.01.1_calculus_i-unit1/">Notes on MIT 18.01.1 Calculus I (Unit1 Derivative)</a>&nbsp;&nbsp;&#47;&nbsp;
+		
+			<a href="/post/mit_18.01/mit_18.01.1_calculus_i-unit0/">Notes on MIT 18.01.1 Calculus I (Unit0 Limit)</a>
+		
+</span>
+</div>
 
 </div>
 <hr />
