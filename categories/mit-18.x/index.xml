@@ -7,17 +7,90 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
-    <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jiansyuan.github.io/categories/mit-18.x/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Notes on MIT 18.01.1 Calculus I (Unit4 Application)</title>
-      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit4/</link>
+      <title>Notes on MIT 18.01.2 Calculus IB (Unit1 MVT)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit1/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit1/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;unit-1-mean-value-theorem&#34;&gt;Unit 1: Mean Value Theorem&lt;/h2&gt;
+&lt;h3 id=&#34;the-mean-value-theorem-mvt&#34;&gt;The Mean Value Theorem (MVT)&lt;/h3&gt;
+&lt;p&gt;If $x(t)$ is continuous on $a\le t\le b$, and differentiable on $a&amp;lt;t&amp;lt;b$, that is, $x^{\prime}(t)$ is defined for all $t$, $a&amp;lt;t&amp;lt;b$, then
+$$
+\frac{x(b)-x(a)}{b-a}=x^{\prime}(c)\qquad \text{for some }c\text{, with }a&amp;lt;c&amp;lt;b
+$$
+Equivalently, in geometric terms, there is at least one point $c$, with $a&amp;lt;c&amp;lt;b$, at which the tangent line is parallel to the secant line through $(a,x(a))$ and $(b,x(b))$:&lt;/p&gt;
+&lt;img src=&#34;\image\MIT_18.01\images_antider1_xtgraph_MVT_statement.svg&#34;&gt;
+&lt;h3 id=&#34;upper-and-lower-bounds&#34;&gt;Upper and Lower Bounds&lt;/h3&gt;
+&lt;p&gt;We have introduced the notion of upper and lower bounds.&lt;/p&gt;
+&lt;p&gt;A number $M$ is an &lt;code&gt;uppper bound&lt;/code&gt; of a function $f(x)$ if
+$$
+f(x)\le M\quad \text{for all }x
+$$
+and a number $m$ is a &lt;code&gt;lower bound&lt;/code&gt; of a function $f(x)$ if
+$$
+m\le f(x)\quad \text{for all }x
+$$
+We can consider upper and lower bounds on the entire real number line, or on an interval.&lt;/p&gt;
+&lt;img src=&#34;\image\MIT_18.01\images_antider1_upperbounddef2.svg&#34;&gt;
+$$
+m\le f(x)\le M
+$$
+In other words, an upper bound of a function is a number that is larger than or euqual to all values of the function. A lower bound of a function is a number which is smaller than or equal to all values of the function.
+&lt;h3 id=&#34;old-news&#34;&gt;Old News&lt;/h3&gt;
+&lt;p&gt;We have been relying on the following fundamental facts whenever we try to understand a function using its derivative. But in fact, these facts are consequences of the MVT.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If $x^{\prime}(t)\ge 0$ for all $t$ in $(A,B)$, then $x(t)$ is &lt;code&gt;increasing or staying the same&lt;/code&gt; over $[A,B]$.&lt;/li&gt;
+&lt;li&gt;If $x^{\prime}(t)&amp;gt;0$ for all $t$ in $(A,B)$, then $x(t)$ is &lt;code&gt;strictly increasing&lt;/code&gt; over $[A,B]$.&lt;/li&gt;
+&lt;li&gt;If $x^{\prime}(t)\le 0$ for all $t$ in $(A,B)$, then $x(t)$ is &lt;code&gt;decreasing or staying the same&lt;/code&gt; over $[A,B]$.&lt;/li&gt;
+&lt;li&gt;If $x^{\prime}(t)&amp;lt; 0$ for all $t$ in $(A,B)$, then $x(t)$ is &lt;code&gt;strictly increasing&lt;/code&gt; over $[A,B]$.&lt;/li&gt;
+&lt;li&gt;IF $x^{\prime}(t)=0$ for all $t$ in $(A,B)$, the $x(t)$ is &lt;code&gt;constant&lt;/code&gt; over $[A,B]$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These facts need proofs and their proofs are based on the MVT. The subtlety is that the MVT relates the infinitesimal behviour of the function, the derivative, which is defined at a point, to the macroscopic behviour of the function, the total change over an interval.&lt;/p&gt;
+&lt;h3 id=&#34;bounding-the-average-rate-of-change&#34;&gt;Bounding The Average Rate of Change&lt;/h3&gt;
+&lt;p&gt;The equality in the MVT can be used to restrict the range of possible values of the average rate of change and the total change.&lt;/p&gt;
+&lt;p&gt;More precisely, if there are numbers $m$ and $M$ such that
+$$
+m\le x^{\prime}(c)\le M\qquad\text{for all }c\text{ with }a&amp;lt;c&amp;lt;b
+$$
+that is, $m$ is a lower bound and $M$ is an upper bound on $x^{\prime}(c)$ over $(a,b)$, then the MVT implies the following:
+$$
+\begin{aligned}
+m\ \ &amp;amp;\le\ \frac{x(b)-x(a)}{b-a}\ \le\ M\qquad \text{(Bounds on the average rate of change)}\\
+m\cdot (b-a)\ &amp;amp;\le\ x(b)-x(a)\ \le\ M\cdot (b-a)\qquad \text{(Bounds on the total change)}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;In other words, a lower bound on the derivative is also a lower bound on the average rate of change, and an upper bound on the derivative is also an upper bound on the average rate of change. Also, the product of a lower bound on the derivative with the length of an interval, is a lower bound on the total change of the function over that interval. Similarly, the product of an upper bound on the derivative with the length of an interval, is an upper bound on the total change of the function over that interval.&lt;/p&gt;
+&lt;p&gt;When we know the maximum and minimum values of $x^{\prime}(t)$, we can use them as bounds on $x^{\prime}(t)$ and obtain the following.
+$$
+\begin{alignat*}{2}
+\min_{a\le t\le b}x^{\prime}(t)
+&amp;amp;\le \frac{x(b)-x(a)}{b-a}
+&amp;amp;&amp;amp;\le \max_{a\le t\le b}x^{\prime}(t)
+\quad\text{(Bounds on the average rate of change)} \\
+\min_{a\le t\le b}x^{\prime}(t)\cdot (b-a)
+&amp;amp;\le x(b)-x(a)
+&amp;amp;&amp;amp;\le \max_{a\le t\le b}x^{\prime}(t)\cdot (b-a)
+\quad\text{(Bounds on the total change)}
+\end{alignat*}
+$$
+In other words, the average rate of change must be in between the maximum and the minimum of the derivative, and the total change must be in between the maximum and minimum of the derivative multiplied by the length of the interval.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Notes on MIT 18.01.1 Calculus IA (Unit4 Application)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit4/</link>
       <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit4/</guid>
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit4/</guid>
       <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
 &lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
@@ -145,11 +218,11 @@ Note that&lt;/p&gt;
     </item>
     
     <item>
-      <title>Notes on MIT 18.01.1 Calculus I (Unit3 Approximation)</title>
-      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit3/</link>
+      <title>Notes on MIT 18.01.1 Calculus IA (Unit3 Approximation)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit3/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit3/</guid>
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit3/</guid>
       <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
 &lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
@@ -214,11 +287,11 @@ for the $n=0,1,2,\cdots$ .&lt;/p&gt;
     </item>
     
     <item>
-      <title>Notes on MIT 18.01.1 Calculus I (Unit2 Differentiation)</title>
-      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit2/</link>
+      <title>Notes on MIT 18.01.1 Calculus IA (Unit2 Differentiation)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit2/</link>
       <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit2/</guid>
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit2/</guid>
       <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
 &lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;unit-2-differentiation&#34;&gt;Unit 2: Differentiation&lt;/h2&gt;
@@ -341,11 +414,11 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Notes on MIT 18.01.1 Calculus I (Unit1 Derivative)</title>
-      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit1/</link>
+      <title>Notes on MIT 18.01.1 Calculus IA (Unit1 Derivative)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit1/</link>
       <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit1/</guid>
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit1/</guid>
       <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
 &lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
@@ -457,11 +530,11 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Notes on MIT 18.01.1 Calculus I (Unit0 Limit)</title>
-      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit0/</link>
+      <title>Notes on MIT 18.01.1 Calculus IA (Unit0 Limit)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit0/</link>
       <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_i-unit0/</guid>
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.1_calculus_ia-unit0/</guid>
       <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
 &lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;unit-0-limits&#34;&gt;Unit 0: Limits&lt;/h2&gt;
