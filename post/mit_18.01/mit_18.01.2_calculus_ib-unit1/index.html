@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title>JiansYuan&#39;s Blog  | Notes on MIT 18.01.2 Calculus IB (Unit1 MVT)</title>
+	<title>JiansYuan&#39;s Blog  | Notes on MIT 18.01.2 Calculus IB (Unit1 Integral)</title>
 	<meta name="viewport" content="width=device-width,minimum-scale=1">
 	<meta name="generator" content="Hugo 0.145.0">
 	
@@ -144,7 +144,7 @@ onload='renderMathInElement(document.body);'></script>
 		<a href="https://jiansyuan.github.io/" title="JiansYuan&#39;s Blog" class="heading font-cursive icon">JiansYuan&#39;s Blog</a>
 	</h2>
 </div>
-<h1 class="pt-2">Notes on MIT 18.01.2 Calculus IB (Unit1 MVT)</h1>
+<h1 class="pt-2">Notes on MIT 18.01.2 Calculus IB (Unit1 Integral)</h1>
 
 <div class="flex flex-wrap justify-end pt-2 "><div class="md:flex-grow-0 font-light">
 	
@@ -188,12 +188,23 @@ onload='renderMathInElement(document.body);'></script>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#preface">Preface</a></li>
-    <li><a href="#unit-1-mean-value-theorem">Unit 1: Mean Value Theorem</a>
+    <li><a href="#mean-value-theorem">Mean Value Theorem</a>
       <ul>
         <li><a href="#the-mean-value-theorem-mvt">The Mean Value Theorem (MVT)</a></li>
         <li><a href="#upper-and-lower-bounds">Upper and Lower Bounds</a></li>
         <li><a href="#old-news">Old News</a></li>
         <li><a href="#bounding-the-average-rate-of-change">Bounding The Average Rate of Change</a></li>
+      </ul>
+    </li>
+    <li><a href="#differentials--antiderivatives">Differentials &amp; Antiderivatives</a>
+      <ul>
+        <li><a href="#differential-notation">Differential Notation</a></li>
+        <li><a href="#antiderivatives">Antiderivatives</a></li>
+        <li><a href="#indefinite-integral">Indefinite Integral</a></li>
+        <li><a href="#uniqueness-of-the-indefinite-integral">Uniqueness of the Indefinite Integral</a></li>
+        <li><a href="#integrals-of-powers">Integrals of Powers</a></li>
+        <li><a href="#first-rules-of-integration">First Rules of Integration</a></li>
+        <li><a href="#method-of-substituion">Method of Substituion</a></li>
       </ul>
     </li>
   </ul>
@@ -211,9 +222,10 @@ onload='renderMathInElement(document.body);'></script>
 
 <article>
 	<section class="mx-auto content">
-		<div class="c-rich-text"><h2 id="preface">Preface</h2>
+		<div class="c-rich-text"><h1 id="unit-1-the-intergral">Unit 1: The Intergral</h1>
+<h2 id="preface">Preface</h2>
 <p>This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to <a href="https://student.mit.edu/catalog/m18a.html">MIT 18.x Catalog</a>, and it can also be found at <a href="https://openlearning.mit.edu/courses-programs/open-learning-library">MIT Open Learning Library</a>.</p>
-<h2 id="unit-1-mean-value-theorem">Unit 1: Mean Value Theorem</h2>
+<h2 id="mean-value-theorem">Mean Value Theorem</h2>
 <h3 id="the-mean-value-theorem-mvt">The Mean Value Theorem (MVT)</h3>
 <p>If $x(t)$ is continuous on $a\le t\le b$, and differentiable on $a&lt;t&lt;b$, that is, $x^{\prime}(t)$ is defined for all $t$, $a&lt;t&lt;b$, then
 $$
@@ -275,6 +287,87 @@ $$
 \end{alignat*}
 $$
 In other words, the average rate of change must be in between the maximum and the minimum of the derivative, and the total change must be in between the maximum and minimum of the derivative multiplied by the length of the interval.</p>
+<hr>
+<h2 id="differentials--antiderivatives">Differentials &amp; Antiderivatives</h2>
+<h3 id="differential-notation">Differential Notation</h3>
+<p>Let $y=F(x)$, the <code>differential of y</code> is defined as
+$$
+dy=f^{\prime}(x)\cdot dx
+$$
+This is also called the <code>differrential of F</code> and denoted <code>dF</code>.</p>
+<p>Rearranging this equation, we get the Leibniz notation for the derivative, which says the derivative is the ratio of the two differentials $dy$ and $dx$.
+$$
+F^{\prime}(x)=\frac{dy}{dx}\qquad \left(\text{or}\ \frac{dF}{dx}\right)
+$$
+We may think of the differential of $x$, $dx$, as a &ldquo;little bit&rdquo; of $x$, and the differential of $y$, $dy$, as a &ldquo;little bit&rdquo; of $y$. Here what we mean by a &ldquo;little bit&rdquo; is really an infinitely small bit, we call these infinitely small quantities &ldquo;infinitesimals&rdquo;. The point is that even though both $dy$ and $dx$ are infinitely small, their ration is NOT. Their ratio is the derivative $F^{\prime}(x)$. In other words, the differential notation says that $dy$ is proportional to $dx$ with constant of proportionaliyu $F^{\prime}(x)$ even though both $dy$ and $dx$ are infinitely small. We use the differential notation as a tool to keep track of how much $y$ changes when $x$ changes by a tiny tiny &hellip; tiny bit.</p>
+<p>The geometric picture for the differential is the same as that for linear approximation.</p>
+<img src="\image\MIT_18.01\images_antider2_Differential.svg">
+<p>Let us compare the differential notation with the formula for linear approximations.</p>
+<p>$$
+\begin{alignat*}{2}
+\text{Linear Approximation at }x\quad \Delta F\quad
+&amp;\approx\quad F^{\prime}(x)\cdot \Delta x,\quad
+&amp;&amp;\Delta x\text{ is a finite change in }x\\
+\text{Differential Notation}\quad dF\quad
+&amp;=\quad F^{\prime}(x)\cdot dx,\quad
+&amp;&amp; dx\text{ is a tiny tiny &hellip; tiny bit of }x
+\end{alignat*}
+$$</p>
+<h3 id="antiderivatives">Antiderivatives</h3>
+<p><code>An antiderivative</code> of $f(x)$ is any function $F(X)$ such that
+$$
+F^{\prime}(x)=f(x)
+$$</p>
+<h3 id="indefinite-integral">Indefinite Integral</h3>
+<p>Given a function $f(x)$, the <code>indefinite integral</code> or <code>the antiderivative</code> of $f(x)$ is denoted $\displaystyle\int f(x) \  dx$. It is the family of functions
+$$
+\int f(x)\  dx\ =\ F(x)+C
+$$
+where $F(X)$ is any antiderivative of $f(x)$, and $C$ is any constant.</p>
+<p>We call $\int$ the <code>integral sign</code>, $f(x)$ the <code>integral</code>, and $C$ the <code>constant of integration</code>.</p>
+<p>The constant of integration is present in this definition because the derivative of a function determines only the shape of the function, but the derivative does not change if the function is shifted up or down by the same constant everywhere.</p>
+<h3 id="uniqueness-of-the-indefinite-integral">Uniqueness of the Indefinite Integral</h3>
+<p>The indefinite integral
+$$
+\int f(x)\ dx\ =\ F(x)+C
+$$
+is termed &ldquo;indefinite&rdquo; since it contains an undetermined constant $C$ and is not just one function but a family of infinitely many functions, parameterized by $C$.</p>
+<p>On the other hand, the constant is the only ambiguity of the indefinite integral due to the MVT, which guarantees that any two antiderivatives of the same function can differ only by a constant.</p>
+<h3 id="integrals-of-powers">Integrals of Powers</h3>
+<p>$$
+\int x^P\ dx\ =\quad \begin{cases}
+\dfrac{x^{P+1}}{p+1}, &amp; \text {if $p\ne -1$} \\
+\ln{(\vert x\vert)}, &amp;\text{if $p=-1$}
+\end{cases}
+$$</p>
+<h3 id="first-rules-of-integration">First Rules of Integration</h3>
+<p>$$
+\begin{array}{lcc}
+&amp; \text{Integration Rules} &amp; \text{Differentiation Rules} \\
+\text{Constant Multiple: } &amp; \displaystyle\int k f(x)\ dx=k\int f(x)\ dx &amp; d(k F)=k\ dF \\
+\text{Sum: } &amp; \displaystyle\int{(f(x)+g(x))\ dx}=\int{f(x)\ dx}+\int{g(x)\ dx} &amp; d(F+G)=dF+dG
+\end{array}
+$$
+On the other hand, the following naive product and quotient rules do NOT work.</p>
+<p>$$
+\int f\cdot g\ dx\quad\textbf{DOES NOT EQUAL}\quad(\int f\ dx)\cdot(\int g\ dx)\\
+\int \frac f g\ dx\quad\textbf{DOES NOT EQUAL}\quad\frac{\int f\ dx}{\int g\ dx}
+$$</p>
+<h3 id="method-of-substituion">Method of Substituion</h3>
+<p>The method of substitution is the integration analogue of the chain rule.</p>
+<p>If
+$$
+g(x)\ dx\quad =\quad f(u(x))u^{\prime}(x)\ dx
+$$
+that is, the differential $g(x)\ dx$ is the result of a chain rule, then
+$$
+\begin{aligned}
+\int g(x)\ dx\quad =&amp;\quad\int f(u(x))u^{\prime}(x)\ dx\\
+=&amp;\quad\int f(u)\ du\\
+=&amp;\quad F(u(x))+C
+\end{aligned}
+$$
+where $F(u)$ is an antiderivative of $f(u)$.</p>
 </div>
 	</section>
 
@@ -404,7 +497,7 @@ In other words, the average rate of change must be in between the maximum and th
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		675 words in this page.
+		1272 words in this page.
 	</div>
 </div>
 

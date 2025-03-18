@@ -13,14 +13,15 @@
     
     
     <item>
-      <title>Notes on MIT 18.01.2 Calculus IB (Unit1 MVT)</title>
+      <title>Notes on MIT 18.01.2 Calculus IB (Unit1 Integral)</title>
       <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit1/</link>
       <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit1/</guid>
-      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+      <description>&lt;h1 id=&#34;unit-1-the-intergral&#34;&gt;Unit 1: The Intergral&lt;/h1&gt;
+&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
 &lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;unit-1-mean-value-theorem&#34;&gt;Unit 1: Mean Value Theorem&lt;/h2&gt;
+&lt;h2 id=&#34;mean-value-theorem&#34;&gt;Mean Value Theorem&lt;/h2&gt;
 &lt;h3 id=&#34;the-mean-value-theorem-mvt&#34;&gt;The Mean Value Theorem (MVT)&lt;/h3&gt;
 &lt;p&gt;If $x(t)$ is continuous on $a\le t\le b$, and differentiable on $a&amp;lt;t&amp;lt;b$, that is, $x^{\prime}(t)$ is defined for all $t$, $a&amp;lt;t&amp;lt;b$, then
 $$
@@ -82,6 +83,87 @@ $$
 \end{alignat*}
 $$
 In other words, the average rate of change must be in between the maximum and the minimum of the derivative, and the total change must be in between the maximum and minimum of the derivative multiplied by the length of the interval.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;differentials--antiderivatives&#34;&gt;Differentials &amp;amp; Antiderivatives&lt;/h2&gt;
+&lt;h3 id=&#34;differential-notation&#34;&gt;Differential Notation&lt;/h3&gt;
+&lt;p&gt;Let $y=F(x)$, the &lt;code&gt;differential of y&lt;/code&gt; is defined as
+$$
+dy=f^{\prime}(x)\cdot dx
+$$
+This is also called the &lt;code&gt;differrential of F&lt;/code&gt; and denoted &lt;code&gt;dF&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Rearranging this equation, we get the Leibniz notation for the derivative, which says the derivative is the ratio of the two differentials $dy$ and $dx$.
+$$
+F^{\prime}(x)=\frac{dy}{dx}\qquad \left(\text{or}\ \frac{dF}{dx}\right)
+$$
+We may think of the differential of $x$, $dx$, as a &amp;ldquo;little bit&amp;rdquo; of $x$, and the differential of $y$, $dy$, as a &amp;ldquo;little bit&amp;rdquo; of $y$. Here what we mean by a &amp;ldquo;little bit&amp;rdquo; is really an infinitely small bit, we call these infinitely small quantities &amp;ldquo;infinitesimals&amp;rdquo;. The point is that even though both $dy$ and $dx$ are infinitely small, their ration is NOT. Their ratio is the derivative $F^{\prime}(x)$. In other words, the differential notation says that $dy$ is proportional to $dx$ with constant of proportionaliyu $F^{\prime}(x)$ even though both $dy$ and $dx$ are infinitely small. We use the differential notation as a tool to keep track of how much $y$ changes when $x$ changes by a tiny tiny &amp;hellip; tiny bit.&lt;/p&gt;
+&lt;p&gt;The geometric picture for the differential is the same as that for linear approximation.&lt;/p&gt;
+&lt;img src=&#34;\image\MIT_18.01\images_antider2_Differential.svg&#34;&gt;
+&lt;p&gt;Let us compare the differential notation with the formula for linear approximations.&lt;/p&gt;
+&lt;p&gt;$$
+\begin{alignat*}{2}
+\text{Linear Approximation at }x\quad \Delta F\quad
+&amp;amp;\approx\quad F^{\prime}(x)\cdot \Delta x,\quad
+&amp;amp;&amp;amp;\Delta x\text{ is a finite change in }x\\
+\text{Differential Notation}\quad dF\quad
+&amp;amp;=\quad F^{\prime}(x)\cdot dx,\quad
+&amp;amp;&amp;amp; dx\text{ is a tiny tiny &amp;hellip; tiny bit of }x
+\end{alignat*}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;antiderivatives&#34;&gt;Antiderivatives&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;An antiderivative&lt;/code&gt; of $f(x)$ is any function $F(X)$ such that
+$$
+F^{\prime}(x)=f(x)
+$$&lt;/p&gt;
+&lt;h3 id=&#34;indefinite-integral&#34;&gt;Indefinite Integral&lt;/h3&gt;
+&lt;p&gt;Given a function $f(x)$, the &lt;code&gt;indefinite integral&lt;/code&gt; or &lt;code&gt;the antiderivative&lt;/code&gt; of $f(x)$ is denoted $\displaystyle\int f(x) \  dx$. It is the family of functions
+$$
+\int f(x)\  dx\ =\ F(x)+C
+$$
+where $F(X)$ is any antiderivative of $f(x)$, and $C$ is any constant.&lt;/p&gt;
+&lt;p&gt;We call $\int$ the &lt;code&gt;integral sign&lt;/code&gt;, $f(x)$ the &lt;code&gt;integral&lt;/code&gt;, and $C$ the &lt;code&gt;constant of integration&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The constant of integration is present in this definition because the derivative of a function determines only the shape of the function, but the derivative does not change if the function is shifted up or down by the same constant everywhere.&lt;/p&gt;
+&lt;h3 id=&#34;uniqueness-of-the-indefinite-integral&#34;&gt;Uniqueness of the Indefinite Integral&lt;/h3&gt;
+&lt;p&gt;The indefinite integral
+$$
+\int f(x)\ dx\ =\ F(x)+C
+$$
+is termed &amp;ldquo;indefinite&amp;rdquo; since it contains an undetermined constant $C$ and is not just one function but a family of infinitely many functions, parameterized by $C$.&lt;/p&gt;
+&lt;p&gt;On the other hand, the constant is the only ambiguity of the indefinite integral due to the MVT, which guarantees that any two antiderivatives of the same function can differ only by a constant.&lt;/p&gt;
+&lt;h3 id=&#34;integrals-of-powers&#34;&gt;Integrals of Powers&lt;/h3&gt;
+&lt;p&gt;$$
+\int x^P\ dx\ =\quad \begin{cases}
+\dfrac{x^{P+1}}{p+1}, &amp;amp; \text {if $p\ne -1$} \\
+\ln{(\vert x\vert)}, &amp;amp;\text{if $p=-1$}
+\end{cases}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;first-rules-of-integration&#34;&gt;First Rules of Integration&lt;/h3&gt;
+&lt;p&gt;$$
+\begin{array}{lcc}
+&amp;amp; \text{Integration Rules} &amp;amp; \text{Differentiation Rules} \\
+\text{Constant Multiple: } &amp;amp; \displaystyle\int k f(x)\ dx=k\int f(x)\ dx &amp;amp; d(k F)=k\ dF \\
+\text{Sum: } &amp;amp; \displaystyle\int{(f(x)+g(x))\ dx}=\int{f(x)\ dx}+\int{g(x)\ dx} &amp;amp; d(F+G)=dF+dG
+\end{array}
+$$
+On the other hand, the following naive product and quotient rules do NOT work.&lt;/p&gt;
+&lt;p&gt;$$
+\int f\cdot g\ dx\quad\textbf{DOES NOT EQUAL}\quad(\int f\ dx)\cdot(\int g\ dx)\\
+\int \frac f g\ dx\quad\textbf{DOES NOT EQUAL}\quad\frac{\int f\ dx}{\int g\ dx}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;method-of-substituion&#34;&gt;Method of Substituion&lt;/h3&gt;
+&lt;p&gt;The method of substitution is the integration analogue of the chain rule.&lt;/p&gt;
+&lt;p&gt;If
+$$
+g(x)\ dx\quad =\quad f(u(x))u^{\prime}(x)\ dx
+$$
+that is, the differential $g(x)\ dx$ is the result of a chain rule, then
+$$
+\begin{aligned}
+\int g(x)\ dx\quad =&amp;amp;\quad\int f(u(x))u^{\prime}(x)\ dx\\
+=&amp;amp;\quad\int f(u)\ du\\
+=&amp;amp;\quad F(u(x))+C
+\end{aligned}
+$$
+where $F(u)$ is an antiderivative of $f(u)$.&lt;/p&gt;
 </description>
     </item>
     
