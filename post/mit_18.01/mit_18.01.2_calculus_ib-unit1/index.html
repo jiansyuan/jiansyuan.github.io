@@ -207,6 +207,14 @@ onload='renderMathInElement(document.body);'></script>
         <li><a href="#method-of-substituion">Method of Substituion</a></li>
       </ul>
     </li>
+    <li><a href="#differentialn-equations">Differentialn Equations</a>
+      <ul>
+        <li><a href="#separation-of-variables">Separation of Variables</a></li>
+        <li><a href="#theorem">Theorem</a></li>
+        <li><a href="#slope-fields">Slope Fields</a></li>
+        <li><a href="#eulers-method">Euler&rsquo;s Method</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -368,6 +376,42 @@ $$
 \end{aligned}
 $$
 where $F(u)$ is an antiderivative of $f(u)$.</p>
+<hr>
+<h2 id="differentialn-equations">Differentialn Equations</h2>
+<h3 id="separation-of-variables">Separation of Variables</h3>
+<p>A differential euqation is <code>separable</code> if it can be written in the form $\frac{dy}{dx}=f(x)\cdot g(y)$.</p>
+<p>To solve a separable differential equation, separate all terms involving $x$ from terms involving $y$, and anti-differentiate both sides.</p>
+<p>$$
+\begin{aligned}
+\frac{dy}{dx}=&amp;f(x)\cdot g(y)\\
+\frac{dy}{g(y)}=&amp;f(x)\ dx\\
+\int\frac{dy}{g(y)}=&amp;\int f(x)\ dx
+\end{aligned}
+$$</p>
+<h3 id="theorem">Theorem</h3>
+<p>Given a differential equation $\frac{dy}{dx}=f(x)\cdot g(y)$ and an <code>initial condition</code> $y(a)=b$, if $f$, $g$ and $g&rsquo;$ are continuous near $(a,b)$, then there is a unique function $y$ whose derivative is given by $f(x)\cdot g(y)$ and that passes through the point $(a,b)$.</p>
+<h3 id="slope-fields">Slope Fields</h3>
+<p>The <code>slope field</code> is a diagram that helps us to visualize the information in a first order differential equation. The slope field is obatined as follows. At each point $(x,y)$, you draw a short segment whose slope is the value of $y^{\prime}$ at the point $(x,y)$. The solution curves must be tangent to the slope filed at all points.</p>
+<h3 id="eulers-method">Euler&rsquo;s Method</h3>
+<p>Given the differential equation $\frac{dy}{dx}=x+y$:</p>
+<ol>
+<li>Choose a step size $h$ (The smaller the step size, the more accurate the approximation.)</li>
+<li>let $(x_0,y_0)$ be the initial condition.</li>
+<li>We can use the differential equation and step size to determine the value of the function at $x_1=x+h$:
+$$
+\begin{aligned}
+x_1=&amp;x_0+h\\
+y_1=&amp;y_0+(x_0+y_0)\cdot h\quad\text{Linear Approximation}
+\end{aligned}
+$$</li>
+<li>Iterate this process:
+$$
+\begin{aligned}
+x_{k+1}=&amp;x_k+h\\
+y_{k+1}=&amp;y_k+(x_k+y_k)\cdot h\quad\text{Linear Approximation}
+\end{aligned}
+$$</li>
+</ol>
 </div>
 	</section>
 
@@ -497,7 +541,7 @@ where $F(u)$ is an antiderivative of $f(u)$.</p>
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		1272 words in this page.
+		1490 words in this page.
 	</div>
 </div>
 
