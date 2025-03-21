@@ -341,7 +341,12 @@ Note that&lt;/p&gt;
       <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://jiansyuan.github.io/about/</guid>
-      <description>&lt;p&gt;This blog website was originally created several years ago when I was in high school. Initially, it hosted a collection of articles I casually wrote about algorithm competitions. However, I later discovered that the website had poor support for LaTeX, with some formula subscripts misaligned in Chrome. Due to time constraints, I never got around to fixing it. Now, on March 6, 2025, after a thorough reorganization, the website stands in its current form.&lt;/p&gt;
+      <description>&lt;blockquote&gt;
+&lt;p&gt;西江月·证明&lt;/p&gt;
+&lt;p&gt;即得易见平凡，仿照上例显然。留作习题答案略，读者自证不难。&lt;/p&gt;
+&lt;p&gt;反之亦然同理，推论自然成立。略去过程Q.E.D.，由上可知证毕。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;This blog website was originally created several years ago when I was in high school. Initially, it hosted a collection of articles I casually wrote about algorithm competitions. However, I later discovered that the website had poor support for LaTeX, with some formula subscripts misaligned in Chrome. Due to time constraints, I never got around to fixing it. Now, on March 6, 2025, after a thorough reorganization, the website stands in its current form.&lt;/p&gt;
 &lt;p&gt;The texts below is from the initial version of this website.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;howdy&#34;&gt;Howdy!&lt;/h2&gt;
