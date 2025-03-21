@@ -215,6 +215,13 @@ onload='renderMathInElement(document.body);'></script>
         <li><a href="#eulers-method">Euler&rsquo;s Method</a></li>
       </ul>
     </li>
+    <li><a href="#modeling-a-zipline">Modeling a Zipline</a>
+      <ul>
+        <li><a href="#hyperbolic-sine-and-cosine">Hyperbolic Sine and Cosine</a></li>
+        <li><a href="#geometric-description-of-trig-functions">Geometric Description of Trig Functions</a></li>
+        <li><a href="#geometric-description-of-hyperbolic-trig-functions">Geometric Description of Hyperbolic Trig Functions</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -412,6 +419,24 @@ y_{k+1}=&amp;y_k+(x_k+y_k)\cdot h\quad\text{Linear Approximation}
 \end{aligned}
 $$</li>
 </ol>
+<hr>
+<h2 id="modeling-a-zipline">Modeling a Zipline</h2>
+<h3 id="hyperbolic-sine-and-cosine">Hyperbolic Sine and Cosine</h3>
+<p>Recall that the hyperbolic cosine and sine are defined by the relationships
+$$
+\begin{aligned}
+\cosh(t)=&amp; \frac 1 2 (e^t+e^{-t})\\
+\sinh(t)=&amp; \frac 1 2 (e^t-e^{-t})
+\end{aligned}
+$$
+The basic trignonometric functions are related to the geometry of a circle. These hyperbolic trig functions are related to the geometry of hyperbola.</p>
+<h3 id="geometric-description-of-trig-functions">Geometric Description of Trig Functions</h3>
+<p>The poinr labeled in the image, $(\cos(\theta),\sin(\theta))$, is defined to be the point on the cricle $x^2+y^2=1$ such that the shaded area is $\theta$.</p>
+<image src="/image/MIT_18.01/images_u5s3DiffEqCircle.svg" width="50%" height="50%">
+<p>A circle of radius 1 centered at the origin is plotted in the x y plane. A point is indicated on the circle in the first quadrant and makes an angle of theta with the positive x axis. A portion of the circle is shaded that indicates the area swept over the range of angles from minus theta to theta.</p>
+<h3 id="geometric-description-of-hyperbolic-trig-functions">Geometric Description of Hyperbolic Trig Functions</h3>
+<p>The point labeled in the image, $(\cosh(t),\sinh(t))$, is defined to be the point on the hyperbolan $x^2-y^2=1$ such that the area of the shaded region is $t$.</p>
+<image src="/image/MIT_18.01/images_u5s3DiffEqHyperbola.svg" width="50%" height="50%">
 </div>
 	</section>
 
@@ -541,7 +566,7 @@ $$</li>
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		1490 words in this page.
+		1668 words in this page.
 	</div>
 </div>
 

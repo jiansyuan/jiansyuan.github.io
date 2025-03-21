@@ -200,6 +200,24 @@ y_{k+1}=&amp;amp;y_k+(x_k+y_k)\cdot h\quad\text{Linear Approximation}
 \end{aligned}
 $$&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;modeling-a-zipline&#34;&gt;Modeling a Zipline&lt;/h2&gt;
+&lt;h3 id=&#34;hyperbolic-sine-and-cosine&#34;&gt;Hyperbolic Sine and Cosine&lt;/h3&gt;
+&lt;p&gt;Recall that the hyperbolic cosine and sine are defined by the relationships
+$$
+\begin{aligned}
+\cosh(t)=&amp;amp; \frac 1 2 (e^t+e^{-t})\\
+\sinh(t)=&amp;amp; \frac 1 2 (e^t-e^{-t})
+\end{aligned}
+$$
+The basic trignonometric functions are related to the geometry of a circle. These hyperbolic trig functions are related to the geometry of hyperbola.&lt;/p&gt;
+&lt;h3 id=&#34;geometric-description-of-trig-functions&#34;&gt;Geometric Description of Trig Functions&lt;/h3&gt;
+&lt;p&gt;The poinr labeled in the image, $(\cos(\theta),\sin(\theta))$, is defined to be the point on the cricle $x^2+y^2=1$ such that the shaded area is $\theta$.&lt;/p&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_u5s3DiffEqCircle.svg&#34; width=&#34;50%&#34; height=&#34;50%&#34;&gt;
+&lt;p&gt;A circle of radius 1 centered at the origin is plotted in the x y plane. A point is indicated on the circle in the first quadrant and makes an angle of theta with the positive x axis. A portion of the circle is shaded that indicates the area swept over the range of angles from minus theta to theta.&lt;/p&gt;
+&lt;h3 id=&#34;geometric-description-of-hyperbolic-trig-functions&#34;&gt;Geometric Description of Hyperbolic Trig Functions&lt;/h3&gt;
+&lt;p&gt;The point labeled in the image, $(\cosh(t),\sinh(t))$, is defined to be the point on the hyperbolan $x^2-y^2=1$ such that the area of the shaded region is $t$.&lt;/p&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_u5s3DiffEqHyperbola.svg&#34; width=&#34;50%&#34; height=&#34;50%&#34;&gt;
 </description>
     </item>
     
