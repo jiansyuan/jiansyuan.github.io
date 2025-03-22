@@ -7,10 +7,103 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
-    <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jiansyuan.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Notes on MIT 18.01.2 Calculus IB (Unit2 Integration Theory)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit2/</link>
+      <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit2/</guid>
+      <description>&lt;h1 id=&#34;unit-2-integration-theory&#34;&gt;Unit 2: Integration Theory&lt;/h1&gt;
+&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-definite-integral&#34;&gt;The Definite Integral&lt;/h2&gt;
+&lt;h3 id=&#34;geometric-definition-of-the-definite-integral&#34;&gt;Geometric Definition of the Definite Integral&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;definite integral&lt;/code&gt; of $f$ from $a$ to $b$, denoted by
+$$
+\int_a^b f(x)\ dx
+$$
+which is the area of the region above the $x$-axis, below the curve $y=f(x)$, and in between the two vertical lines $x=a$ and $x=b$, as shown shaded in the figure below.
+&lt;image src=&#34;\image\MIT_18.01\images_defint_riemann4.svg&#34;&gt;
+The $x$-values $a$ and $b$ are called the &lt;code&gt;lower&lt;/code&gt; and &lt;code&gt;upper limits of the integral&lt;/code&gt;. And remember that this is a different sense of the word &amp;ldquo;limit&amp;rdquo; from when we take the limit of a function.&lt;/p&gt;
+&lt;p&gt;The only difference between the notation for definite and indefinite integrals is that definite integrals have limits but indefinite integrals do not.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;summation-notation&#34;&gt;Summation Notation&lt;/h3&gt;
+&lt;p&gt;The $\Sigma$ notation in a compact way to denote a sum in which each term is obtained from a formula:
+$$
+\sum_{i=1}^n a_i=a_1+a_2+\cdots+a_{n-1}+a_n
+$$
+where $i$ indexes the terms, and $a_i$ is a formula from the $i^{th}$ term of the sum.&lt;/p&gt;
+&lt;p&gt;The notation $\sum_{i=1}^n a_i$ reads &amp;ldquo;the sum of $a_i$ from $i=1$ to $i=n$&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;For example, if $a_i=i^2$, that is, the formula for the term indexed by $i$ is $i^2$, then
+$$
+\sum_{i=1}^n i^2=1^2+2^2+3^2+\cdots+(n-1)^2+n^2
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;riemann-sums&#34;&gt;Riemann Sums&lt;/h3&gt;
+&lt;p&gt;Let us summarize in precise terms the steps for evaluating $\displaystyle\int_a^b f(x)\ dx$ using a Reimann Sum.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Divide $[a,b]$ into $n$ equal subintervals.
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_defint_nintervals2.svg&#34;&gt;
+Then each interval is of length
+$$
+\Delta x=\frac{b-1}n
+$$
+Let the $i^th$ subinterval be the &lt;strong&gt;base&lt;/strong&gt; of $i^{th}$ rectangle.
+&lt;hr style=&#34;
+    border: 0;
+    height: 0;
+    border-top: 1px dashed rgba(2, 135, 96, 0.2); 
+    border-bottom: 0;
+    margin: 0.5em 0;
+&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;Choose a point $c_i$ within the $i^th$ subinterval. Choose $f(c_i)$ be the &lt;strong&gt;height&lt;/strong&gt; of the $i^th$ rectangle.
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_defint_ci2.svg&#34;&gt;
+&lt;hr style=&#34;
+    border: 0;
+    height: 0;
+    border-top: 1px dashed rgba(2, 135, 96, 0.2); 
+    border-bottom: 0;
+    margin: 0.5em 0;
+&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;Add up the areas of the $n$ rectangles. The total area of $n$ rectangles is:
+$$
+\smash[b]{\underbrace{f(c_1)}_{\mathclap{\text{height}}}}
+\smash[b]{\underbrace{\Delta x}_{\mathclap{\text{base}}}} +
+\smash[b]{\underbrace{f(c_2)}_{\mathclap{\text{height}}}}
+\smash[b]{\underbrace{\Delta x}_{\mathclap{\text{base}}}} + \cdots +
+\smash[b]{\underbrace{f(c_n)}_{\mathclap{\text{height}}}}
+\smash[b]{\underbrace{\Delta x}_{\mathclap{\text{base}}}}
+=\sum_{i=1}^n{f(c_i)\Delta x}
+$$
+&lt;hr style=&#34;
+    border: 0;
+    height: 0;
+    border-top: 1px dashed rgba(2, 135, 96, 0.2); 
+    border-bottom: 0;
+    margin: 0.5em 0;
+&#34;&gt;
+&lt;/li&gt;
+&lt;li&gt;Take the limit as the rectangles become infinitesimally thin, ($\Delta x\to 0$, or equivalent $n\to\infty$). This limit is the actual area under the curve between $a$ and $b$.
+$$
+\lim_{n\to\infty}\sum_{i=1}^n f(c_i)\Delta x=\int_a^b f(x)\ dx
+$$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The sum of the areas of the $n$ rectangles, $\sum_{i=1}^n f(c_i)$, is called a &lt;code&gt;Riemann Sum&lt;/code&gt;. If we pick $c_i$ to be the left endpoint of the $i^{th}$ subinterval, the Riemann Sum is called a &lt;code&gt;left Riemann Sum&lt;/code&gt;. Similarly, if $c_i$ is the right endpoint of the $i^{th}$ interval, the Riemann Sum is called a &lt;code&gt;right Riemann Sum&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Howerver, in the limit $n\to\infty$ (so that $\Delta x\to 0$), this distinction is no longger needed. The limit of any Reimann Sum, no matter what the $c_i$&amp;rsquo;s whtin the subinterval are, is equal to the exact area under the curve.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;cumulative-sums&#34;&gt;Cumulative Sums&lt;/h3&gt;
+&lt;p&gt;We have been defining the definite integral $\displaystyle\int_a^b f(x)\ dx$ geometrically as the area under a curve. But $f(x)$ and $x$ can represent quantities other than length.&lt;/p&gt;
+&lt;p&gt;For instance, if $x$ represents time, with units of hours, and $f(x)$ represents velocity, with units of km/hour. So the units of the integral, $\displaystyle\int_a^b f(x)\ dx$, is km, which are the units of distance. But the integral $\displaystyle\int_a^b f(x)\ dx$ still represents the area under the curve, so the units of this area are km.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Notes on MIT 18.01.2 Calculus IB (Unit1 Integral)</title>
