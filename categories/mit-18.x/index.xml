@@ -102,6 +102,113 @@ $$&lt;/li&gt;
 &lt;h3 id=&#34;cumulative-sums&#34;&gt;Cumulative Sums&lt;/h3&gt;
 &lt;p&gt;We have been defining the definite integral $\displaystyle\int_a^b f(x)\ dx$ geometrically as the area under a curve. But $f(x)$ and $x$ can represent quantities other than length.&lt;/p&gt;
 &lt;p&gt;For instance, if $x$ represents time, with units of hours, and $f(x)$ represents velocity, with units of km/hour. So the units of the integral, $\displaystyle\int_a^b f(x)\ dx$, is km, which are the units of distance. But the integral $\displaystyle\int_a^b f(x)\ dx$ still represents the area under the curve, so the units of this area are km.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;first-fundamental-theorem-of-calculus&#34;&gt;First Fundamental Theorem of Calculus&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;First Fundamental Theorem of Calculus&lt;/code&gt; states that:
+If $F$ is differentiable, and $F^{\prime}=f$ is continuous, then
+$$
+\int_a^b f(x)\ dx = F(b)-F(a)=\left.F(x)\right\vert_a^b
+$$
+In other words, the definite integral of a function is the difference between the values of its antiderivative at the limits of the definite integral.&lt;/p&gt;
+&lt;p&gt;We will abbreviate the &lt;code&gt;First Fundamental Theorem of Calculus&lt;/code&gt; as &lt;code&gt;FTC1&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The FTC1 connects the definite integral to the antiderivative. With this connectionk, we can now compute definite integrals using antiderivatives, and dispense with Reimann sums.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-definite-integral-of-any-continuous-function&#34;&gt;The Definite Integral of Any Continuous Function&lt;/h3&gt;
+&lt;p&gt;Since the equation in the statement of FTC1 makes sense of general functions, we can use the FTC1 to extend the &lt;code&gt;definition of the definite integral&lt;/code&gt; to functions that are not necessarily non-negative.
+That is,
+For any continuous function $f$ with an antiderivative $F$,
+$$
+\int_a^b f(x)\ dx=F(b)-F(a)\quad\text{(for any continuous $f$)}
+$$
+It turns out that to be consistent with FTC1, the Riemann sum formula for definite integrals does not need to change. Consequently, the &lt;code&gt;geometric definition&lt;/code&gt; of $\displaystyle\int_a^b f(x)\ dx$ that is consistent with FTC1 is as follows.
+&lt;image src=&#34;\image\MIT_18.01\images_ftc1_signedarea.svg&#34;&gt;
+$$
+\displaystyle\int_a^b f(x)\ dx=\\
+\text{Area above $x$-axis and below &amp;ldquo;$y=f(x)$&amp;rdquo;}
+\\- \text{Area below $x$-axis and above &amp;ldquo;$y=f(x)$&amp;rdquo;}
+$$
+where the areas considered are between the vertical line $x=a$ and $x=b$. The important point is that the area above the $x$-axis is counted with a positive sign and the area below the $x$-axis is counted with a negative sign. In other words, the definite integral of a general function is the &lt;code&gt;signed area bounded by the curve $y=f(x)$&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We will continue to use FTC1, not Riemann sums, to evaluate definite integrals. We will also often use the area interpretation to dedeuce properties of definite integrals, for example when looking for symmetry.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;velocity-and-speed-displacement-and-distance-travelled&#34;&gt;Velocity and Speed, Displacement and Distance Travelled&lt;/h3&gt;
+&lt;p&gt;Suppose you are travelling between time $a$ and time $b$, and your velocity is given by $v(t)$ and your position by $x(t)$ at time $t$.&lt;/p&gt;
+&lt;p&gt;Recall the &lt;code&gt;Speed&lt;/code&gt; is $\vert v(t)\right$, the absolute value of the velocity function.&lt;/p&gt;
+&lt;p&gt;Then,
+$$
+\int_a^b v(t)\ dt=x(b)-x(a)\quad\text{(Displacement)}
+$$
+That is, the integral of the velocity function is the change if position between time $a$ and $b$, also called the &lt;code&gt;displacement&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;On the other hand, $\displaystyle\int_a^b\vert v(t)\vert\ dt$ gives the &lt;code&gt;total distance travelled&lt;/code&gt; between time $a$ and $b$.&lt;/p&gt;
+&lt;p&gt;In the case when $v(t)&amp;gt;0$ for all $t$, $\vert v(t)\vert=v(t)$, and therefore $\displaystyle\int_a^b v(t)\ dt=\displaystyle\int_a^b\vert v(t)\vert\ dt$. In other words, when you are always travelling in the same direction, then speed is equal to velocity, and total distance traveled is equal to displacement.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;properties-of-definite-integrals&#34;&gt;Properties of Definite Integrals&lt;/h3&gt;
+&lt;p&gt;Here are some properties of definite integrals. We have discussed and used most of these properties for $f&amp;gt;0$. The properties below are true for definite integrals for functions which can be negative as well.&lt;/p&gt;
+&lt;p&gt;Sums:
+$$
+\int_a^b(f(x)+g(x))\ dx=\int_a^bf(x)\ dx+\int_a^bg(x)\ dx
+$$&lt;/p&gt;
+&lt;p&gt;Constant Multiples:
+$$
+\int_a^bc\cdot f(x)\ dx=c\cdot\int_a^b f(x)\ dx\quad\text{for any constant $c$}
+$$&lt;/p&gt;
+&lt;p&gt;Same Upper and Lower Limits:
+$$
+\int_a^af(x)\ dx=0
+$$&lt;/p&gt;
+&lt;p&gt;Reversing Limits of Integrals:
+$$
+\int_b^af(x)\ dx=-\int_a^bf(x)\ dx\quad\text{for any $a$,$b$}
+$$&lt;/p&gt;
+&lt;p&gt;This is the definition of a definite integral with its lower limit greater than its upper limit. It is defined this way to be consistent with FTC1.&lt;/p&gt;
+&lt;p&gt;Combining Integrals:
+$$
+\int_a^cf(x)\ dx=\int_a^bf(x)\ dx+\int_b^cf(x)\ dx\quad\text{for any $a$,$b$,$c$}
+$$&lt;/p&gt;
+&lt;p&gt;We have seen this property in the last section with $a&amp;lt;b&amp;lt;c$. With the property above on reversing the limits of a definite integral, we can now use this property with $a$,$b$,$c$ in any order.\&lt;/p&gt;
+&lt;h3 id=&#34;estimation&#34;&gt;Estimation&lt;/h3&gt;
+&lt;p&gt;If $f(x)\le g(x)$, and $a\le b$, then
+$$
+\int_a^bf(x)\ dx\le\int_a^b g(x)\ dx\quad \text(for $a\le b$)
+$$
+Notice that the order of $a$ and $b$ matters for this inequality. If instead of $a\le b$ we have $b\le a$, then
+$$
+\int_a^bf(x)\ dx\ge \int_a^bg(x)\ dx\quad(b\le a)
+$$
+In other words, if the limits of the integrals are reversed, the inequality is also reversed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;change-of-variables-for-definite-integrals&#34;&gt;Change of Variables for Definite Integrals&lt;/h3&gt;
+&lt;p&gt;When we make a change of variables of an integral in order to evaluate it, we are using the method of substitution. The method of substitution for definite integrals is exactly analogous to the method of substitution for indefinite integrals, except we now need to pay attention to the limits of the integrals.&lt;/p&gt;
+&lt;p&gt;If
+$$
+\int_a^bf(x)\ dx=\int_a^bg(u(x))u^{\prime}(x)\ dx
+$$
+and $u^{\prime}$ does not change sign between $a$ and $b$, then
+$$
+\int_a^bf(x)\ dx=\int_a^bg(u(x))u^{\prime}(x)\ dx=\int_{u(a)}^{u(b)}g(u)\ du
+$$
+That is, the limits of the integral over $u$ are the values of $u$ corresponding to the limits of the integral over $x$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;caution&#34;&gt;Caution&lt;/h3&gt;
+&lt;p&gt;When using the method of substituion, we need to be very careful about when $u^{\prime}$ or $du$ changes sign. If $u^{\prime}$ changes sign within the integration interval $[a,b]$, the method of substition may give the wrong answer. In this case, we need to first rewrite the integral as a sum of two integrals such that within the limits of each integral $u^{\prime}$ does not change sign, and then use the method of substitution on each integral separately.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;comparing-ftc1-and-mvt&#34;&gt;Comparing FTC1 and MVT&lt;/h3&gt;
+&lt;p&gt;If $F(x)$ is differentiable and $F^{\prime}$ is continuous on $[a,b]$. And let
+$$
+\begin{aligned}
+\Delta F =&amp;amp; F(b)-F(a)\\
+\Delta x =&amp;amp; b-a
+\end{aligned}
+$$
+Then, the MVT states that
+$$
+\frac{\Delta F}{\Delta x}=F^{\prime}(c)\quad\text{for some }c,\ a&amp;lt;c&amp;lt;b
+$$
+On the other hand, the FTC1 gives
+$$
+\frac{\Delta F}{\Delta x}=\frac 1 {b-a}\int_a^b f^{\prime}\ dx
+$$
+We see that the FTC1 gives a specific value for $\frac{\Delta F}{\Delta x}$, the average rate of change of $F$ over $[a,b]$, but the MVT does not, sinve it does not tell us where $c$ is.&lt;/p&gt;
+&lt;p&gt;Therefore, the First Fundamental Theorem much more useful than the Mean Value Theorem. Once we have FTC1 at our disposal, we do not need to use MVT anymore. Nonetheless, the Mean Value Theorem is important as the basis of calculus. We needed it to establish the fact that two antiderivatives of the same function can only differ by a constant. We will need this fact again in order to prove FTC1 in the next section.&lt;/p&gt;
 </description>
     </item>
     
