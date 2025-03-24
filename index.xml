@@ -127,12 +127,12 @@ $$
 \text{Area above $x$-axis and below &amp;ldquo;$y=f(x)$&amp;rdquo;}
 \\- \text{Area below $x$-axis and above &amp;ldquo;$y=f(x)$&amp;rdquo;}
 $$
-where the areas considered are between the vertical line $x=a$ and $x=b$. The important point is that the area above the $x$-axis is counted with a positive sign and the area below the $x$-axis is counted with a negative sign. In other words, the definite integral of a general function is the &lt;code&gt;signed area bounded by the curve $y=f(x)$&lt;/code&gt;.&lt;/p&gt;
+where the areas considered are between the vertical line $x=a$ and $x=b$. The important point is that the area above the $x$-axis is counted with a positive sign and the area below the $x$-axis is counted with a negative sign. In other words, the definite integral of a general function is the &lt;code&gt;signed area bounded by the curve &lt;/code&gt;$y=f(x)$.&lt;/p&gt;
 &lt;p&gt;We will continue to use FTC1, not Riemann sums, to evaluate definite integrals. We will also often use the area interpretation to dedeuce properties of definite integrals, for example when looking for symmetry.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;velocity-and-speed-displacement-and-distance-travelled&#34;&gt;Velocity and Speed, Displacement and Distance Travelled&lt;/h3&gt;
 &lt;p&gt;Suppose you are travelling between time $a$ and time $b$, and your velocity is given by $v(t)$ and your position by $x(t)$ at time $t$.&lt;/p&gt;
-&lt;p&gt;Recall the &lt;code&gt;Speed&lt;/code&gt; is $\vert v(t)\right$, the absolute value of the velocity function.&lt;/p&gt;
+&lt;p&gt;Recall the &lt;code&gt;Speed&lt;/code&gt; is $\vert v(t)\vert$, the absolute value of the velocity function.&lt;/p&gt;
 &lt;p&gt;Then,
 $$
 \int_a^b v(t)\ dt=x(b)-x(a)\quad\text{(Displacement)}
