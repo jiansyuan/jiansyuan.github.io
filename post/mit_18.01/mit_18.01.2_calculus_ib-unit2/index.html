@@ -207,6 +207,14 @@ onload='renderMathInElement(document.body);'></script>
         <li><a href="#comparing-ftc1-and-mvt">Comparing FTC1 and MVT</a></li>
       </ul>
     </li>
+    <li><a href="#second-fundamental-theorem-of-calculus">Second Fundamental Theorem of Calculus</a>
+      <ul>
+        <li><a href="#ftc2-and-the-chain-rule">FTC2 and The Chain Rule</a></li>
+        <li><a href="#the-two-fundamental-theorems-of-calculus">The Two Fundamental Theorems of Calculus</a></li>
+        <li><a href="#constructing-functions-using-integrals">Constructing Functions Using Integrals</a></li>
+        <li><a href="#summary-of-the-logarithm">Summary of The Logarithm</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -413,6 +421,113 @@ $$
 $$
 We see that the FTC1 gives a specific value for $\frac{\Delta F}{\Delta x}$, the average rate of change of $F$ over $[a,b]$, but the MVT does not, sinve it does not tell us where $c$ is.</p>
 <p>Therefore, the First Fundamental Theorem much more useful than the Mean Value Theorem. Once we have FTC1 at our disposal, we do not need to use MVT anymore. Nonetheless, the Mean Value Theorem is important as the basis of calculus. We needed it to establish the fact that two antiderivatives of the same function can only differ by a constant. We will need this fact again in order to prove FTC1 in the next section.</p>
+<hr>
+<h2 id="second-fundamental-theorem-of-calculus">Second Fundamental Theorem of Calculus</h2>
+<p>The <code>Second Fundemental Theorem of Calculus</code> states the following.</p>
+<p>Given a continuous function $f(x)$, if
+$$
+G(x)=\int_a^x f(t)\ dt\quad\text{($t$ between $a$ and $x$)}
+$$
+then
+$$
+G^{\prime}(x)=f(x)
+$$
+<image src="\image\MIT_18.01\images_ftc2_G.svg"></p>
+<p>Geometrically, $G(x)$ is the area between $a$ and $x$. This area varies as $x$ varies.</p>
+<p>We will abbreviate this theorem by <code>FTC2</code>.</p>
+<p>In terms of differential equations, FTC2 says that $G(x)$ is the solution to the following differential equation and initial condition:
+$$
+\begin{aligned}
+y^{\prime}\quad=&amp;\quad f\quad\text{(differential equation)}\\
+y(a)\quad=&amp;\quad 0\quad\text{(initial condition)}
+\end{aligned}
+$$
+The initial condition $y(a)=0$ is satisified because $G(a)=\displaystyle\int_a^a f(t)\ dt=0$.</p>
+<p>Recall that any function $G$ such that $G^{\prime}=f$ is an antiderivative of $f$. Hence, FTC2 gives us a formula for an antiderivative of $f(x)$. This formula is different from the formulas you have seen. It is terms of a definite integral, and is called an <code>integral formula</code>.</p>
+<p><strong>Note:</strong> The integrand $f(x)$ can be nay continuous function, not just the one whose antiderivative we know how to find. These integral formulas are still useful there are numerical methods that allow us to compute them.</p>
+<hr>
+<h3 id="ftc2-and-the-chain-rule">FTC2 and The Chain Rule</h3>
+<p>For any continuous function $f$, and differentiable function $u(x)$,
+$$
+\frac d {dx}\int_a^{u(x)}f(t)\ dt\quad=\quad f(u(x))\cdot u^{\prime}(x)
+$$
+This is because
+$$
+\int_a^{u(x)}f(t)\ dt\ =\ G(u(x))\quad\text{where}\quad G(y)\ =\ \int_a^y f(t)\ dt
+$$
+In other words, the integral $\displaystyle\int_a^{u(a)}f(t)\ dt$ can be written as a composition of two function $G$ and $u$. We can then apply the chain rule and FTC2 to get the derivative.</p>
+<hr>
+<h3 id="the-two-fundamental-theorems-of-calculus">The Two Fundamental Theorems of Calculus</h3>
+<p>Here is another point of view of the two fundamental theorems of calculus together.</p>
+<h4 id="ftc1">FTC1:</h4>
+<p>Given a differentiable function $F$ with continuous derivative $F^{\prime}$,
+$$
+\int_a^x F^{\prime}(t)\ dt=F(x)-F(a)
+$$</p>
+<h4 id="ftc2">FTC2:</h4>
+<p>Given a continuous function $f$,
+$$
+\frac d{dx}\int_a^x f(t)\ dt=f(x)
+$$
+So, the two fundamental theorems together say that differentiation and integration (from $a$ to $x$) are &ldquo;inverse&rdquo; operation of on another, up to a constant.</p>
+<hr>
+<h3 id="constructing-functions-using-integrals">Constructing Functions Using Integrals</h3>
+<p>The FTC2 gives the integral formula
+$$
+G(x)=\int_a^xf(t)\ dt
+$$
+as the solution to the following differential equation and initial condition:
+$$
+\begin{aligned}
+y^{\prime}\quad=&amp;\quad f\quad\text{(differential equation)}\\
+y(a)\quad=&amp;\quad 0\quad\text{(initial condition)}
+\end{aligned}
+$$
+Depending on what the differential equation is, $G(x)$ can be a function we already know, or onw that cannot be expressed without an integral in terms of any function we already know. There are many functions of either kind.</p>
+<p>For instance, the logarithmic function can be defined using an integral:
+$$
+L(x)\ =\ \int_1^x\frac{dt}t\ =\ \ln(x)\quad\text{where $x&gt;0$}
+$$
+On the other hand, the integral of $e^{-t^2}$, the <code>bell curve</code>, is a function defined by an integral and cannot be expressed in terms of functions we already know:
+$$
+F(x)\ =\ \int_0^xe^{-t^2}\ dt
+$$
+This function is central in probability and will be discussed more in the next unit.</p>
+<p>Finally, even though we may not have explicit formulas for the functions designed by integral formulas, we can apply FTC2 to find their derivatives. Therefore, we have all of our usual tools at our disposal. For example, we can graph them, or approximate them by linear and quadratic approximations.</p>
+<hr>
+<h3 id="summary-of-the-logarithm">Summary of The Logarithm</h3>
+<p>In Calculus IA, we defined the exponential function $E(y)$ to be the solution to the differential equation and initial condition.
+$$
+\begin{aligned}
+E^{\prime}\quad=&amp;\quad E(y)\quad\text{(differential equation)}\\
+E(0)\quad=&amp;\quad 1\quad\text{(initial condition)}
+\end{aligned}
+$$
+The Properties of the logarithm were derived from the properties of the exponential.</p>
+<p>Product:
+$$
+\begin{array}{lcl}
+\text{Product:}&amp;\qquad e^a\cdot e^b\ =\ e^{a+b}\qquad&amp;\Longrightarrow\qquad&amp;\ln(A\cdot B)\ =\ \ln(A)+\ln(B)\\
+\text{Reciprocal:}&amp;\qquad\frac{1}{e^a}\ =\ e^{-a}\qquad&amp;\Longrightarrow\qquad&amp; \ln(\frac 1 A)\ =\ -\ln(A)\\
+\end{array}
+$$
+On the other hand, we first define the logarithm to be the solution to the differential equation and initial condition below:
+$$
+\begin{aligned}
+L^{\prime}(x)\ =&amp;\ \frac 1 x\quad\text{(differential equation)}\\
+L(1)\ =&amp;\ 0\quad\text{(initial condition)}
+\end{aligned}
+$$
+The FTC2 gives the integral formula for $L$.
+$$
+\text{Definition of the logarithm: }\quad L(x)\ =\ \int_1^x\frac{dt}t\\
+$$
+We then define $e$ to be the number such that $L(e)=1$, and the exponential function to be the inverse of $L$.
+$$
+\text{Definition of the exponential:}\quad e^y\ =\ L^{-1}(y)
+$$
+To derive the properties of logarithm, we perform different changes of variable to the integral formula $L(x)=\displaystyle\int_1^x\frac{dt}t$.</p>
+<hr>
 </div>
 	</section>
 
@@ -542,7 +657,7 @@ We see that the FTC1 gives a specific value for $\frac{\Delta F}{\Delta x}$, the
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		1527 words in this page.
+		2205 words in this page.
 	</div>
 </div>
 
