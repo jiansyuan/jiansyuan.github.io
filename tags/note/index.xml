@@ -7,10 +7,60 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
-    <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Mar 2025 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jiansyuan.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Notes on MIT 18.01.2 Calculus IB (Unit3 Application)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit3/</link>
+      <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit3/</guid>
+      <description>&lt;h1 id=&#34;unit-2-applications&#34;&gt;Unit 2: Applications&lt;/h1&gt;
+&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;area-and-volumes&#34;&gt;Area and Volumes&lt;/h2&gt;
+&lt;h3 id=&#34;process-for-finding-areas-and-volumes&#34;&gt;Process for Finding Areas and Volumes&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Draw a picture&lt;/li&gt;
+&lt;li&gt;Identify limits of integration&lt;/li&gt;
+&lt;li&gt;Identify integrand&lt;/li&gt;
+&lt;li&gt;Integrate to solve (as needed)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;volumes-by-slicing&#34;&gt;Volumes by Slicing&lt;/h3&gt;
+&lt;p&gt;The volume of a slive of bread is
+$$
+dV=A(x)\ dx
+$$
+where $dx$ is the width of the slice, and $A(x)$ is the cross-sectional area. The volume of the entire loaf is
+$$
+V=\int A(x)\ dx
+$$&lt;/p&gt;
+&lt;h3 id=&#34;method-of-disks&#34;&gt;Method of Disks&lt;/h3&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_methoddisks2d.svg&#34; width=40% style=&#34;float: left; margin-right: 20px&#34;&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_methoddisks3d.svg&#34; width=40%&gt;
+&lt;p&gt;The method of disks gives the differential volume element for a curve rotated about the $x$-axis
+$$
+dV=\pi y^2\ dx
+$$&lt;/p&gt;
+&lt;h3 id=&#34;method-of-shells&#34;&gt;Method of Shells&lt;/h3&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_methodshells.svg&#34; width=70% &gt;
+&lt;p&gt;The method of shells for a curve $y=f(x)$ rotated about the $y$-axis
+$$
+dV=2\pi x y \ dx
+$$&lt;/p&gt;
+&lt;h3 id=&#34;method-of-washers&#34;&gt;Method of Washers&lt;/h3&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_app1_washer2.svg&#34;  width=50%&gt;
+&lt;p&gt;The volume of an infinitesimal washer is given by
+$$
+dV=\pi (y_{outer}^2-y_{inner}^2)\ dx
+$$&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
     
     <item>
       <title>Notes on MIT 18.01.2 Calculus IB (Unit2 Integration Theory)</title>
