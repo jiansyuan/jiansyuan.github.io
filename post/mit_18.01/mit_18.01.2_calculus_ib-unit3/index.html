@@ -197,6 +197,15 @@ onload='renderMathInElement(document.body);'></script>
         <li><a href="#method-of-washers">Method of Washers</a></li>
       </ul>
     </li>
+    <li><a href="#average-value">Average Value</a>
+      <ul>
+        <li><a href="#average-value-of-fx">Average Value of $f(x)$</a></li>
+        <li><a href="#average-value-and-average-rate-of-change">Average Value And Average Rate of Change</a></li>
+        <li><a href="#weighted-average">Weighted Average</a></li>
+        <li><a href="#center-of-mass">Center of Mass</a></li>
+        <li><a href="#work-heat-and-energy">Work, Heat, And Energy</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -251,6 +260,59 @@ $$</p>
 <p>The volume of an infinitesimal washer is given by
 $$
 dV=\pi (y_{outer}^2-y_{inner}^2)\ dx
+$$</p>
+<hr>
+<h2 id="average-value">Average Value</h2>
+<h3 id="average-value-of-fx">Average Value of $f(x)$</h3>
+<p>The average value of a function $f(x)$ on an interval $a\le x\le b$ is a given by
+$$
+\frac{1}{b-a}\int_a^b f(x)\ dx
+$$</p>
+<h3 id="average-value-and-average-rate-of-change">Average Value And Average Rate of Change</h3>
+<p>Fundamental Theorem of calculus tells us that the average rate of change of $y$ over $a\le t\le b$ is the <strong>same</strong> as the average value of $a\le t\le b$
+$$
+\text{ave}(y^{\prime})=\frac 1 {b-a}\int_a^b y^{\prime}(t)\ dt=\frac{y(b)-y(a)}{b-a}=\text{average rate of change of $y(x)$}
+$$</p>
+<h3 id="weighted-average">Weighted Average</h3>
+<p>The <code>weighted average</code> value of a function $f(x)$, weighted by a weight function $w(x)$ on an interval $a\le x\le b$ is given by
+$$
+\frac{\int_a^bf(x)w(x)\ dx}{\int_a^bw(x)\ dx}
+$$</p>
+<h3 id="center-of-mass">Center of Mass</h3>
+<h4 id="1-dimensional">1-Dimensional</h4>
+<p>For a 1-dimensional rod of length $L$ with linear density function $\lambda(x)$ (measured in mass per unit length), the center of mass is the weighted average:
+$$
+x_c=\frac{\int_0^Lx\lambda(x)\ dx}{\int_0^L\lambda(x)\ dx}
+$$</p>
+<h4 id="2-dimensional">2-Dimensional</h4>
+<p>For a 2-dimensional region whose mass is proportional to area, the center of mass, or centroid $(\overline{x},\overline{y})$, is the weighted average of the position with respect to the area. The $x-$ and $y-$ coordinates of the centroid are computed by the following integrals:
+$$
+\begin{aligned}
+\overline{x}=&amp;\frac{\int_a^bx\ dA}{\int_a^b\ dA}\\
+\overline{y}=&amp;\frac{\int_a^by\ dA}{\int_a^b\ dA}
+\end{aligned}
+$$
+where $dA$ is the infinitesimal area, and we must define the limits of integration so that we integrate over the entire region with respect to $x$ or $y$ respectively.</p>
+<h3 id="work-heat-and-energy">Work, Heat, And Energy</h3>
+<p><code>Work</code> is done on an object when <code>energy</code> is transferred to that object.</p>
+<p><code>Work</code>, <code>heat</code>, and <code>energy</code> have the same units, but we typically measure them differently.</p>
+<ul>
+<li>We measure <code>work</code> in Newton-meters (N⋅M)</li>
+<li>We measure <code>heat</code> in calories (cal)</li>
+<li>We measure <code>energy</code> in Joules (J)</li>
+</ul>
+<p>James Joule recognized and measured the relationship between heat energy and mechanical work.
+$$
+1\text{ cal}=4.186\text{ J}=4.186\text{ N$\cdot$m}
+$$
+The approach to solving problems involving work, heat, or energy is the same, and involves computing an integral.</p>
+<p>A common example of mechanical work is when a force is applied over a distance. This force applied to the object transfers energy in the form of kinetic or potential energy. In this case, the formula for work is given by
+$$
+\text{W}=\int F\ dx
+$$
+In the cauldron example, heat energy was transferred to the water in the cauldron. We measured the work done, or the energy transferred, by measuring the total change in tempertaure $T$:
+$$
+\int T\ dV
 $$</p>
 <hr>
 </div>
@@ -382,7 +444,7 @@ $$</p>
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		160 words in this page.
+		552 words in this page.
 	</div>
 </div>
 

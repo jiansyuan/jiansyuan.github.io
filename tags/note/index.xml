@@ -59,6 +59,59 @@ $$
 dV=\pi (y_{outer}^2-y_{inner}^2)\ dx
 $$&lt;/p&gt;
 &lt;hr&gt;
+&lt;h2 id=&#34;average-value&#34;&gt;Average Value&lt;/h2&gt;
+&lt;h3 id=&#34;average-value-of-fx&#34;&gt;Average Value of $f(x)$&lt;/h3&gt;
+&lt;p&gt;The average value of a function $f(x)$ on an interval $a\le x\le b$ is a given by
+$$
+\frac{1}{b-a}\int_a^b f(x)\ dx
+$$&lt;/p&gt;
+&lt;h3 id=&#34;average-value-and-average-rate-of-change&#34;&gt;Average Value And Average Rate of Change&lt;/h3&gt;
+&lt;p&gt;Fundamental Theorem of calculus tells us that the average rate of change of $y$ over $a\le t\le b$ is the &lt;strong&gt;same&lt;/strong&gt; as the average value of $a\le t\le b$
+$$
+\text{ave}(y^{\prime})=\frac 1 {b-a}\int_a^b y^{\prime}(t)\ dt=\frac{y(b)-y(a)}{b-a}=\text{average rate of change of $y(x)$}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;weighted-average&#34;&gt;Weighted Average&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;weighted average&lt;/code&gt; value of a function $f(x)$, weighted by a weight function $w(x)$ on an interval $a\le x\le b$ is given by
+$$
+\frac{\int_a^bf(x)w(x)\ dx}{\int_a^bw(x)\ dx}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;center-of-mass&#34;&gt;Center of Mass&lt;/h3&gt;
+&lt;h4 id=&#34;1-dimensional&#34;&gt;1-Dimensional&lt;/h4&gt;
+&lt;p&gt;For a 1-dimensional rod of length $L$ with linear density function $\lambda(x)$ (measured in mass per unit length), the center of mass is the weighted average:
+$$
+x_c=\frac{\int_0^Lx\lambda(x)\ dx}{\int_0^L\lambda(x)\ dx}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;2-dimensional&#34;&gt;2-Dimensional&lt;/h4&gt;
+&lt;p&gt;For a 2-dimensional region whose mass is proportional to area, the center of mass, or centroid $(\overline{x},\overline{y})$, is the weighted average of the position with respect to the area. The $x-$ and $y-$ coordinates of the centroid are computed by the following integrals:
+$$
+\begin{aligned}
+\overline{x}=&amp;amp;\frac{\int_a^bx\ dA}{\int_a^b\ dA}\\
+\overline{y}=&amp;amp;\frac{\int_a^by\ dA}{\int_a^b\ dA}
+\end{aligned}
+$$
+where $dA$ is the infinitesimal area, and we must define the limits of integration so that we integrate over the entire region with respect to $x$ or $y$ respectively.&lt;/p&gt;
+&lt;h3 id=&#34;work-heat-and-energy&#34;&gt;Work, Heat, And Energy&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Work&lt;/code&gt; is done on an object when &lt;code&gt;energy&lt;/code&gt; is transferred to that object.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Work&lt;/code&gt;, &lt;code&gt;heat&lt;/code&gt;, and &lt;code&gt;energy&lt;/code&gt; have the same units, but we typically measure them differently.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We measure &lt;code&gt;work&lt;/code&gt; in Newton-meters (N⋅M)&lt;/li&gt;
+&lt;li&gt;We measure &lt;code&gt;heat&lt;/code&gt; in calories (cal)&lt;/li&gt;
+&lt;li&gt;We measure &lt;code&gt;energy&lt;/code&gt; in Joules (J)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;James Joule recognized and measured the relationship between heat energy and mechanical work.
+$$
+1\text{ cal}=4.186\text{ J}=4.186\text{ N$\cdot$m}
+$$
+The approach to solving problems involving work, heat, or energy is the same, and involves computing an integral.&lt;/p&gt;
+&lt;p&gt;A common example of mechanical work is when a force is applied over a distance. This force applied to the object transfers energy in the form of kinetic or potential energy. In this case, the formula for work is given by
+$$
+\text{W}=\int F\ dx
+$$
+In the cauldron example, heat energy was transferred to the water in the cauldron. We measured the work done, or the energy transferred, by measuring the total change in tempertaure $T$:
+$$
+\int T\ dV
+$$&lt;/p&gt;
+&lt;hr&gt;
 </description>
     </item>
     
