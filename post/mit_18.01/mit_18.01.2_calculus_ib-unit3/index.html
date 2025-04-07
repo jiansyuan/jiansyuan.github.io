@@ -206,6 +206,15 @@ onload='renderMathInElement(document.body);'></script>
         <li><a href="#work-heat-and-energy">Work, Heat, And Energy</a></li>
       </ul>
     </li>
+    <li><a href="#probability">Probability</a>
+      <ul>
+        <li><a href="#discrete-probability">Discrete Probability</a></li>
+        <li><a href="#distributions">Distributions</a></li>
+        <li><a href="#normal-distribution">Normal Distribution</a></li>
+        <li><a href="#exponential-distribution">Exponential Distribution</a></li>
+        <li><a href="#expected-value">Expected Value</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -221,7 +230,7 @@ onload='renderMathInElement(document.body);'></script>
 
 <article>
 	<section class="mx-auto content">
-		<div class="c-rich-text"><h1 id="unit-2-applications">Unit 2: Applications</h1>
+		<div class="c-rich-text"><h1 id="unit-3-applications">Unit 3: Applications</h1>
 <h2 id="preface">Preface</h2>
 <p>This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to <a href="https://student.mit.edu/catalog/m18a.html">MIT 18.x Catalog</a>, and it can also be found at <a href="https://openlearning.mit.edu/courses-programs/open-learning-library">MIT Open Learning Library</a>.</p>
 <hr>
@@ -315,6 +324,41 @@ $$
 \int T\ dV
 $$</p>
 <hr>
+<h2 id="probability">Probability</h2>
+<h3 id="discrete-probability">Discrete Probability</h3>
+<p>$$
+\text{Discrete Probability}=\frac{\text{# specified outcomes}}{\text{# all possible outcomes}}
+$$</p>
+<p>Note this means that the probability is a positive fraction that is less than or equal to $1$.</p>
+<hr>
+<h3 id="distributions">Distributions</h3>
+<p>A <code>distribution</code> is a nonnegative function $w(x)$ that approximates the discrete distribution. The area under a distribution measures the probability that an event occurs.
+$$
+P(a&lt;x&lt;b)=\frac{\int_a^bw(x)\ dx}{\int_{-\infty}^{+\infty}w(x)\ dx}
+$$
+Since $\displaystyle\int_{-\infty}^{+\infty}w(x)\ dx=C$ is a finite constant, to scale the function, we define $\displaystyle p(x)=\frac{w(x)}{C}$, which had the property that $\displaystyle\int_{-\infty}^{+\infty}p(x)\ dx=1$</p>
+<p>A <code>probability distribution</code> or a <code>probability density function</code> is defined as a nonnegative function $p(x)$ defined on $-\infty &lt;x&lt;\infty$ with the property that $\displaystyle\int_{-\infty}^{+\infty}p(x)\ dx=1$. In this case, the probability of the outcome $a&lt;x&lt;b$ is defined as:
+$$
+P(a&lt;x&lt;b)=\int_a^bp(x)\ dx
+$$</p>
+<hr>
+<h3 id="normal-distribution">Normal Distribution</h3>
+<p>$$
+p(x)=\frac1{\sigma \sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}},\qquad -\infty&lt;x&lt;+\infty
+$$</p>
+<p>where the expected value is $\mu$ and the standard deviation is $\sigma$.</p>
+<hr>
+<h3 id="exponential-distribution">Exponential Distribution</h3>
+<p>$$
+p(t)=
+\begin{cases}
+0,&amp;\quad t&lt;0 \\
+a e^{-a t},&amp;\quad 0\le t&lt;\infty
+\end{cases}
+$$</p>
+<p>where the expected value is $1/a$.</p>
+<hr>
+<h3 id="expected-value">Expected Value</h3>
 </div>
 	</section>
 
@@ -444,7 +488,7 @@ $$</p>
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		552 words in this page.
+		717 words in this page.
 	</div>
 </div>
 

@@ -18,7 +18,7 @@
       <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit3/</guid>
-      <description>&lt;h1 id=&#34;unit-2-applications&#34;&gt;Unit 2: Applications&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;unit-3-applications&#34;&gt;Unit 3: Applications&lt;/h1&gt;
 &lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
 &lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
@@ -112,6 +112,41 @@ $$
 \int T\ dV
 $$&lt;/p&gt;
 &lt;hr&gt;
+&lt;h2 id=&#34;probability&#34;&gt;Probability&lt;/h2&gt;
+&lt;h3 id=&#34;discrete-probability&#34;&gt;Discrete Probability&lt;/h3&gt;
+&lt;p&gt;$$
+\text{Discrete Probability}=\frac{\text{# specified outcomes}}{\text{# all possible outcomes}}
+$$&lt;/p&gt;
+&lt;p&gt;Note this means that the probability is a positive fraction that is less than or equal to $1$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;distributions&#34;&gt;Distributions&lt;/h3&gt;
+&lt;p&gt;A &lt;code&gt;distribution&lt;/code&gt; is a nonnegative function $w(x)$ that approximates the discrete distribution. The area under a distribution measures the probability that an event occurs.
+$$
+P(a&amp;lt;x&amp;lt;b)=\frac{\int_a^bw(x)\ dx}{\int_{-\infty}^{+\infty}w(x)\ dx}
+$$
+Since $\displaystyle\int_{-\infty}^{+\infty}w(x)\ dx=C$ is a finite constant, to scale the function, we define $\displaystyle p(x)=\frac{w(x)}{C}$, which had the property that $\displaystyle\int_{-\infty}^{+\infty}p(x)\ dx=1$&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;probability distribution&lt;/code&gt; or a &lt;code&gt;probability density function&lt;/code&gt; is defined as a nonnegative function $p(x)$ defined on $-\infty &amp;lt;x&amp;lt;\infty$ with the property that $\displaystyle\int_{-\infty}^{+\infty}p(x)\ dx=1$. In this case, the probability of the outcome $a&amp;lt;x&amp;lt;b$ is defined as:
+$$
+P(a&amp;lt;x&amp;lt;b)=\int_a^bp(x)\ dx
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;normal-distribution&#34;&gt;Normal Distribution&lt;/h3&gt;
+&lt;p&gt;$$
+p(x)=\frac1{\sigma \sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}},\qquad -\infty&amp;lt;x&amp;lt;+\infty
+$$&lt;/p&gt;
+&lt;p&gt;where the expected value is $\mu$ and the standard deviation is $\sigma$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;exponential-distribution&#34;&gt;Exponential Distribution&lt;/h3&gt;
+&lt;p&gt;$$
+p(t)=
+\begin{cases}
+0,&amp;amp;\quad t&amp;lt;0 \\
+a e^{-a t},&amp;amp;\quad 0\le t&amp;lt;\infty
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;where the expected value is $1/a$.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;expected-value&#34;&gt;Expected Value&lt;/h3&gt;
 </description>
     </item>
     
