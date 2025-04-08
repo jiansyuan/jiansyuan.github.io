@@ -147,6 +147,77 @@ $$&lt;/p&gt;
 &lt;p&gt;where the expected value is $1/a$.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;expected-value&#34;&gt;Expected Value&lt;/h3&gt;
+&lt;p&gt;Given a probability distribution $p(x)$ such that $\displaystyle\int_{-\infty}^\infty p(x)\ dx=1$, the &lt;code&gt;expected value&lt;/code&gt;, $E$, also known as the &lt;code&gt;mean&lt;/code&gt;.
+$$
+\text{Expected value}=E=\int_{-\infty}^\infty x p(x)\ dx
+$$
+Note that the expected value is completely analogous to center of mass.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;variance&#34;&gt;Variance&lt;/h3&gt;
+&lt;p&gt;Given a probability distribution $p(x)$ with $\displaystyle\int_{-\infty}^{\infty}p(x)\ dx=1$, and whose expected value is $E$, the &lt;code&gt;variance&lt;/code&gt;, $V$, measures the average spread of outcomes from the expected value.
+$$
+\text{Variance}=V=\int_{-\infty}^\infty (x-E)^2p(x)\ dx
+$$
+The &lt;code&gt;standard deviation&lt;/code&gt;, $\sigma$, is the square root of the variance:
+$$
+\sigma=\sqrt{V}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;area-under-the-bell-curve&#34;&gt;Area Under The Bell Curve&lt;/h3&gt;
+&lt;p&gt;$$
+\text{Area} = \int_0^\infty x^{-x^2}\ dx=\frac{\sqrt{\pi}}{2}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;numerical-integration&#34;&gt;Numerical Integration&lt;/h2&gt;
+&lt;h3 id=&#34;riemann-sums&#34;&gt;Riemann sums&lt;/h3&gt;
+&lt;p&gt;To approximate the integral $\displaystyle\int_a^b f(x)\ dx$:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Subdivide the interval into $n$ pieces $a=x_0&amp;lt;x_1&amp;lt;\cdots&amp;lt;x_{n-1}&amp;lt;x_n=b$.&lt;/li&gt;
+&lt;li&gt;Let $y_0=f(x_0)$, $y_1=f(x_1)$, &amp;hellip; , $y_{n-1}=f(x_{n-1})$, and $y_n=f(x_n)$.&lt;/li&gt;
+&lt;li&gt;$\displaystyle \Delta x=\frac{b-a}{n}$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;left-riemann-sum&#34;&gt;Left Riemann Sum&lt;/h4&gt;
+&lt;p&gt;$$
+\int_a^b f(x)\ dx\approx \Delta x(y_0+y_1+\cdots+y_{n-1})
+$$&lt;/p&gt;
+&lt;h4 id=&#34;right-riemann-sum&#34;&gt;Right Riemann Sum&lt;/h4&gt;
+&lt;p&gt;$$
+\int_a^b f(x)\ dx\approx \Delta x(y_1+y_2+\cdots+y_{n})
+$$&lt;/p&gt;
+&lt;h3 id=&#34;midpoint-rule&#34;&gt;Midpoint Rule&lt;/h3&gt;
+&lt;p&gt;Let
+$$
+\tilde{y}_1=f\left(\frac{x_0+x_1}2\right),\quad \tilde{y}_1=f\left(\frac{x_1+x_2}2\right),\ \dots\ ,\quad \tilde{y}_n=f\left(\frac{x_{n-1}+x_n}2\right)
+$$
+then
+$$
+\int_a^bf(x)\ dx\approx \Delta x\left(\tilde{y}_1+\tilde{y}_2+\cdots+\tilde{y}_n\right)
+$$&lt;/p&gt;
+&lt;h3 id=&#34;trapezoidal-rule&#34;&gt;Trapezoidal Rule&lt;/h3&gt;
+&lt;p&gt;$$
+\int_a^bf(x)\ dx\approx \Delta x\left(\frac 1 2y_0+y_1+\cdots+y_{n-1}+\frac 1 2 y_n\right)
+$$&lt;/p&gt;
+&lt;h3 id=&#34;simpsons-rule&#34;&gt;Simpson&amp;rsquo;s Rule&lt;/h3&gt;
+&lt;p&gt;$$
+\int_a^bf(x)\ dx\approx \frac {\Delta x}3 \left(y_0+4y_1+2y_2+4y_3+\cdots+2y_{n-2}+4y_{n-1}+y_n\right)
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;error-bounds&#34;&gt;Error Bounds&lt;/h3&gt;
+&lt;h4 id=&#34;error-bound-of-trapezoidal-rule&#34;&gt;Error bound of Trapezoidal Rule&lt;/h4&gt;
+&lt;p&gt;Suppose $\vert f^{\prime\prime}(x)\vert\le M$ for $a\le x\le b$. Then the error of the Trapezoidal Rule over $n$ subintervals is given by
+$$
+\vert E_T\vert \le\frac{M(b-a)^3}{12n^2}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;error-bound-of-midpoint-rule&#34;&gt;Error bound of Midpoint Rule&lt;/h4&gt;
+&lt;p&gt;Suppose $\vert f^{\prime\prime}(x)\vert\le M$ for $a\le x\le b$. Then the error of the Midpoint Rule over $n$ subintervals is given by
+$$
+\vert E_M\vert \le\frac{M(b-a)^3}{24n^2}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;error-bound-of-simpsons-rule&#34;&gt;Error bound of Simpson&amp;rsquo;s Rule&lt;/h4&gt;
+&lt;p&gt;Suppose $\vert f^{(4)}(x)\vert\le M$ for $a\le x\le b$. Then the error of the Simpson&amp;rsquo;s Rule over $n$ subintervals is given by
+$$
+\vert E_S\vert\le\frac{M(b-a)^5}{180n^4}
+$$&lt;/p&gt;
 </description>
     </item>
     
