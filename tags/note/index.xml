@@ -7,10 +7,138 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
-    <lastBuildDate>Wed, 26 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Apr 2025 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jiansyuan.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Notes on MIT 18.01.2 Calculus IB (Unit4 Integration Techniques)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit4/</link>
+      <pubDate>Sat, 12 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit4/</guid>
+      <description>&lt;h1 id=&#34;unit-4-techniques-of-integration&#34;&gt;Unit 4: Techniques of Integration&lt;/h1&gt;
+&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;integrals-of-trig-powers&#34;&gt;Integrals of Trig Powers&lt;/h2&gt;
+&lt;h3 id=&#34;trigonometric-identities&#34;&gt;Trigonometric Identities&lt;/h3&gt;
+&lt;h4 id=&#34;the-pythagorean-theorem&#34;&gt;The Pythagorean Theorem&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\cos^2(\theta)+\sin^2(\theta)\quad=&amp;amp;\quad1\\
+1+\tan^2(\theta)\quad=&amp;amp;\quad\sec^2(\theta)\qquad\left(\theta\ne\frac{\pi}2+n\pi\right)\\
+\cot^2(\theta)+1\quad=&amp;amp;\quad\csc^2(\theta)\qquad(\theta\ne n\pi)
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;the-angle-sum-formulas&#34;&gt;The Angle Sum Formulas&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\sin(a+b)\quad=&amp;amp;\quad\sin(a)\cos(b)+\sin(b)\cos(a)\\
+\cos(a+b)\quad=&amp;amp;\quad\cos(a)\cos(b)-\sin(a)\sin(b)
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;the-half-angle-formulas&#34;&gt;The Half Angle Formulas&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\sin^2(a)\quad=&amp;amp;\quad\frac{1-\cos(2a)}2\\
+\cos^2(a)\quad=&amp;amp;\quad\frac{1+\cos(2a)}2
+\end{aligned}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;integrals-of-products-of-powers-of-sin-and-cosine&#34;&gt;Integrals of Products of Powers of Sin and Cosine&lt;/h3&gt;
+&lt;h4 id=&#34;one-exponent-equals-one&#34;&gt;One Exponent Equals One&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\int\cos^m(x)\sin(x)\ dx\quad=&amp;amp;\begin{cases}
+\displaystyle-\frac{\cos^{m+1}(x)}{m+1}+C,\quad\text{if $m\ne -1$}\\
+-\ln\vert\cos(x)\vert+C,\quad\text{if $m=-1$}
+\end{cases}\\
+\int\sin^m(x)\cos(x)\ dx\quad=&amp;amp;\begin{cases}
+\displaystyle\frac{\sin^{m+1}(x)}{m+1}+C,\quad\text{if $m\ne -1$}\\
+\ln\vert\sin(x)\vert+C,\quad\text{if $m=-1$}
+\end{cases}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;When $m=-1$,
+$$
+\begin{aligned}
+\int\tan(x)\ dx\quad=&amp;amp;\quad-\ln\vert\cos(x)\vert+C\\
+\int\cot(x)\ dx\quad=&amp;amp;\quad\ln\vert\sin(x)\vert+C
+\end{aligned}
+$$
+When $m=-2$,
+$$
+\begin{aligned}
+\int\tan(x)\sec(x)\ dx\quad=&amp;amp;\quad\sec(x)+C\\
+\int\cot(x)\csc(x)\ dx\quad=&amp;amp;\quad-\csc(x)+C
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;one-postive-odd-exponent&#34;&gt;One Postive Odd Exponent&lt;/h4&gt;
+&lt;p&gt;Let $2m+1$ be any positive integer and $n$ any real number. Then we can use substitution:
+$$
+\begin{aligned}
+\int\cos^{2m+1}(x)\sin^n(x)\ dx\quad:&amp;amp;\quad\text{use }u=\sin(x)\\
+\int\sin^{2m+1}(x)\cos^n(x)\ dx\quad:&amp;amp;\quad\text{use }u=\cos(x)
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;two-positive-even-exponents&#34;&gt;Two Positive Even Exponents&lt;/h4&gt;
+&lt;p&gt;To evaluate
+$$
+\int\sin^{2m}(x)\cos^{2n}(x)\ dx\qquad 2m,2n\ge0\text{ and are even}
+$$
+apply the half angle formulas to the integrand as many times as needed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;integrals-of-products-of-powers-of-tangent-and-cosecant&#34;&gt;Integrals of Products of Powers of Tangent and Cosecant&lt;/h3&gt;
+&lt;h4 id=&#34;odd-positive-exponent-of-tangent&#34;&gt;Odd Positive Exponent of Tangent&lt;/h4&gt;
+&lt;p&gt;The integrals of the form
+$$
+\int\tan^{2m+1}(x)\sec^n(x)\ dx\qquad\text{$n$ real, $2m+1\ge1$ odd positive integer}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\int\cot^{2m+1}(x)\csc^n(x)\ dx\qquad\text{$n$ real, $2m+1\ge1$ odd positive integer}
+$$&lt;/p&gt;
+&lt;p&gt;can be evaluated using the substitution $u=\sec(x)$, and $u=\csc(x)$ respectively.&lt;/p&gt;
+&lt;p&gt;Alternatively, these can also be written as
+$$
+\int\sin^{2m+1}(x)\cos^{-n}(x)\ dx\qquad\text{$n$ real, $2m+1\ge1$ odd positive integer}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\int\cos^{2m+1}(x)\sin^{-n}(x)\ dx\qquad\text{$n$ real, $2m+1\ge1$ odd positive integer}
+$$&lt;/p&gt;
+&lt;p&gt;we can also evaluate them using the substitution $u=\cos(x)$ and $u=\sin(x)$ respectively.&lt;/p&gt;
+&lt;h4 id=&#34;even-positive-exponent-of-secant&#34;&gt;Even Positive Exponent of Secant&lt;/h4&gt;
+&lt;p&gt;Let $2m\ge2$ be a positive even integer, and $n$ any real number.&lt;/p&gt;
+&lt;p&gt;We can use $u=\tan(x)$ to evaluate
+$$
+\int\sec^{2m}(x)\tan^n(x)\ dx\qquad\text{$2m\ge2$ even integer, $n$ real}
+$$
+and use $u=\cot(x)$ to evaluate
+$$
+\int\csc^{2m}(x)\cot^n(x)\ dx\qquad \text{$2m\ge2$ even integer, $n$ real}
+$$
+These are equivalent to
+$$
+\int\sin^p(x)\cos^q(x)\ dx\qquad\text{for $p$, $q$ real, $p+q=-2k$ even negative integer}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;integrals-table&#34;&gt;Integrals Table&lt;/h3&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\int\sec^2(x)\ dx\quad=&amp;amp;\quad\tan(x)+C\\
+\int\csc^2(x)\ dx\quad=&amp;amp;\quad-\cot(x)+C\\
+\int\sec(x)\tan(x)\ dx\quad=&amp;amp;\quad\sec(x)+C\\
+\int\csc(x)\cot(x)\ dx\quad=&amp;amp;\quad-\csc(x)+C\\
+\int\tan(x)\ dx\quad=&amp;amp;\quad-\ln\vert\cos(x)\vert+C\\
+\int\cot(x)\ dx\quad=&amp;amp;\quad\ln\vert\sin(x)\vert+C\\
+\int\sec(x)\ dx\quad=&amp;amp;\quad\ln\vert\sec(x)+\tan(x)\vert+C\\
+\int\csc(x)\ dx\quad=&amp;amp;\quad-\ln\vert\csc(x)+\cot(x)\vert+C
+\end{aligned}
+$$&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
     
     <item>
       <title>Notes on MIT 18.01.2 Calculus IB (Unit3 Application)</title>

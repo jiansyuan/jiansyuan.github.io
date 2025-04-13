@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title>JiansYuan&#39;s Blog  | Notes on MIT 18.01.2 Calculus IB (Unit3 Application)</title>
+	<title>JiansYuan&#39;s Blog  | Notes on MIT 18.01.2 Calculus IB (Unit4 Integration Techniques)</title>
 	<meta name="viewport" content="width=device-width,minimum-scale=1">
 	<meta name="generator" content="Hugo 0.145.0">
 	
@@ -144,7 +144,7 @@ onload='renderMathInElement(document.body);'></script>
 		<a href="https://jiansyuan.github.io/" title="JiansYuan&#39;s Blog" class="heading font-cursive icon">JiansYuan&#39;s Blog</a>
 	</h2>
 </div>
-<h1 class="pt-2">Notes on MIT 18.01.2 Calculus IB (Unit3 Application)</h1>
+<h1 class="pt-2">Notes on MIT 18.01.2 Calculus IB (Unit4 Integration Techniques)</h1>
 
 <div class="flex flex-wrap justify-end pt-2 "><div class="md:flex-grow-0 font-light">
 	
@@ -177,7 +177,7 @@ onload='renderMathInElement(document.body);'></script>
 	
 	
 </div><time class="text-eucalyptus-500 md:text-right md:flex-grow font-light pl-4"
-		datetime="2025-03-26T00:00:00Z">2025-3-26</time>
+		datetime="2025-04-12T00:00:00Z">2025-4-12</time>
 </div>
 
 <details class="toc" open>
@@ -188,42 +188,12 @@ onload='renderMathInElement(document.body);'></script>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#preface">Preface</a></li>
-    <li><a href="#area-and-volumes">Area and Volumes</a>
+    <li><a href="#integrals-of-trig-powers">Integrals of Trig Powers</a>
       <ul>
-        <li><a href="#process-for-finding-areas-and-volumes">Process for Finding Areas and Volumes</a></li>
-        <li><a href="#volumes-by-slicing">Volumes by Slicing</a></li>
-        <li><a href="#method-of-disks">Method of Disks</a></li>
-        <li><a href="#method-of-shells">Method of Shells</a></li>
-        <li><a href="#method-of-washers">Method of Washers</a></li>
-      </ul>
-    </li>
-    <li><a href="#average-value">Average Value</a>
-      <ul>
-        <li><a href="#average-value-of-fx">Average Value of $f(x)$</a></li>
-        <li><a href="#average-value-and-average-rate-of-change">Average Value And Average Rate of Change</a></li>
-        <li><a href="#weighted-average">Weighted Average</a></li>
-        <li><a href="#center-of-mass">Center of Mass</a></li>
-        <li><a href="#work-heat-and-energy">Work, Heat, And Energy</a></li>
-      </ul>
-    </li>
-    <li><a href="#probability">Probability</a>
-      <ul>
-        <li><a href="#discrete-probability">Discrete Probability</a></li>
-        <li><a href="#distributions">Distributions</a></li>
-        <li><a href="#normal-distribution">Normal Distribution</a></li>
-        <li><a href="#exponential-distribution">Exponential Distribution</a></li>
-        <li><a href="#expected-value">Expected Value</a></li>
-        <li><a href="#variance">Variance</a></li>
-        <li><a href="#area-under-the-bell-curve">Area Under The Bell Curve</a></li>
-      </ul>
-    </li>
-    <li><a href="#numerical-integration">Numerical Integration</a>
-      <ul>
-        <li><a href="#riemann-sums">Riemann sums</a></li>
-        <li><a href="#midpoint-rule">Midpoint Rule</a></li>
-        <li><a href="#trapezoidal-rule">Trapezoidal Rule</a></li>
-        <li><a href="#simpsons-rule">Simpson&rsquo;s Rule</a></li>
-        <li><a href="#error-bounds">Error Bounds</a></li>
+        <li><a href="#trigonometric-identities">Trigonometric Identities</a></li>
+        <li><a href="#integrals-of-products-of-powers-of-sin-and-cosine">Integrals of Products of Powers of Sin and Cosine</a></li>
+        <li><a href="#integrals-of-products-of-powers-of-tangent-and-cosecant">Integrals of Products of Powers of Tangent and Cosecant</a></li>
+        <li><a href="#integrals-table">Integrals Table</a></li>
       </ul>
     </li>
   </ul>
@@ -241,206 +211,125 @@ onload='renderMathInElement(document.body);'></script>
 
 <article>
 	<section class="mx-auto content">
-		<div class="c-rich-text"><h1 id="unit-3-applications">Unit 3: Applications</h1>
+		<div class="c-rich-text"><h1 id="unit-4-techniques-of-integration">Unit 4: Techniques of Integration</h1>
 <h2 id="preface">Preface</h2>
 <p>This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to <a href="https://student.mit.edu/catalog/m18a.html">MIT 18.x Catalog</a>, and it can also be found at <a href="https://openlearning.mit.edu/courses-programs/open-learning-library">MIT Open Learning Library</a>.</p>
 <hr>
-<h2 id="area-and-volumes">Area and Volumes</h2>
-<h3 id="process-for-finding-areas-and-volumes">Process for Finding Areas and Volumes</h3>
-<ol>
-<li>Draw a picture</li>
-<li>Identify limits of integration</li>
-<li>Identify integrand</li>
-<li>Integrate to solve (as needed)</li>
-</ol>
-<h3 id="volumes-by-slicing">Volumes by Slicing</h3>
-<p>The volume of a slive of bread is
-$$
-dV=A(x)\ dx
-$$
-where $dx$ is the width of the slice, and $A(x)$ is the cross-sectional area. The volume of the entire loaf is
-$$
-V=\int A(x)\ dx
+<h2 id="integrals-of-trig-powers">Integrals of Trig Powers</h2>
+<h3 id="trigonometric-identities">Trigonometric Identities</h3>
+<h4 id="the-pythagorean-theorem">The Pythagorean Theorem</h4>
+<p>$$
+\begin{aligned}
+\cos^2(\theta)+\sin^2(\theta)\quad=&amp;\quad1\\
+1+\tan^2(\theta)\quad=&amp;\quad\sec^2(\theta)\qquad\left(\theta\ne\frac{\pi}2+n\pi\right)\\
+\cot^2(\theta)+1\quad=&amp;\quad\csc^2(\theta)\qquad(\theta\ne n\pi)
+\end{aligned}
 $$</p>
-<h3 id="method-of-disks">Method of Disks</h3>
-<image src="/image/MIT_18.01/images_methoddisks2d.svg" width=40% style="float: left; margin-right: 20px">
-<image src="/image/MIT_18.01/images_methoddisks3d.svg" width=40%>
-<p>The method of disks gives the differential volume element for a curve rotated about the $x$-axis
-$$
-dV=\pi y^2\ dx
+<h4 id="the-angle-sum-formulas">The Angle Sum Formulas</h4>
+<p>$$
+\begin{aligned}
+\sin(a+b)\quad=&amp;\quad\sin(a)\cos(b)+\sin(b)\cos(a)\\
+\cos(a+b)\quad=&amp;\quad\cos(a)\cos(b)-\sin(a)\sin(b)
+\end{aligned}
 $$</p>
-<h3 id="method-of-shells">Method of Shells</h3>
-<image src="/image/MIT_18.01/images_methodshells.svg" width=70% >
-<p>The method of shells for a curve $y=f(x)$ rotated about the $y$-axis
-$$
-dV=2\pi x y \ dx
-$$</p>
-<h3 id="method-of-washers">Method of Washers</h3>
-<image src="/image/MIT_18.01/images_app1_washer2.svg"  width=50%>
-<p>The volume of an infinitesimal washer is given by
-$$
-dV=\pi (y_{outer}^2-y_{inner}^2)\ dx
+<h4 id="the-half-angle-formulas">The Half Angle Formulas</h4>
+<p>$$
+\begin{aligned}
+\sin^2(a)\quad=&amp;\quad\frac{1-\cos(2a)}2\\
+\cos^2(a)\quad=&amp;\quad\frac{1+\cos(2a)}2
+\end{aligned}
 $$</p>
 <hr>
-<h2 id="average-value">Average Value</h2>
-<h3 id="average-value-of-fx">Average Value of $f(x)$</h3>
-<p>The average value of a function $f(x)$ on an interval $a\le x\le b$ is a given by
-$$
-\frac{1}{b-a}\int_a^b f(x)\ dx
+<h3 id="integrals-of-products-of-powers-of-sin-and-cosine">Integrals of Products of Powers of Sin and Cosine</h3>
+<h4 id="one-exponent-equals-one">One Exponent Equals One</h4>
+<p>$$
+\begin{aligned}
+\int\cos^m(x)\sin(x)\ dx\quad=&amp;\begin{cases}
+\displaystyle-\frac{\cos^{m+1}(x)}{m+1}+C,\quad\text{if $m\ne -1$}\\
+-\ln\vert\cos(x)\vert+C,\quad\text{if $m=-1$}
+\end{cases}\\
+\int\sin^m(x)\cos(x)\ dx\quad=&amp;\begin{cases}
+\displaystyle\frac{\sin^{m+1}(x)}{m+1}+C,\quad\text{if $m\ne -1$}\\
+\ln\vert\sin(x)\vert+C,\quad\text{if $m=-1$}
+\end{cases}
+\end{aligned}
 $$</p>
-<h3 id="average-value-and-average-rate-of-change">Average Value And Average Rate of Change</h3>
-<p>Fundamental Theorem of calculus tells us that the average rate of change of $y$ over $a\le t\le b$ is the <strong>same</strong> as the average value of $a\le t\le b$
-$$
-\text{ave}(y^{\prime})=\frac 1 {b-a}\int_a^b y^{\prime}(t)\ dt=\frac{y(b)-y(a)}{b-a}=\text{average rate of change of $y(x)$}
-$$</p>
-<h3 id="weighted-average">Weighted Average</h3>
-<p>The <code>weighted average</code> value of a function $f(x)$, weighted by a weight function $w(x)$ on an interval $a\le x\le b$ is given by
-$$
-\frac{\int_a^bf(x)w(x)\ dx}{\int_a^bw(x)\ dx}
-$$</p>
-<h3 id="center-of-mass">Center of Mass</h3>
-<h4 id="1-dimensional">1-Dimensional</h4>
-<p>For a 1-dimensional rod of length $L$ with linear density function $\lambda(x)$ (measured in mass per unit length), the center of mass is the weighted average:
-$$
-x_c=\frac{\int_0^Lx\lambda(x)\ dx}{\int_0^L\lambda(x)\ dx}
-$$</p>
-<h4 id="2-dimensional">2-Dimensional</h4>
-<p>For a 2-dimensional region whose mass is proportional to area, the center of mass, or centroid $(\overline{x},\overline{y})$, is the weighted average of the position with respect to the area. The $x-$ and $y-$ coordinates of the centroid are computed by the following integrals:
+<p>When $m=-1$,
 $$
 \begin{aligned}
-\overline{x}=&amp;\frac{\int_a^bx\ dA}{\int_a^b\ dA}\\
-\overline{y}=&amp;\frac{\int_a^by\ dA}{\int_a^b\ dA}
+\int\tan(x)\ dx\quad=&amp;\quad-\ln\vert\cos(x)\vert+C\\
+\int\cot(x)\ dx\quad=&amp;\quad\ln\vert\sin(x)\vert+C
 \end{aligned}
 $$
-where $dA$ is the infinitesimal area, and we must define the limits of integration so that we integrate over the entire region with respect to $x$ or $y$ respectively.</p>
-<h3 id="work-heat-and-energy">Work, Heat, And Energy</h3>
-<p><code>Work</code> is done on an object when <code>energy</code> is transferred to that object.</p>
-<p><code>Work</code>, <code>heat</code>, and <code>energy</code> have the same units, but we typically measure them differently.</p>
-<ul>
-<li>We measure <code>work</code> in Newton-meters (N⋅M)</li>
-<li>We measure <code>heat</code> in calories (cal)</li>
-<li>We measure <code>energy</code> in Joules (J)</li>
-</ul>
-<p>James Joule recognized and measured the relationship between heat energy and mechanical work.
+When $m=-2$,
 $$
-1\text{ cal}=4.186\text{ J}=4.186\text{ N$\cdot$m}
-$$
-The approach to solving problems involving work, heat, or energy is the same, and involves computing an integral.</p>
-<p>A common example of mechanical work is when a force is applied over a distance. This force applied to the object transfers energy in the form of kinetic or potential energy. In this case, the formula for work is given by
-$$
-\text{W}=\int F\ dx
-$$
-In the cauldron example, heat energy was transferred to the water in the cauldron. We measured the work done, or the energy transferred, by measuring the total change in tempertaure $T$:
-$$
-\int T\ dV
+\begin{aligned}
+\int\tan(x)\sec(x)\ dx\quad=&amp;\quad\sec(x)+C\\
+\int\cot(x)\csc(x)\ dx\quad=&amp;\quad-\csc(x)+C
+\end{aligned}
 $$</p>
+<h4 id="one-postive-odd-exponent">One Postive Odd Exponent</h4>
+<p>Let $2m+1$ be any positive integer and $n$ any real number. Then we can use substitution:
+$$
+\begin{aligned}
+\int\cos^{2m+1}(x)\sin^n(x)\ dx\quad:&amp;\quad\text{use }u=\sin(x)\\
+\int\sin^{2m+1}(x)\cos^n(x)\ dx\quad:&amp;\quad\text{use }u=\cos(x)
+\end{aligned}
+$$</p>
+<h4 id="two-positive-even-exponents">Two Positive Even Exponents</h4>
+<p>To evaluate
+$$
+\int\sin^{2m}(x)\cos^{2n}(x)\ dx\qquad 2m,2n\ge0\text{ and are even}
+$$
+apply the half angle formulas to the integrand as many times as needed.</p>
 <hr>
-<h2 id="probability">Probability</h2>
-<h3 id="discrete-probability">Discrete Probability</h3>
+<h3 id="integrals-of-products-of-powers-of-tangent-and-cosecant">Integrals of Products of Powers of Tangent and Cosecant</h3>
+<h4 id="odd-positive-exponent-of-tangent">Odd Positive Exponent of Tangent</h4>
+<p>The integrals of the form
+$$
+\int\tan^{2m+1}(x)\sec^n(x)\ dx\qquad\text{$n$ real, $2m+1\ge1$ odd positive integer}
+$$</p>
 <p>$$
-\text{Discrete Probability}=\frac{\text{# specified outcomes}}{\text{# all possible outcomes}}
+\int\cot^{2m+1}(x)\csc^n(x)\ dx\qquad\text{$n$ real, $2m+1\ge1$ odd positive integer}
 $$</p>
-<p>Note this means that the probability is a positive fraction that is less than or equal to $1$.</p>
-<hr>
-<h3 id="distributions">Distributions</h3>
-<p>A <code>distribution</code> is a nonnegative function $w(x)$ that approximates the discrete distribution. The area under a distribution measures the probability that an event occurs.
+<p>can be evaluated using the substitution $u=\sec(x)$, and $u=\csc(x)$ respectively.</p>
+<p>Alternatively, these can also be written as
 $$
-P(a&lt;x&lt;b)=\frac{\int_a^bw(x)\ dx}{\int_{-\infty}^{+\infty}w(x)\ dx}
-$$
-Since $\displaystyle\int_{-\infty}^{+\infty}w(x)\ dx=C$ is a finite constant, to scale the function, we define $\displaystyle p(x)=\frac{w(x)}{C}$, which had the property that $\displaystyle\int_{-\infty}^{+\infty}p(x)\ dx=1$</p>
-<p>A <code>probability distribution</code> or a <code>probability density function</code> is defined as a nonnegative function $p(x)$ defined on $-\infty &lt;x&lt;\infty$ with the property that $\displaystyle\int_{-\infty}^{+\infty}p(x)\ dx=1$. In this case, the probability of the outcome $a&lt;x&lt;b$ is defined as:
-$$
-P(a&lt;x&lt;b)=\int_a^bp(x)\ dx
+\int\sin^{2m+1}(x)\cos^{-n}(x)\ dx\qquad\text{$n$ real, $2m+1\ge1$ odd positive integer}
 $$</p>
-<hr>
-<h3 id="normal-distribution">Normal Distribution</h3>
 <p>$$
-p(x)=\frac1{\sigma \sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{2\sigma^2}},\qquad -\infty&lt;x&lt;+\infty
+\int\cos^{2m+1}(x)\sin^{-n}(x)\ dx\qquad\text{$n$ real, $2m+1\ge1$ odd positive integer}
 $$</p>
-<p>where the expected value is $\mu$ and the standard deviation is $\sigma$.</p>
-<hr>
-<h3 id="exponential-distribution">Exponential Distribution</h3>
-<p>$$
-p(t)=
-\begin{cases}
-0,&amp;\quad t&lt;0 \\
-a e^{-a t},&amp;\quad 0\le t&lt;\infty
-\end{cases}
-$$</p>
-<p>where the expected value is $1/a$.</p>
-<hr>
-<h3 id="expected-value">Expected Value</h3>
-<p>Given a probability distribution $p(x)$ such that $\displaystyle\int_{-\infty}^\infty p(x)\ dx=1$, the <code>expected value</code>, $E$, also known as the <code>mean</code>.
+<p>we can also evaluate them using the substitution $u=\cos(x)$ and $u=\sin(x)$ respectively.</p>
+<h4 id="even-positive-exponent-of-secant">Even Positive Exponent of Secant</h4>
+<p>Let $2m\ge2$ be a positive even integer, and $n$ any real number.</p>
+<p>We can use $u=\tan(x)$ to evaluate
 $$
-\text{Expected value}=E=\int_{-\infty}^\infty x p(x)\ dx
+\int\sec^{2m}(x)\tan^n(x)\ dx\qquad\text{$2m\ge2$ even integer, $n$ real}
 $$
-Note that the expected value is completely analogous to center of mass.</p>
-<hr>
-<h3 id="variance">Variance</h3>
-<p>Given a probability distribution $p(x)$ with $\displaystyle\int_{-\infty}^{\infty}p(x)\ dx=1$, and whose expected value is $E$, the <code>variance</code>, $V$, measures the average spread of outcomes from the expected value.
+and use $u=\cot(x)$ to evaluate
 $$
-\text{Variance}=V=\int_{-\infty}^\infty (x-E)^2p(x)\ dx
+\int\csc^{2m}(x)\cot^n(x)\ dx\qquad \text{$2m\ge2$ even integer, $n$ real}
 $$
-The <code>standard deviation</code>, $\sigma$, is the square root of the variance:
+These are equivalent to
 $$
-\sigma=\sqrt{V}
+\int\sin^p(x)\cos^q(x)\ dx\qquad\text{for $p$, $q$ real, $p+q=-2k$ even negative integer}
 $$</p>
 <hr>
-<h3 id="area-under-the-bell-curve">Area Under The Bell Curve</h3>
+<h3 id="integrals-table">Integrals Table</h3>
 <p>$$
-\text{Area} = \int_0^\infty x^{-x^2}\ dx=\frac{\sqrt{\pi}}{2}
+\begin{aligned}
+\int\sec^2(x)\ dx\quad=&amp;\quad\tan(x)+C\\
+\int\csc^2(x)\ dx\quad=&amp;\quad-\cot(x)+C\\
+\int\sec(x)\tan(x)\ dx\quad=&amp;\quad\sec(x)+C\\
+\int\csc(x)\cot(x)\ dx\quad=&amp;\quad-\csc(x)+C\\
+\int\tan(x)\ dx\quad=&amp;\quad-\ln\vert\cos(x)\vert+C\\
+\int\cot(x)\ dx\quad=&amp;\quad\ln\vert\sin(x)\vert+C\\
+\int\sec(x)\ dx\quad=&amp;\quad\ln\vert\sec(x)+\tan(x)\vert+C\\
+\int\csc(x)\ dx\quad=&amp;\quad-\ln\vert\csc(x)+\cot(x)\vert+C
+\end{aligned}
 $$</p>
 <hr>
-<h2 id="numerical-integration">Numerical Integration</h2>
-<h3 id="riemann-sums">Riemann sums</h3>
-<p>To approximate the integral $\displaystyle\int_a^b f(x)\ dx$:</p>
-<ul>
-<li>Subdivide the interval into $n$ pieces $a=x_0&lt;x_1&lt;\cdots&lt;x_{n-1}&lt;x_n=b$.</li>
-<li>Let $y_0=f(x_0)$, $y_1=f(x_1)$, &hellip; , $y_{n-1}=f(x_{n-1})$, and $y_n=f(x_n)$.</li>
-<li>$\displaystyle \Delta x=\frac{b-a}{n}$.</li>
-</ul>
-<h4 id="left-riemann-sum">Left Riemann Sum</h4>
-<p>$$
-\int_a^b f(x)\ dx\approx \Delta x(y_0+y_1+\cdots+y_{n-1})
-$$</p>
-<h4 id="right-riemann-sum">Right Riemann Sum</h4>
-<p>$$
-\int_a^b f(x)\ dx\approx \Delta x(y_1+y_2+\cdots+y_{n})
-$$</p>
-<h3 id="midpoint-rule">Midpoint Rule</h3>
-<p>Let
-$$
-\tilde{y}_1=f\left(\frac{x_0+x_1}2\right),\quad \tilde{y}_1=f\left(\frac{x_1+x_2}2\right),\ \dots\ ,\quad \tilde{y}_n=f\left(\frac{x_{n-1}+x_n}2\right)
-$$
-then
-$$
-\int_a^bf(x)\ dx\approx \Delta x\left(\tilde{y}_1+\tilde{y}_2+\cdots+\tilde{y}_n\right)
-$$</p>
-<h3 id="trapezoidal-rule">Trapezoidal Rule</h3>
-<p>$$
-\int_a^bf(x)\ dx\approx \Delta x\left(\frac 1 2y_0+y_1+\cdots+y_{n-1}+\frac 1 2 y_n\right)
-$$</p>
-<h3 id="simpsons-rule">Simpson&rsquo;s Rule</h3>
-<p>$$
-\int_a^bf(x)\ dx\approx \frac {\Delta x}3 \left(y_0+4y_1+2y_2+4y_3+\cdots+2y_{n-2}+4y_{n-1}+y_n\right)
-$$</p>
-<hr>
-<h3 id="error-bounds">Error Bounds</h3>
-<h4 id="error-bound-of-trapezoidal-rule">Error bound of Trapezoidal Rule</h4>
-<p>Suppose $\vert f^{\prime\prime}(x)\vert\le M$ for $a\le x\le b$. Then the error of the Trapezoidal Rule over $n$ subintervals is given by
-$$
-\vert E_T\vert \le\frac{M(b-a)^3}{12n^2}
-$$</p>
-<h4 id="error-bound-of-midpoint-rule">Error bound of Midpoint Rule</h4>
-<p>Suppose $\vert f^{\prime\prime}(x)\vert\le M$ for $a\le x\le b$. Then the error of the Midpoint Rule over $n$ subintervals is given by
-$$
-\vert E_M\vert \le\frac{M(b-a)^3}{24n^2}
-$$</p>
-<h4 id="error-bound-of-simpsons-rule">Error bound of Simpson&rsquo;s Rule</h4>
-<p>Suppose $\vert f^{(4)}(x)\vert\le M$ for $a\le x\le b$. Then the error of the Simpson&rsquo;s Rule over $n$ subintervals is given by
-$$
-\vert E_S\vert\le\frac{M(b-a)^5}{180n^4}
-$$</p>
 </div>
 	</section>
 
@@ -570,7 +459,7 @@ $$</p>
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		997 words in this page.
+		348 words in this page.
 	</div>
 </div>
 
@@ -581,21 +470,14 @@ $$</p>
 <hr class="double-line" />
 <div class="flex flex-wrap justify-between pb-2 leading-loose font-serif">
     
-    <a class="flex-grow-0" href="/post/mit_18.01/mit_18.01.2_calculus_ib-unit2/">
+    <a class="flex-grow-0" href="/post/mit_18.01/mit_18.01.2_calculus_ib-unit3/">
         <svg class="fill-current inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
             height="24">
             <path fill="none" d="M0 0h24v24H0z" />
             <path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414z" /></svg>
-        Notes on MIT 18.01.2 Calculus IB (Unit2 Integration Theory)
+        Notes on MIT 18.01.2 Calculus IB (Unit3 Application)
     </a>
     
-    
-    <a class="flex-grow-0" href="/post/mit_18.01/mit_18.01.2_calculus_ib-unit4/">
-        Notes on MIT 18.01.2 Calculus IB (Unit4 Integration Techniques)
-        <svg class="fill-current inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
-            height="24">
-            <path fill="none" d="M0 0h24v24H0z" />
-            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" /></svg></a>
     
 </div>
 <div >
@@ -605,6 +487,8 @@ $$</p>
 <div class="font-serif pb-2 flex align-start leading-loose">
 	<span class="heading pr-6 leading-loose">Related</span>
 	<span >
+		
+			<a href="/post/mit_18.01/mit_18.01.2_calculus_ib-unit3/">Notes on MIT 18.01.2 Calculus IB (Unit3 Application)</a>&nbsp;&nbsp;&#47;&nbsp;
 		
 			<a href="/post/mit_18.01/mit_18.01.2_calculus_ib-unit2/">Notes on MIT 18.01.2 Calculus IB (Unit2 Integration Theory)</a>&nbsp;&nbsp;&#47;&nbsp;
 		
