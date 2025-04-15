@@ -196,6 +196,12 @@ onload='renderMathInElement(document.body);'></script>
         <li><a href="#integrals-table">Integrals Table</a></li>
       </ul>
     </li>
+    <li><a href="#trig-integrals-and-binomial-expansion">Trig Integrals and Binomial Expansion</a>
+      <ul>
+        <li><a href="#binomial-coefficients">Binomial Coefficients</a></li>
+        <li><a href="#general-formula-for-integral">General Formula for Integral</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -213,7 +219,7 @@ onload='renderMathInElement(document.body);'></script>
 	<section class="mx-auto content">
 		<div class="c-rich-text"><h1 id="unit-4-techniques-of-integration">Unit 4: Techniques of Integration</h1>
 <h2 id="preface">Preface</h2>
-<p>This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to <a href="https://student.mit.edu/catalog/m18a.html">MIT 18.x Catalog</a>, and it can also be found at <a href="https://openlearning.mit.edu/courses-programs/open-learning-library">MIT Open Learning Library</a>.</p>
+<p>This is the note of the MIT Course 18.01.2 Calculus. For more details, refer to <a href="https://student.mit.edu/catalog/m18a.html">MIT 18.x Catalog</a>, and it can also be found at <a href="https://openlearning.mit.edu/courses-programs/open-learning-library">MIT Open Learning Library</a>.</p>
 <hr>
 <h2 id="integrals-of-trig-powers">Integrals of Trig Powers</h2>
 <h3 id="trigonometric-identities">Trigonometric Identities</h3>
@@ -330,6 +336,36 @@ $$</p>
 \end{aligned}
 $$</p>
 <hr>
+<h2 id="trig-integrals-and-binomial-expansion">Trig Integrals and Binomial Expansion</h2>
+<h3 id="binomial-coefficients">Binomial Coefficients</h3>
+<p>The <code>binomial theorem</code> says that
+$$
+(1+y)^m=\sum_{k=0}^m\dbinom{m}{k}y^k=\sum_{k=0}^m\frac{m!}{(m-k)!\ k!}y^k
+$$
+where $m!$ is called $m$ <code>factorial</code>.</p>
+<p>And we get the coefficient of the $y^k$ to be
+$$
+\dbinom{m}{k}=\frac{m!}{(m-k)!\ k!}
+$$
+which is called the <code>binomial coeffecient</code>, and $\dbinom{m}{k}$ is read as <code>m choose k</code>.</p>
+<h3 id="general-formula-for-integral">General Formula for Integral</h3>
+<h4 id="integral-with-one-positive-odd-exponent-of-sine-or-cosine">Integral with One Positive Odd Exponent of Sine or Cosine</h4>
+<p>Let $2m+1$ be any positive integer and $n$ any real number such that $n\ne-(2k+1)$ for any integer $k$ such that $0\le k\le m$, we obtain the following formulas:
+$$
+\begin{aligned}
+\int\cos^{2m+1}(x)\sin^n(x)\ dx\ =&amp;\ \sum_{k=0}^m(-1)^k\dbinom{m}{k}\frac{\sin^{2k+n+1}(x)}{2k+n+1}+C\\
+\int\sin^{2m+1}(x)\cos^n(x)\ dx\ =&amp;\ \sum_{k=0}^m(-1)^{k+1}\dbinom{m}{k}\frac{\cos^{2k+n+1}(x)}{2k+n+1}+C
+\end{aligned}
+$$</p>
+<h4 id="integral-with-even-positive-power-of-secant">Integral with Even Positive Power of Secant</h4>
+<p>$$
+\begin{aligned}
+\sec^{2m}(x)\ =&amp;\ \sec^2(x)(1+\tan^2(x))^{m-1}\\
+=&amp;\ \sec^2(x)\left(\sum_{k=0}^{m-1}\dbinom{m-1}k\tan^{2k}(x)\right)\\
+\int\sec^{2m}(x)\ dx\ =&amp;\ \int\left(\sum_{k=0}^{m-1}\dbinom{m-1}ku^{2k}\right)\ du\qquad\text{use $u=\tan(x)$}\\
+=&amp;\ \sum_{k=0}^{m-1}\dbinom{m-1}k\frac{\tan^{2k+1}(x)}{2k+1}+C
+\end{aligned}
+$$</p>
 </div>
 	</section>
 
@@ -459,7 +495,7 @@ $$</p>
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		348 words in this page.
+		476 words in this page.
 	</div>
 </div>
 

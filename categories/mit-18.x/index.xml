@@ -20,7 +20,7 @@
       <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit4/</guid>
       <description>&lt;h1 id=&#34;unit-4-techniques-of-integration&#34;&gt;Unit 4: Techniques of Integration&lt;/h1&gt;
 &lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
-&lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.2 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;integrals-of-trig-powers&#34;&gt;Integrals of Trig Powers&lt;/h2&gt;
 &lt;h3 id=&#34;trigonometric-identities&#34;&gt;Trigonometric Identities&lt;/h3&gt;
@@ -137,6 +137,36 @@ $$&lt;/p&gt;
 \end{aligned}
 $$&lt;/p&gt;
 &lt;hr&gt;
+&lt;h2 id=&#34;trig-integrals-and-binomial-expansion&#34;&gt;Trig Integrals and Binomial Expansion&lt;/h2&gt;
+&lt;h3 id=&#34;binomial-coefficients&#34;&gt;Binomial Coefficients&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;binomial theorem&lt;/code&gt; says that
+$$
+(1+y)^m=\sum_{k=0}^m\dbinom{m}{k}y^k=\sum_{k=0}^m\frac{m!}{(m-k)!\ k!}y^k
+$$
+where $m!$ is called $m$ &lt;code&gt;factorial&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;And we get the coefficient of the $y^k$ to be
+$$
+\dbinom{m}{k}=\frac{m!}{(m-k)!\ k!}
+$$
+which is called the &lt;code&gt;binomial coeffecient&lt;/code&gt;, and $\dbinom{m}{k}$ is read as &lt;code&gt;m choose k&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;general-formula-for-integral&#34;&gt;General Formula for Integral&lt;/h3&gt;
+&lt;h4 id=&#34;integral-with-one-positive-odd-exponent-of-sine-or-cosine&#34;&gt;Integral with One Positive Odd Exponent of Sine or Cosine&lt;/h4&gt;
+&lt;p&gt;Let $2m+1$ be any positive integer and $n$ any real number such that $n\ne-(2k+1)$ for any integer $k$ such that $0\le k\le m$, we obtain the following formulas:
+$$
+\begin{aligned}
+\int\cos^{2m+1}(x)\sin^n(x)\ dx\ =&amp;amp;\ \sum_{k=0}^m(-1)^k\dbinom{m}{k}\frac{\sin^{2k+n+1}(x)}{2k+n+1}+C\\
+\int\sin^{2m+1}(x)\cos^n(x)\ dx\ =&amp;amp;\ \sum_{k=0}^m(-1)^{k+1}\dbinom{m}{k}\frac{\cos^{2k+n+1}(x)}{2k+n+1}+C
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;integral-with-even-positive-power-of-secant&#34;&gt;Integral with Even Positive Power of Secant&lt;/h4&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\sec^{2m}(x)\ =&amp;amp;\ \sec^2(x)(1+\tan^2(x))^{m-1}\\
+=&amp;amp;\ \sec^2(x)\left(\sum_{k=0}^{m-1}\dbinom{m-1}k\tan^{2k}(x)\right)\\
+\int\sec^{2m}(x)\ dx\ =&amp;amp;\ \int\left(\sum_{k=0}^{m-1}\dbinom{m-1}ku^{2k}\right)\ du\qquad\text{use $u=\tan(x)$}\\
+=&amp;amp;\ \sum_{k=0}^{m-1}\dbinom{m-1}k\frac{\tan^{2k+1}(x)}{2k+1}+C
+\end{aligned}
+$$&lt;/p&gt;
 </description>
     </item>
     
@@ -148,7 +178,7 @@ $$&lt;/p&gt;
       <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit3/</guid>
       <description>&lt;h1 id=&#34;unit-3-applications&#34;&gt;Unit 3: Applications&lt;/h1&gt;
 &lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
-&lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.2 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;area-and-volumes&#34;&gt;Area and Volumes&lt;/h2&gt;
 &lt;h3 id=&#34;process-for-finding-areas-and-volumes&#34;&gt;Process for Finding Areas and Volumes&lt;/h3&gt;
@@ -357,7 +387,7 @@ $$&lt;/p&gt;
       <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit2/</guid>
       <description>&lt;h1 id=&#34;unit-2-integration-theory&#34;&gt;Unit 2: Integration Theory&lt;/h1&gt;
 &lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
-&lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.2 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-definite-integral&#34;&gt;The Definite Integral&lt;/h2&gt;
 &lt;h3 id=&#34;geometric-definition-of-the-definite-integral&#34;&gt;Geometric Definition of the Definite Integral&lt;/h3&gt;
@@ -664,7 +694,7 @@ To derive the properties of logarithm, we perform different changes of variable 
       <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.2_calculus_ib-unit1/</guid>
       <description>&lt;h1 id=&#34;unit-1-the-intergral&#34;&gt;Unit 1: The Intergral&lt;/h1&gt;
 &lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
-&lt;p&gt;This is the note of the MIT Course 18.01.1 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.2 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;mean-value-theorem&#34;&gt;Mean Value Theorem&lt;/h2&gt;
 &lt;h3 id=&#34;the-mean-value-theorem-mvt&#34;&gt;The Mean Value Theorem (MVT)&lt;/h3&gt;
 &lt;p&gt;If $x(t)$ is continuous on $a\le t\le b$, and differentiable on $a&amp;lt;t&amp;lt;b$, that is, $x^{\prime}(t)$ is defined for all $t$, $a&amp;lt;t&amp;lt;b$, then
