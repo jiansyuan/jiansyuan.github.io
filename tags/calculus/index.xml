@@ -167,6 +167,176 @@ $$&lt;/p&gt;
 =&amp;amp;\ \sum_{k=0}^{m-1}\dbinom{m-1}k\frac{\tan^{2k+1}(x)}{2k+1}+C
 \end{aligned}
 $$&lt;/p&gt;
+&lt;h2 id=&#34;trig-substitution&#34;&gt;Trig Substitution&lt;/h2&gt;
+&lt;h3 id=&#34;an-example&#34;&gt;An Example&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Consider the integral:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\int\frac{dx}{x^2\sqrt{1+x^2}}
+$$&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Identify this part:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\sqrt{1+x^2}
+$$&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Make a substitution to simplify this part based on $\sec^2\theta=1+\tan^2\theta$.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\begin{cases}
+x=\tan\theta\\
+\sqrt{1+x^2}=\sqrt{\sec^2\theta}=\sec\theta\\
+dx=\sec^2\theta\ d\theta
+\end{cases}
+$$&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Plug into integral:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\int\frac{dx}{x^2\sqrt{1+x^2}}=\int\frac{\sec\theta\ d\theta}{\tan^2\theta}
+$$&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Rewrite in terms of $\sin$ and $\cos$:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+=\int\frac{\cos\theta\ d\theta}{\sin^2\theta}
+$$&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Try substitution $\displaystyle\begin{cases}u=\sin\theta\\ du=\cos\theta\ d\theta\end{cases}$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+=\int\frac{du}{u^2}
+$$&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Evaluate it,&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+=\frac{-1}u+C
+$$&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Then back substitution by replace $u$ by $\sin\theta$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+=\frac{-1}{\sin\theta}+C
+$$&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;As $\theta=\arctan x$, we can evaluate $\sin\theta$ by drawing diagrams.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;image src=&#34;\image\MIT_18.01\images_trigsub_tri1.svg&#34; width=20% style=&#34;float: left; margin-right: 100px&#34;&gt;
+&lt;image src=&#34;\image\MIT_18.01\images_trigsub_tri2.svg&#34; width=20%&gt;
+&lt;p&gt;Therefore,&lt;/p&gt;
+&lt;p&gt;$$
+\frac{1}{\sin\theta}=\frac{\sqrt{1+x^2}}x
+$$&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;Rewrite in terms of $x$:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+=-\frac{\sqrt{1+x^2}}{x}+C
+$$&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-trig-substitutions&#34;&gt;Summary of Trig Substitutions&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;If integrand contains:&lt;/th&gt;
+          &lt;th&gt;Make Substituion:&lt;/th&gt;
+          &lt;th&gt;To get:&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;$\sqrt{a^2-x^2}$&lt;/td&gt;
+          &lt;td&gt;$x=\begin{cases}a\cos\theta\\ a\sin\theta\end{cases}$&lt;/td&gt;
+          &lt;td&gt;$\sqrt{a^2-x^2}=\begin{cases}a\sin\theta\\ a\cos\theta\end{cases}$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;$\sqrt{a^2+x^2}$&lt;/td&gt;
+          &lt;td&gt;$x=a\tan\theta$&lt;/td&gt;
+          &lt;td&gt;$\sqrt{a^2+x^2}=a\sec\theta$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;$\sqrt{x^2-a^2}$&lt;/td&gt;
+          &lt;td&gt;$x=a\sec\theta$&lt;/td&gt;
+          &lt;td&gt;$\sqrt{x^2-a^2}=a\tan\theta$&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;partial-fractions&#34;&gt;Partial Fractions&lt;/h2&gt;
+&lt;h3 id=&#34;rational-functions&#34;&gt;Rational Functions&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Ploynomials&lt;/code&gt; are function $P(x)=a_nx^n+a{n-1}x^{n-1}+\cdots+a_1x+a_0$ where the constants $a_i$ are real numbers and the powers $n$ are non-negative, finite integers.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;degree&lt;/code&gt; of a polynomial $P(x)$ is the integer $\deg(P)=n$ of the higest order $x$ term in the polynomial $P(x)$.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Rational functions&lt;/code&gt; are ratios of polynomials.&lt;/p&gt;
+&lt;h3 id=&#34;method-of-partial-functions&#34;&gt;Method of Partial Functions&lt;/h3&gt;
+&lt;p&gt;Given a rational function $\displaystyle\frac{P(x)}{Q(x)}$&lt;/p&gt;
+&lt;p&gt;For instance, we have a ration function&lt;/p&gt;
+&lt;p&gt;$$
+\frac{4x-1}{x^2+x-2}
+$$&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Factor the denomiator $Q(x)$&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+Q(x)=x^2+x-2=(x-1)(x+2)
+$$&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Set-up&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\frac{4x-1}{(x-1)(x+2)}=\frac A{x-1}+\frac B{x+2}
+$$&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Solve for $A$ and $B$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Multiply by $(x-1)$ and take the limit as $x\to 1$
+$$
+A=\frac{4-1}{1+2}=1
+$$&lt;/li&gt;
+&lt;li&gt;Multiply by $(x+2)$ and take the limit as $x\to-2$
+$$
+B=\frac{-8-1}{-2-1}=3
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rewrite rational function&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\frac{4x-1}{x^2+x-2}=\frac 1{x-1}+\frac 3{x+2}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;cover-up-method&#34;&gt;Cover-up Method&lt;/h4&gt;
+&lt;p&gt;For a ration function $\frac{P(x)}{Q(x)}$ where $\deg(P)&amp;lt;\deg(Q)$, then the following is the fastest way:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Factor $Q(x)$&lt;/li&gt;
+&lt;li&gt;Set-up&lt;/li&gt;
+&lt;li&gt;Cover-up&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;repeated-linear-factors&#34;&gt;Repeated Linear Factors&lt;/h4&gt;
+&lt;p&gt;For a ration function $\frac{P(x)}{Q(x)}$ where $\deg(P)&amp;lt;\deg(Q)$. If $Q(x)=(x-a)^n$, then the set-up for partial fractions is as follows:&lt;/p&gt;
+&lt;p&gt;$$
+\frac{P(x)}{Q(x)}=\frac{A_1}{x-a}+\frac{A_2}{(x-a)^2}+\cdots+\frac{A_n}{(x-a)^n}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;quadratic-factors-in-the-demoniator&#34;&gt;Quadratic Factors in the Demoniator&lt;/h4&gt;
+&lt;p&gt;For a ration function $\frac{P(x)}{Q(x)}$ where $\deg(P)&amp;lt;\deg(Q)$. If $Q(x)=x^2+1$, then the set-up for partial fractions is as follows:&lt;/p&gt;
+&lt;p&gt;$$
+\frac{P(x)}{Q(x)}=\frac{Bx+C}{x^2+1}
+$$&lt;/p&gt;
+&lt;h4 id=&#34;improper-fractions&#34;&gt;Improper Fractions&lt;/h4&gt;
+&lt;p&gt;For a rational function $\frac{P(x)}{Q(x)}$ such that $\deg(P)\ge\deg(Q)$:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use Long Division to divide $Q(x)$ into $P(x)$ to obtain&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$$
+\frac{P(x)}{Q(x)}=p(x)+\frac{r(x)}{Q(x)}
+$$&lt;/p&gt;
+&lt;p&gt;where $p(x)$ and $r(x)$ are polynomials, and $\deg(r)&amp;lt;\deg(Q)$.&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Use the method of partial fractions to divide $\frac{r(x)}{Q(x)}$ into easier pieces.&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
