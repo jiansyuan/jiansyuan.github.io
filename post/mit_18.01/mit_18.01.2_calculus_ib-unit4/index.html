@@ -214,6 +214,11 @@ onload='renderMathInElement(document.body);'></script>
         <li><a href="#method-of-partial-functions">Method of Partial Functions</a></li>
       </ul>
     </li>
+    <li><a href="#integration-by-parts">Integration by Parts</a>
+      <ul>
+        <li><a href="#reduction-formula">Reduction Formula</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -548,6 +553,148 @@ $$</p>
 <ol start="2">
 <li>Use the method of partial fractions to divide $\frac{r(x)}{Q(x)}$ into easier pieces.</li>
 </ol>
+<hr>
+<h2 id="integration-by-parts">Integration by Parts</h2>
+<p>We have already known the product rule of differentiation, which is:</p>
+<p>$$
+(u\ v)^{\prime}\quad=\quad u\ v^{\prime}+v^{\prime}\ u
+$$</p>
+<p><code>Integration by parts</code> comes from the product rule of differentiation.</p>
+<p>$$
+\int u\ v^{\prime}\ dx\quad=\quad u\ v-\int u^{\prime}\ v\ dx
+$$</p>
+<p><strong>Example 1:</strong></p>
+<p>$$
+\int\ln(x)\ dx=\int\ln(x)\cdot 1\ dx
+$$</p>
+<p>Let $u=\ln(x)$ and $v^{\prime}=1$,
+then $\displaystyle u^{\prime}=\frac 1 x$ and $v=x$,</p>
+<p>then,</p>
+<p>$$
+\begin{aligned}
+=&amp;\int u\ v^{\prime}\ dx\\
+=&amp;x\ln(x)-\int \frac 1 x\cdot x\ dx\\
+=&amp;x\ln(x)-x+C
+\end{aligned}
+$$</p>
+<p>We can have more general formula:</p>
+<p>$$
+\begin{aligned}
+&amp;\int x^p\ln(x)\ dx \qquad (p\ne0)\\
+=&amp; \int u^{\prime}\ v\ dx\qquad (u^{\prime}=x^p,\ v=\ln(x))\\
+=&amp;\ u\ v-\int u\ v^{\prime}\ dx\qquad (u=\frac{x^{p+1}}{p+1},\ v^{\prime}=\frac 1 x)\\
+=&amp;\ \frac{x^{p+1}}{p+1} \ln(x)-\frac{x^{p+1}}{(p+1)^2}+C
+\end{aligned}
+$$</p>
+<p><strong>Example 3:</strong></p>
+<p>Evaluate $\displaystyle \int x^3\cos(x^2)\ dx$</p>
+<p>Let
+$$
+u=x^2,\quad v^{\prime}=x\cos(x^2)
+$$</p>
+<p>then we have
+$$
+u^{\prime}=2x,\quad v=\frac{\sin(x^2)}2
+$$</p>
+<p>Therefore,
+$$
+\begin{aligned}
+\int x^3\cos(x^2)\ dx=&amp;\int u\ v^{\prime}\ dx\\
+=&amp;\ u\ v-\int u^{\prime}\ v\ dx\\
+=&amp;\ \frac{x^2\sin(x^2)}2+\frac{cos(x^2)}2+C
+\end{aligned}
+$$</p>
+<h3 id="reduction-formula">Reduction Formula</h3>
+<p><strong>Example 4:</strong></p>
+<p>We can find the reduction formula for $\displaystyle\int x^p(\ln x)^n\ dx$, where $n\ge 0$ integer, and $p\ne -1$ integer.</p>
+<p>Define
+$$
+I_n\ =\ \int x^p (\ln x)^n\ dx
+$$</p>
+<p>Then we have the relationship between $I_n$ and $I_{n-1}$:
+$$
+I_n\ =\ \frac{(\ln x)^n\ x^{p+1}}{p+1}-\frac{n}{p+1}\ I_{n-1}
+$$
+Ignore the constant $C$ because we can add it at the end.</p>
+<p><strong>Example 5:</strong></p>
+<p>We will see the original integral reappears on the right hand side of the formula after applying integral by parts.</p>
+<p>Evaluate $\displaystyle\int e^x\cos(x)\ dx$</p>
+<p>Let $u=e^x$ and $v^{\prime}=\cos(x)$, then $u^{\prime}=e^x$ and $v=\sin(x)$.</p>
+<p>We have
+$$
+\begin{aligned}
+\int e^x\cos(x)\ dx\ =&amp;\ \int u\ v^{\prime}\ dx\\
+=&amp;\ u\ v-\int u^{\prime}\ v\ dx\\
+=&amp;\ e^x\sin(x)-\int e^x\sin(x)\ dx
+\end{aligned}
+$$</p>
+<p>Now we have to evaluate $\displaystyle\int e^x\sin(x)\ dx$.</p>
+<p>Let $m=e^x$ and $n^{\prime}=\sin(x)$, then $m^{\prime}=e^x$ and $n=-\cos(x)$.</p>
+<p>We have
+$$
+\begin{aligned}
+\int e^x\sin(x)\ dx=&amp;\ m\ n-\int m^{\prime}\ n\ dx\\
+=&amp;\ -e^x\cos(x)+\int e^x\cos(x)\ dx
+\end{aligned}
+$$</p>
+<p>Therefore,</p>
+<p>$$
+\begin{aligned}
+\int e^x\cos(x)\ dx+\int e^x\sin(x)\ dx\ =&amp;\ e^x\sin(x)-\int e^x\sin(x)\ dx+e^x\cos(x)+\int e^x\cos(x)\ dx\\
+2\int e^x\sin(x)\ dx\ =&amp;\ e^x\sin(x)+e^x\cos(x)\\
+\int e^x\sin(x)\ dx\ =&amp;\ \frac{e^x\sin(x)+e^x\cos(x)}2
+\end{aligned}
+$$</p>
+<p><strong>Example 6:</strong></p>
+<p>Now we will find the reduction formula of Cosine.</p>
+<p>Define
+$$
+C_n\ =\ \int\cos^n(x)\ dx
+$$</p>
+<p>Using $\sin^2(x)+\cos^2(x)=1$, we get
+$$
+C_n\ =\ C_{n-2}-\int \cos^{n-2}(x)\sin^2(x)\ dx
+$$</p>
+<p>Use integration by parts where $n\ne 1$:
+$$
+=\ \frac{\sin(x)\cos^{n-1}(x)}n+\frac{n-1}n\ C_{n-2}
+$$</p>
+<p><strong>Example 7:</strong></p>
+<p>We can find a reduction formula for the integral of odd positive powers of secant, but now we derive it from the reduction formula for the integral of powers of cosine.</p>
+<p>We have already defined $C_n$, and now we define
+$$
+\zeta_m\ =\ \int\sec^m(x)\ dx
+$$</p>
+<p>When $m=n$, notice that
+$$
+\zeta_m\ =\ C_{-n}
+$$</p>
+<p>In example 6, we have
+$$
+C_n\ =\ \frac{\sin(x)\cos^{n-1}(x)}n+\frac{n-1}n\ C_{n-2}
+$$</p>
+<p>Replace $n$ by $-n$, we get
+$$
+C_{-n}\ =\ \frac{\sin(x)\cos^{-n-1}(x)}{-n}+\frac{-n-1}{-n}\ C_{-n-2}
+$$</p>
+<p>then
+$$
+\begin{aligned}
+\zeta_m\ =&amp;\ \frac{\sin(x)\cos^{-m-1}(x)}{-m}+\frac{-m-1}{-m}\ \zeta_{m+2}\\
+=&amp;\ \frac{m+1}{m}\ \zeta_{m+2}-\frac{\tan(x)\sec^m(x)}{m}
+\end{aligned}
+$$</p>
+<p>Move $\zeta_{m+2}$ to the left hand side,
+$$
+\begin{aligned}
+\zeta_{m+2}\ =&amp;\ \frac{m}{m+1}\left(\zeta_m+\frac{\tan(x)\sec^m(x)}{m}\right)\\
+=&amp;\ \frac{m}{m+1}\ \zeta_m+\frac{\tan(x)\sec^m(x)}{m+1}
+\end{aligned}
+$$</p>
+<p>Therefore,
+$$
+\zeta_{m}\ =\ \frac{m-2}{m-1}\ \zeta_{m-2}+\frac{\tan(x)\sec^{m-2}(x)}{m-1}
+$$</p>
 </div>
 	</section>
 
@@ -677,7 +824,7 @@ $$</p>
 		<br />
 		Hosted by <a href="https://github.com/jiansyuan">JiansYuan</a>. 
 		<br />
-		828 words in this page.
+		1315 words in this page.
 	</div>
 </div>
 

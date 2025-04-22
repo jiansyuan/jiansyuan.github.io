@@ -337,6 +337,148 @@ $$&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;Use the method of partial fractions to divide $\frac{r(x)}{Q(x)}$ into easier pieces.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;integration-by-parts&#34;&gt;Integration by Parts&lt;/h2&gt;
+&lt;p&gt;We have already known the product rule of differentiation, which is:&lt;/p&gt;
+&lt;p&gt;$$
+(u\ v)^{\prime}\quad=\quad u\ v^{\prime}+v^{\prime}\ u
+$$&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Integration by parts&lt;/code&gt; comes from the product rule of differentiation.&lt;/p&gt;
+&lt;p&gt;$$
+\int u\ v^{\prime}\ dx\quad=\quad u\ v-\int u^{\prime}\ v\ dx
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$
+\int\ln(x)\ dx=\int\ln(x)\cdot 1\ dx
+$$&lt;/p&gt;
+&lt;p&gt;Let $u=\ln(x)$ and $v^{\prime}=1$,
+then $\displaystyle u^{\prime}=\frac 1 x$ and $v=x$,&lt;/p&gt;
+&lt;p&gt;then,&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+=&amp;amp;\int u\ v^{\prime}\ dx\\
+=&amp;amp;x\ln(x)-\int \frac 1 x\cdot x\ dx\\
+=&amp;amp;x\ln(x)-x+C
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;We can have more general formula:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+&amp;amp;\int x^p\ln(x)\ dx \qquad (p\ne0)\\
+=&amp;amp; \int u^{\prime}\ v\ dx\qquad (u^{\prime}=x^p,\ v=\ln(x))\\
+=&amp;amp;\ u\ v-\int u\ v^{\prime}\ dx\qquad (u=\frac{x^{p+1}}{p+1},\ v^{\prime}=\frac 1 x)\\
+=&amp;amp;\ \frac{x^{p+1}}{p+1} \ln(x)-\frac{x^{p+1}}{(p+1)^2}+C
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 3:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Evaluate $\displaystyle \int x^3\cos(x^2)\ dx$&lt;/p&gt;
+&lt;p&gt;Let
+$$
+u=x^2,\quad v^{\prime}=x\cos(x^2)
+$$&lt;/p&gt;
+&lt;p&gt;then we have
+$$
+u^{\prime}=2x,\quad v=\frac{\sin(x^2)}2
+$$&lt;/p&gt;
+&lt;p&gt;Therefore,
+$$
+\begin{aligned}
+\int x^3\cos(x^2)\ dx=&amp;amp;\int u\ v^{\prime}\ dx\\
+=&amp;amp;\ u\ v-\int u^{\prime}\ v\ dx\\
+=&amp;amp;\ \frac{x^2\sin(x^2)}2+\frac{cos(x^2)}2+C
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;reduction-formula&#34;&gt;Reduction Formula&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Example 4:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can find the reduction formula for $\displaystyle\int x^p(\ln x)^n\ dx$, where $n\ge 0$ integer, and $p\ne -1$ integer.&lt;/p&gt;
+&lt;p&gt;Define
+$$
+I_n\ =\ \int x^p (\ln x)^n\ dx
+$$&lt;/p&gt;
+&lt;p&gt;Then we have the relationship between $I_n$ and $I_{n-1}$:
+$$
+I_n\ =\ \frac{(\ln x)^n\ x^{p+1}}{p+1}-\frac{n}{p+1}\ I_{n-1}
+$$
+Ignore the constant $C$ because we can add it at the end.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 5:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We will see the original integral reappears on the right hand side of the formula after applying integral by parts.&lt;/p&gt;
+&lt;p&gt;Evaluate $\displaystyle\int e^x\cos(x)\ dx$&lt;/p&gt;
+&lt;p&gt;Let $u=e^x$ and $v^{\prime}=\cos(x)$, then $u^{\prime}=e^x$ and $v=\sin(x)$.&lt;/p&gt;
+&lt;p&gt;We have
+$$
+\begin{aligned}
+\int e^x\cos(x)\ dx\ =&amp;amp;\ \int u\ v^{\prime}\ dx\\
+=&amp;amp;\ u\ v-\int u^{\prime}\ v\ dx\\
+=&amp;amp;\ e^x\sin(x)-\int e^x\sin(x)\ dx
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Now we have to evaluate $\displaystyle\int e^x\sin(x)\ dx$.&lt;/p&gt;
+&lt;p&gt;Let $m=e^x$ and $n^{\prime}=\sin(x)$, then $m^{\prime}=e^x$ and $n=-\cos(x)$.&lt;/p&gt;
+&lt;p&gt;We have
+$$
+\begin{aligned}
+\int e^x\sin(x)\ dx=&amp;amp;\ m\ n-\int m^{\prime}\ n\ dx\\
+=&amp;amp;\ -e^x\cos(x)+\int e^x\cos(x)\ dx
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Therefore,&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\int e^x\cos(x)\ dx+\int e^x\sin(x)\ dx\ =&amp;amp;\ e^x\sin(x)-\int e^x\sin(x)\ dx+e^x\cos(x)+\int e^x\cos(x)\ dx\\
+2\int e^x\sin(x)\ dx\ =&amp;amp;\ e^x\sin(x)+e^x\cos(x)\\
+\int e^x\sin(x)\ dx\ =&amp;amp;\ \frac{e^x\sin(x)+e^x\cos(x)}2
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 6:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now we will find the reduction formula of Cosine.&lt;/p&gt;
+&lt;p&gt;Define
+$$
+C_n\ =\ \int\cos^n(x)\ dx
+$$&lt;/p&gt;
+&lt;p&gt;Using $\sin^2(x)+\cos^2(x)=1$, we get
+$$
+C_n\ =\ C_{n-2}-\int \cos^{n-2}(x)\sin^2(x)\ dx
+$$&lt;/p&gt;
+&lt;p&gt;Use integration by parts where $n\ne 1$:
+$$
+=\ \frac{\sin(x)\cos^{n-1}(x)}n+\frac{n-1}n\ C_{n-2}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 7:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can find a reduction formula for the integral of odd positive powers of secant, but now we derive it from the reduction formula for the integral of powers of cosine.&lt;/p&gt;
+&lt;p&gt;We have already defined $C_n$, and now we define
+$$
+\zeta_m\ =\ \int\sec^m(x)\ dx
+$$&lt;/p&gt;
+&lt;p&gt;When $m=n$, notice that
+$$
+\zeta_m\ =\ C_{-n}
+$$&lt;/p&gt;
+&lt;p&gt;In example 6, we have
+$$
+C_n\ =\ \frac{\sin(x)\cos^{n-1}(x)}n+\frac{n-1}n\ C_{n-2}
+$$&lt;/p&gt;
+&lt;p&gt;Replace $n$ by $-n$, we get
+$$
+C_{-n}\ =\ \frac{\sin(x)\cos^{-n-1}(x)}{-n}+\frac{-n-1}{-n}\ C_{-n-2}
+$$&lt;/p&gt;
+&lt;p&gt;then
+$$
+\begin{aligned}
+\zeta_m\ =&amp;amp;\ \frac{\sin(x)\cos^{-m-1}(x)}{-m}+\frac{-m-1}{-m}\ \zeta_{m+2}\\
+=&amp;amp;\ \frac{m+1}{m}\ \zeta_{m+2}-\frac{\tan(x)\sec^m(x)}{m}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Move $\zeta_{m+2}$ to the left hand side,
+$$
+\begin{aligned}
+\zeta_{m+2}\ =&amp;amp;\ \frac{m}{m+1}\left(\zeta_m+\frac{\tan(x)\sec^m(x)}{m}\right)\\
+=&amp;amp;\ \frac{m}{m+1}\ \zeta_m+\frac{\tan(x)\sec^m(x)}{m+1}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Therefore,
+$$
+\zeta_{m}\ =\ \frac{m-2}{m-1}\ \zeta_{m-2}+\frac{\tan(x)\sec^{m-2}(x)}{m-1}
+$$&lt;/p&gt;
 </description>
     </item>
     
