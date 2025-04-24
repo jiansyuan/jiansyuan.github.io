@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1199.9 1023.9" enable-background="new 0 0 1199.9 1023.9" xml:space="preserve">
+<path fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M242.4,515.2c86.6-20.1,228-43.6,417.9-123.8
+	c221.8-93.6,354.7-190.8,394.8-254"/>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="0" y1="654.8" x2="703.8" y2="654.8"/>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="127.9" y1="89.4" x2="127.9" y2="1023.9"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="759.5929" y1="997.2321" x2="759.5929" y2="315.1277">
+	<stop  offset="0" style="stop-color:#231F20"/>
+	<stop  offset="8.962709e-02" style="stop-color:#231F20;stop-opacity:0.9104"/>
+	<stop  offset="1" style="stop-color:#231F20;stop-opacity:0"/>
+</linearGradient>
+<path fill="url(#SVGID_1_)" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" d="M817.7,315.1c-13.4,0-25.7,24.5-35.7,66
+	c-15,62.1-24.7,162.2-24.7,275.1c0,111.3,9.4,210.2,24.1,272.5c10.1,43,22.7,68.6,36.3,68.6l-62.1-37.5
+	c-29.9,0-54.1-136.9-54.1-305.7c0-150.9,19.3-276.2,44.8-301.2"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="781.9839" y1="352.8514" x2="781.9839" y2="315.1277">
+	<stop  offset="0" style="stop-color:#231F20"/>
+	<stop  offset="8.962709e-02" style="stop-color:#231F20;stop-opacity:0.9104"/>
+	<stop  offset="1" style="stop-color:#231F20;stop-opacity:0"/>
+</linearGradient>
+<path fill="url(#SVGID_2_)" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" d="M746.3,352.9c3-3,6.2-4.5,9.3-4.5
+	l62.1-33.2"/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="828.7099" y1="315.1277" x2="828.7099" y2="997.2321">
+	<stop  offset="0" style="stop-color:#231F20"/>
+	<stop  offset="8.962709e-02" style="stop-color:#231F20;stop-opacity:0.9104"/>
+	<stop  offset="1" style="stop-color:#231F20;stop-opacity:0"/>
+</linearGradient>
+<path fill="url(#SVGID_3_)" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" d="M779.4,928.8
+	c18-49.7,30.4-154.1,30.4-274.8c0-119.2-12.1-222.5-29.7-272.9h2c10-41.5,22.3-66,35.7-66c33.3,0,60.4,152.7,60.4,341.1
+	s-27,341.1-60.4,341.1l0-2.5c-13.6,0-26.2-25.5-36.3-68.6"/>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="755.2" y1="654.8" x2="1145.8" y2="654.8"/>
+<text transform="matrix(1 0 0 1 728.4592 297.3708)" fill="#0000FF" font-family="'cmr10'" font-size="74.7195px">∆</text>
+<text transform="matrix(1 0 0 1 790.7268 297.3708)" fill="#0000FF" font-family="'cmmi10'" font-size="74.7195px">s</text>
+<text transform="matrix(1 0 0 1 1157.1639 671.7901)" font-family="'cmmi10'" font-size="74.7195px">x</text>
+<text transform="matrix(1 0 0 1 106.4041 63.5108)" font-family="'cmmi10'" font-size="74.7195px">y</text>
+<ellipse fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" cx="817.2" cy="656.2" rx="60.9" ry="341.1"/>
+<path fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M756.1,959.7c-29.7,0-53.8-136.9-53.8-305.7
+	s24.1-305.7,53.8-305.7"/>
+<path fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M780.3,381c17.6,50.4,29.6,153.7,29.6,273.1
+	c0,120.8-12.3,225.2-30.2,274.9"/>
+<line fill="none" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" x1="746.3" y1="347.9" x2="817.7" y2="310.1"/>
+<line fill="none" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" x1="746.3" y1="352.9" x2="817.7" y2="315.1"/>
+<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="748.7" y1="954.2" x2="820.1" y2="998.1"/>
+<text transform="matrix(1 0 0 1 207.331 475.0079)" font-family="'cmmi10'" font-size="74.7195px">s</text>
+<text transform="matrix(1 0 0 1 242.3583 486.2111)" font-family="'cmr7'" font-size="52.3035px">0</text>
+<text transform="matrix(1 0 0 1 1016.1918 116.3028)" font-family="'cmmi10'" font-size="74.7195px">s</text>
+<text transform="matrix(1 0 0 1 1051.2133 127.5118)" font-family="'cmmi7'" font-size="52.3035px">n</text>
+<text transform="matrix(1 0 0 1 221.0066 721.6036)" font-family="'cmmi10'" font-size="74.7195px">x</text>
+<text transform="matrix(1 0 0 1 263.7098 732.8126)" font-family="'cmr7'" font-size="52.3035px">0</text>
+<text transform="matrix(1 0 0 1 1033.7021 727.2081)" font-family="'cmmi10'" font-size="74.7195px">x</text>
+<text transform="matrix(1 0 0 1 1076.4111 738.4171)" font-family="'cmmi7'" font-size="52.3035px">n</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="242.4" y1="522.7" x2="242.4" y2="528.7"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12.4589,12.4589" x1="242.4" y1="541.2" x2="242.4" y2="659.6"/>
+		<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="242.4" y1="665.8" x2="242.4" y2="671.8"/>
+	</g>
+</g>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12" x1="1055.1" y1="145.7" x2="1055.1" y2="671.8"/>
+<text transform="matrix(1 0 0 1 32.8691 522.7422)" font-family="'cmmi10'" font-size="74.7195px">y</text>
+<text transform="matrix(1 0 0 1 69.5019 533.957)" font-family="'cmr7'" font-size="52.3035px">0</text>
+<text transform="matrix(1 0 0 1 28.1855 146.1427)" font-family="'cmmi10'" font-size="74.7195px">y</text>
+<text transform="matrix(1 0 0 1 64.8183 157.3458)" font-family="'cmmi7'" font-size="52.3035px">n</text>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12" x1="106.4" y1="137.4" x2="1055.1" y2="137.4"/>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12" x1="242.4" y1="515.2" x2="106.4" y2="515.2"/>
+</svg>

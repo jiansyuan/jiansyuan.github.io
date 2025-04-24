@@ -479,6 +479,111 @@ $$&lt;/p&gt;
 $$
 \zeta_{m}\ =\ \frac{m-2}{m-1}\ \zeta_{m-2}+\frac{\tan(x)\sec^{m-2}(x)}{m-1}
 $$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;arc-length-and-surface-area&#34;&gt;Arc Length and Surface Area&lt;/h2&gt;
+&lt;h3 id=&#34;arc-length&#34;&gt;Arc Length&lt;/h3&gt;
+&lt;p&gt;Consider a small piece of a curve $\Delta s$.&lt;/p&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_arclength_im2.svg&#34; width=&#34;50%&#34;&gt;
+&lt;p&gt;We can use the length of secant line to approximate the length of this small curve:
+$$
+\Delta s\ \approx\ \sqrt{\left(\Delta x\right)^2+\left(\Delta y\right)^2}
+$$&lt;/p&gt;
+&lt;p&gt;In differential, we get
+$$
+ds\ =\ \sqrt{\left(dx\right)^2+\left(dy\right)^2}
+$$&lt;/p&gt;
+&lt;p&gt;For a curve $y=f(x)$, we can write
+$$
+\begin{aligned}
+ds\ =&amp;amp;\ \sqrt{dx^2+dy^2}\\
+=&amp;amp;\ \sqrt{1+\left(\frac{dy}{dx}\right)^2}\ dx\ =\ \sqrt{1+\big(f^{\prime}(x)\big)^2}\ dx\\
+=&amp;amp;\ \sqrt{\left(\frac{dx}{dy}\right)^2+1}\ dy\ =\ \sqrt{\Big(\big(f^{-1}\big)^{\prime}(y)\Big)^2+1}\ dy
+\end{aligned}
+$$&lt;/p&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_arclength_im2b.svg&#34; width=&#34;50%&#34;&gt;
+&lt;p&gt;Now, we can write the &lt;code&gt;arc length&lt;/code&gt; $s$ of $y=f(x)$ over the interval shown by the integral:
+$$
+\begin{aligned}
+\text{Arc Length }s\ =&amp;amp;\ \int_{s_0}^{s_n}\ ds\\
+=&amp;amp;\ \int_{x_0}^{x_n}\sqrt{1+\big(f^{\prime}(x)\big)^2}\ dx\\
+=&amp;amp;\ \int_{y_0}^{y_n}\sqrt{1+\Big(\big(f^{-1}\big)^{\prime}(y)\Big)^2}\ dy
+\end{aligned}
+$$&lt;/p&gt;
+&lt;h3 id=&#34;surface-area&#34;&gt;Surface Area&lt;/h3&gt;
+&lt;p&gt;Consider the surface area created by rotating the curve $y=f(x)$ about the $x$-axis.&lt;/p&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_arclength_im3.svg&#34; width=&#34;50%&#34;&gt;
+&lt;p&gt;We can compute the surface area $A$ by the integral:
+$$
+\begin{aligned}
+A\ =&amp;amp;\ \int_{s_0}^{s_n}(2\pi y)\ ds\\
+=&amp;amp;\ \int_{x_0}^{x_n}2\pi y\sqrt{1+\left(\frac{dy}{dx}\right)^2}\ dx\\
+=&amp;amp;\ \int_{y_0}^{y_n}2\pi y\sqrt{1+\left(\frac{dx}{dy}\right)^2}\ dy
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;If $y=f(x)$ rotate about the $y$-axis:&lt;/p&gt;
+&lt;image src=&#34;https://jiansyuan.github.io/image/MIT_18.01/images_arclength_im4.svg&#34; width=&#34;70%&#34;&gt;
+&lt;p&gt;$$
+\begin{aligned}
+A\ =&amp;amp;\ \int_{s_0}^{s_n}(2\pi x)\ ds\\
+=&amp;amp;\ \int_{y_0}^{y_n}2\pi x\sqrt{1+\left(\frac{dx}{dy}\right)^2}\ dy\\
+=&amp;amp;\ \int_{x_0}^{x_0}2\pi x\sqrt{1+\left(\frac{dy}{dx}\right)^2}\ dx
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Calculate a surface area of a sphere with radius $a$.&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\text{Surface area }A\ =&amp;amp;\ \int_{-a}^{a} 2\pi\sqrt{a^2-x^2}\sqrt{1+\frac{x^2}{a^2-x^2}}\ dx\\
+=&amp;amp;\ \int_{-a}^{a} 2\pi a\ dx\\
+=&amp;amp;\ 2\pi a x\Big\vert_{x=-a}^{a}\\
+=&amp;amp;\ 4\pi a^2
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Calculate a surface area of a torus which is the graph of $(x-R)^2+y^2=r^2$ rotating about the $y$-axis, where $R$ and $r$ are constant, and satisfy $R\ge r$.&lt;/p&gt;
+&lt;p&gt;Consider the half part above $x$-axis of the torus, we can write the formula of $y$:
+$$
+y\ =\ \sqrt{r^2-(x-R)^2}
+$$&lt;/p&gt;
+&lt;p&gt;then,
+$$
+y^{\prime}\ =\ -\frac{x-R}{\sqrt{r^2-(x-R)^2}}
+$$&lt;/p&gt;
+&lt;p&gt;Write the formula of the surface area of half part of the torus:
+$$
+\begin{aligned}
+A_{\text{half}}\ =&amp;amp;\ \int_{R-r}^{R+r}2\pi x \sqrt{1+\big(y^{\prime}\big)^2}\ dx\\
+=&amp;amp;\ 2\pi\int_{R-r}^{R+r} x\sqrt{1+\frac{(x-R)^2}{r^2-(x-R)^2}}\ dx\\
+=&amp;amp;\ 2\pi r\int_{R-r}^{R+r} \frac{x}{\sqrt{r^2-(x-R)^2}}\ dx
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Let $u=x-R$, then $dx=du$, we get:
+$$
+=\ 2\pi r\int_{-r}^{r}\frac{u+R}{\sqrt{r^2-u^2}}\ du
+$$&lt;/p&gt;
+&lt;p&gt;As the integral is range from $-r$ to $r$, the $u$ in the numerator can be cancelled.
+$$
+\begin{aligned}
+=&amp;amp;\ 2\pi r\int_{-r}^{r}\frac{R}{\sqrt{r^2-u^2}}\ du\\
+=&amp;amp;\ 2\pi r R\int_{-r}^{r}\frac{du}{\sqrt{r^2-u^2}}\\
+=&amp;amp;\ 2\pi R\int_{-r}^{r}\frac{du}{\sqrt{1-\left(\displaystyle\frac{u}{r}\right)^2}}
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Let $\displaystyle\frac{u}{r}=\sin\theta$, then $du=r\cos\theta\ d\theta$.
+$$
+\begin{aligned}
+=&amp;amp;\ 2\pi R\int_{-\pi/2}^{\pi/2} \frac{r\cos\theta}{\sqrt{1-\sin^2\theta}}\ d\theta\\
+=&amp;amp;\ 2\pi R r\int_{-\pi/2}^{\pi/2} \frac{d\theta}{\cos\theta}\\
+=&amp;amp;\ 2\pi^2 R r
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Therefore,
+$$
+\begin{aligned}
+A\ =&amp;amp;\ 2A_{\text{half}}\\
+=&amp;amp;\ 4\pi^2 R r
+\end{aligned}
+$$&lt;/p&gt;
 </description>
     </item>
     

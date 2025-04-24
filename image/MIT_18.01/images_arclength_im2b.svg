@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1149.7 749.8" enable-background="new 0 0 1149.7 749.8" xml:space="preserve">
+<path fill="none" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" d="M214.2,515.2c86.6-20.1,228-43.6,417.9-123.8
+	c221.8-93.6,354.7-190.8,394.8-254"/>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="4.7" y1="652.8" x2="1107" y2="652.8"/>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="99.7" y1="396.3" x2="99.7" y2="738.4"/>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="99.7" y1="89.4" x2="99.7" y2="396.3"/>
+<text transform="matrix(1 0 0 1 1106.9784 671.7901)" font-family="'cmmi10'" font-size="74.7195px">x</text>
+<text transform="matrix(1 0 0 1 78.2187 63.5108)" font-family="'cmmi10'" font-size="74.7195px">y</text>
+<text transform="matrix(1 0 0 1 179.1455 475.0079)" font-family="'cmmi10'" font-size="74.7195px">s</text>
+<text transform="matrix(1 0 0 1 214.1729 486.2111)" font-family="'cmr7'" font-size="52.3035px">0</text>
+<text transform="matrix(1 0 0 1 988.0063 96.3028)" font-family="'cmmi10'" font-size="74.7195px">s</text>
+<text transform="matrix(1 0 0 1 1023.0278 107.5118)" font-family="'cmmi7'" font-size="52.3035px">n</text>
+<text transform="matrix(1 0 0 1 192.8212 721.6036)" font-family="'cmmi10'" font-size="74.7195px">x</text>
+<text transform="matrix(1 0 0 1 235.5243 732.8126)" font-family="'cmr7'" font-size="52.3035px">0</text>
+<text transform="matrix(1 0 0 1 1005.5167 727.2081)" font-family="'cmmi10'" font-size="74.7195px">x</text>
+<text transform="matrix(1 0 0 1 1048.2257 738.4171)" font-family="'cmmi7'" font-size="52.3035px">n</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="214.2" y1="522.7" x2="214.2" y2="528.7"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12.4589,12.4589" x1="214.2" y1="541.2" x2="214.2" y2="659.6"/>
+		<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="214.2" y1="665.8" x2="214.2" y2="671.8"/>
+	</g>
+</g>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12" x1="1026.9" y1="145.7" x2="1026.9" y2="671.8"/>
+<text transform="matrix(1 0 0 1 4.6836 522.7422)" font-family="'cmmi10'" font-size="74.7195px">y</text>
+<text transform="matrix(1 0 0 1 41.3164 533.957)" font-family="'cmr7'" font-size="52.3035px">0</text>
+<text transform="matrix(1 0 0 1 0 146.1427)" font-family="'cmmi10'" font-size="74.7195px">y</text>
+<text transform="matrix(1 0 0 1 36.6328 157.3458)" font-family="'cmmi7'" font-size="52.3035px">n</text>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12" x1="78.2" y1="137.4" x2="1026.9" y2="137.4"/>
+<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12" x1="214.2" y1="515.2" x2="78.2" y2="515.2"/>
+<path fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M716.1,352.6"/>
+<path fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M-475.8,336.1"/>
+<circle fill="#0000FF" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" cx="214.2" cy="515.2" r="11.2"/>
+<circle fill="#0000FF" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" cx="1026.9" cy="137.4" r="11.2"/>
+</svg>
