@@ -7,10 +7,107 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>cn</language>
     <copyright>Copyright © 2000–2025</copyright>
-    <lastBuildDate>Sat, 12 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Apr 2025 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jiansyuan.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Notes on MIT 18.01.3 Calculus IC (Unit1 Coordinate Systems)</title>
+      <link>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.3_calculus_ic-unit1/</link>
+      <pubDate>Sat, 26 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiansyuan.github.io/post/mit_18.01/mit_18.01.3_calculus_ic-unit1/</guid>
+      <description>&lt;h1 id=&#34;unit-1-coordinate-systems&#34;&gt;Unit 1: Coordinate Systems&lt;/h1&gt;
+&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;This is the note of the MIT Course 18.01.2 Calculus. For more details, refer to &lt;a href=&#34;https://student.mit.edu/catalog/m18a.html&#34;&gt;MIT 18.x Catalog&lt;/a&gt;, and it can also be found at &lt;a href=&#34;https://openlearning.mit.edu/courses-programs/open-learning-library&#34;&gt;MIT Open Learning Library&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;parametric-curves&#34;&gt;Parametric Curves&lt;/h2&gt;
+&lt;p&gt;The parametric curve in the plane is defined by two equations:
+$$
+x\quad=\quad x(t)\\
+y\quad=\quad y(t)
+$$
+where $t$ is called &lt;code&gt;parameter&lt;/code&gt;. For each $t\in \R$, the point $(x(t), y(t))$ is a point on the curve.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;$$
+x\quad =\quad a\cos t\\
+y\quad =\quad a\sin t
+$$&lt;/p&gt;
+&lt;p&gt;Since
+$$
+x^2+y^2\ =\ a^2,
+$$
+the graph of this parametric curve is a circle with radius $a$ and center at origin.&lt;/p&gt;
+&lt;h3 id=&#34;tangent-line&#34;&gt;Tangent Line&lt;/h3&gt;
+&lt;p&gt;The slope of a parametric curve $x=x(t)$, $y=y(t)$ is
+$$
+\frac{dy}{dx}\quad=\quad \frac{dy/dt}{dx/dt}.
+$$&lt;/p&gt;
+&lt;p&gt;Therefore, we can use $\displaystyle\frac{y^{\prime}(t_0)}{x^{\prime}(t_0)}$ to compute the slope of the tangent line of the curve at $t=t_0$.&lt;/p&gt;
+&lt;h3 id=&#34;arc-length&#34;&gt;Arc Length&lt;/h3&gt;
+&lt;p&gt;Consider a particle moving along a trajectory, which can be described by the parametric curve:
+$$
+x\quad=\quad x(t)\\
+y\quad=\quad y(t)
+$$&lt;/p&gt;
+&lt;p&gt;The speed of the particle is given by
+$$
+\frac{ds}{dt}\quad=\quad\sqrt{\big(x^{\prime}(t)\big)^2+\big(y^{\prime}(t)\big)^2}
+$$&lt;/p&gt;
+&lt;p&gt;The differential arc length is given by
+$$
+ds\quad=\quad \sqrt{\big(x^{\prime}(t)\big)^2+\big(y^{\prime}(t)\big)^2}\ dt
+$$&lt;/p&gt;
+&lt;p&gt;Let $s=s(t)$, where $s(t)$ is used to denote arc length. If $s_0=s(t_0)$ and $s_1=s(t_1)$, then the arc length from $t_0$ to $t_1$ can be calculated by
+$$
+s_1-s_0=\int_{s_0}^{s_1}\ ds=\int_{t_0}^{t_1}\sqrt{\big(x^{\prime}(t)\big)^2+\big(y^{\prime}(t)\big)^2}\ dt
+$$&lt;/p&gt;
+&lt;h3 id=&#34;surface-area&#34;&gt;Surface Area&lt;/h3&gt;
+&lt;p&gt;Consider the parametric curve:
+$$
+x\quad=\quad x(t)\\
+y\quad=\quad y(t)
+$$&lt;/p&gt;
+&lt;p&gt;Calculate the surface formed by rotating the curve about $y$-axis.
+$$
+\begin{aligned}
+dA\quad=&amp;amp;\quad 2\pi x\ ds\\
+=&amp;amp;\quad 2\pi x(t)\sqrt{\big(x^{\prime}(t)\big)^2+\big(y^{\prime}(t)\big)^2}\ dt
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Therefore, the surface area from time $t_0$ to time $t_1$ is given by the integral:
+$$
+\int_{t_0}^{t_1} 2\pi x(t)\sqrt{\big(x^{\prime}(t)\big)^2+\big(y^{\prime}(t)\big)^2}\ dt
+$$&lt;/p&gt;
+&lt;p&gt;We can also calculate the surface formed by rotating the curve about $x$-axis.
+$$
+\begin{aligned}
+dA\quad=&amp;amp;\quad 2\pi y\ ds\\
+=&amp;amp;\quad 2\pi y(t)\sqrt{\big(x^{\prime}(t)\big)^2+\big(y^{\prime}(t)\big)^2}\ dt
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;Therefore, the surface area from time $t_0$ to time $t_1$ is given by the integral:
+$$
+\int_{t_0}^{t_1} 2\pi y(t)\sqrt{\big(x^{\prime}(t)\big)^2+\big(y^{\prime}(t)\big)^2}\ dt
+$$&lt;/p&gt;
+&lt;h3 id=&#34;area&#34;&gt;Area&lt;/h3&gt;
+&lt;p&gt;We have already known that the area under the a curve $y=f(x)$ between $x=a$ and $x=b$ is given by $\displaystyle \int_a^b f(x)\ dx$.&lt;/p&gt;
+&lt;p&gt;We can also use the parametric equation to express the curve:
+$$
+x\quad=\quad x(t)\\
+y\quad=\quad y(t)
+$$&lt;/p&gt;
+&lt;p&gt;Suppose that $x(t_0)=a$ and $x(t_1)=b$, then
+$$
+\begin{aligned}
+\int_a^b f(x)\ dx\ =&amp;amp;\ \int_{t_0}^{t_1} f(x(t))\ x^{\prime}(t)\ dt\\
+=&amp;amp;\ \int_{t_0}^{t_1} y(t)\ x^{\prime}(t)\ dt
+\end{aligned}
+$$&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
     
     <item>
       <title>Notes on MIT 18.01.2 Calculus IB (Unit4 Integration Techniques)</title>
